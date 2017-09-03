@@ -1,0 +1,26 @@
+{
+  "name": "skylark",
+  "version": "1.0.0",
+  "description": "single page application for skylark's homepage",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://lihongwang@w3term.net:29418/utilhub/frontend/webapps/skylark-site"
+  },
+  "keywords": [
+    "skylark",
+    "JavaScript",
+    "spa",
+    "original"
+  ],
+  "author": "lwf@hudaokeji.com, lhw@hudaokeji.com",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "promise": "^8.0.1",
+    "serve-index": "^1.9.0"
+  }
+}

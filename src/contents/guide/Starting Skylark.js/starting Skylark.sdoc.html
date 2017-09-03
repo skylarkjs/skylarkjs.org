@@ -1,0 +1,130 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#folder_structure">Folder structure</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#use_requirejs">use requirejs</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#base_config">base config</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#integrate_other_libraries">Integrate other libraries</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#amd_libray">amd libray</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#non_amd_libray">non amd libray</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#replace_jquery">replace jquery</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="starting_skylarkjs">starting skylark.js</h1>
+    <div class="level1">
+        <p>
+            Skyalrk.js is a modular javascript library and application framework, uses the AMD specification, could run with the RequireJS library.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="folder_structure">Folder structure</h2>
+    <div class="level2">
+        <p>
+            Determine the forder structure for web site or web application. for example:
+            <br>
+        </p>
+        <pre class="code  _doc-code_ code-type-text">
+|-index.html 
+`-js/ 
+  |-main.js 
+  `-lib/ 
+     `-skylark/... 
+     `-oth-amd-lib/... 
+     |-non-amd-lib.js </pre>
+    </div>
+    <h2 class="sectionedit3" id="use_requirejs">use requirejs</h2>
+    <div class="level2">
+        <p>
+            In index.html,you can use the RequireJS library downloaded , or use a RequireJS CDN Combination.
+        </p>
+        <pre class="code  _doc-code_ code-type-html">
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt; 
+&lt;head&gt; 
+&lt;script type="text/javascript" data-main="./main.js"  
+        src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"&gt; &lt;/script&gt; 
+
+&lt;/head&gt; 
+
+&lt;body&gt; 
+&lt;/body&gt; 
+
+&lt;/html&gt; 
+</pre>
+    </div>
+    <h2 class="sectionedit4" id="base_config">base config</h2>
+    <div class="level2">
+        <p>
+            Use requirejs.config () in main.js to define skylark packages and so on.
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+    require.config({ 
+        baseUrl: "./", 
+        packages: [{ 
+            name: "skylark", 
+            location: "./lib/skylark" 
+        }, ] 
+    }); </pre>
+    </div>
+    <h2 class="sectionedit5" id="integrate_other_libraries">Integrate other libraries</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit6" id="amd_libray">amd libray</h3>
+    <div class="level3">
+        <p>
+            You can use an other AMD library, like using skylark.
+        </p>
+    </div>
+    <h3 class="sectionedit7" id="non_amd_libray">non amd libray</h3>
+    <div class="level3">
+        <p>
+            You can use a non-AMD library, such as underscore, which follows the requirejs syntax
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+require.config({ 
+  shim: { 
+    underscore: { 
+      exports: '_' 
+    } 
+  } 
+  , paths: { 
+    underscore : "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min" 
+  }   
+   
+}); </pre>
+    </div>
+    <h2 class="sectionedit8" id="replace_jquery">replace jquery</h2>
+    <div class="level2">
+        <p>
+            Jquery is a most popular javascript library, with a large number of plug-ins and application using jquery.
+        </p>
+        <p>
+            The optional skylark.jquery library is based on the skylark/query module, providing APIs that are fully compatible with jquery,and the codes is simpler and more productive, JQuery plugins and applications can run directly on skylark without jquery.
+        </p>
+        <p>
+            examples: please refer to the skalark.jquery project.
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

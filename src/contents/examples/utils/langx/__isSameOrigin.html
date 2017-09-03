@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylark"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <script>
+    require(["skylark/langx"], function(langx) {
+        alert(langx.isSameOrigin("http://skylark.dt.hudaokeji.com"));
+    });
+    </script>
+</body>
+
+</html>

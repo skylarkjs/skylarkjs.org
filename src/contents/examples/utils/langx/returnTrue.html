@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylark"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <h4>Example : <span>The returnTrue function value is true and the input shows the Return value.</span></h4>
+    away return true? <b></b>
+    <input></input>
+    <script>
+    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+        var text = langx.returnTrue();
+        datax.val(finder.find("input"),text)
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level2">
+                    <div class="li"><a href="#usage">Usage</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#hooker">Hooker</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#select_engine">Select engine</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#example">Example</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#extends">Extends</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="use_router_framework_alone">use router framework alone</h1>
+    <div class="level1">
+        <p>
+            The skylark/router module implemented a complete routing framework, and you can use this module separately as needed.
+        </p>
+    </div>
+    <h3 class="sectionedit2" id="usage">Usage</h3>
+    <div class="level3">
+        <p>
+            Refence router module object.
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+define(["skylark/router","skylark/query"],function(router,$){ 
+}); 
+OR 
+requre(["skylark/router","skylark/query"],function(router,$){ 
+}); </pre>
+        <p>
+            add route defines.
+            <br>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+    var homeRoute = router.route('home', { 
+        pathto : '/', 
+        entered (){ 
+            $("#yield").html($('#home').html()); 
+        }      
+    }); 
+             
+    var pageRoute = router.route('page', { 
+        pathto : '/page/:id', 
+        entered(e){ 
+            $("#yield").html($('#page' + e.params.id).html()); 
+        } 
+    }); </pre>
+        <p>
+            add callback function for route.
+        </p>
+        <p>
+            When the route is changed, the following event are triggered in order.
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> exiting (for previous route) </div>
+            </li>
+            <li class="level1">
+                <div class="li"> entering (for new route) </div>
+            </li>
+            <li class="level1">
+                <div class="li"> entered (for new route) </div>
+            </li>
+            <li class="level1">
+                <div class="li"> exited (for previous route) </div>
+            </li>
+        </ol>
+        <p>
+            In adding route at the same time, you can add the same name of the callback function, after the route is added,you can also add callback function for these events.
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+    homeRoute.on("exited",function(){ 
+       console.log('good bye Home'); 
+    }); 
+
+    pageRoute.on("exited",function(){ 
+            var field = $('[name="field"]').val(); 
+            if (field) { 
+                return confirm('Are you sure you want to quit this page ?'); 
+            }            
+    }); 
+             </pre>
+        <p>
+            Start router
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+router.start(); </pre>
+    </div>
+    <h2 class="sectionedit3" id="hooker">Hooker</h2>
+    <div class="level2">
+        <p>
+            The router supports global events and you can implement hooker functions by listening to global events.
+            <br>Built-in global events have routing before current route change and routed after current route change.
+            <br>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+    router.on("routed",function(e){ 
+            var links = $("a.active"); 
+
+            links.removeClass("active"); 
+
+            links = $("a[href=\"" + e.current.path + "\"]"); 
+            links.addClass("active"); 
+            links[0].focus(); 
+    }); </pre>
+    </div>
+    <h2 class="sectionedit4" id="select_engine">Select engine</h2>
+    <div class="level2">
+        <p>
+            The router support the following three routing engines.
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> html5 history
+                    <abbr title="Application Programming Interface">API</abbr> egine </div>
+            </li>
+            <li class="level1">
+                <div class="li"> hash egine </div>
+            </li>
+            <li class="level1">
+                <div class="li"> internal management engine </div>
+            </li>
+        </ol>
+        <p>
+            The useHistoryApi attribute and useHashbang attribute of router object are used to control which engine is used：
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> useHistoryApi === null &amp;&amp; useHashbang===null （default）
+                    <br> The router automatically determine which engine to use, if running on the web, he html5 history
+                    <abbr title="Application Programming Interface">API</abbr> egine is used; if running in the local file system, The hash egine is used. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> useHistoryApi === true
+                    <br> The html5 history
+                    <abbr title="Application Programming Interface">API</abbr> egine is used. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> useHistoryApi !== true &amp;&amp; useHashbang===true
+                    <br> The hash egine is used. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> useHistoryApi === false &amp;&amp; useHashbang===false
+                    <br> The internal management engine is used. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit5" id="example">Example</h2>
+    <div class="level2">
+        <p>
+            For example, please refer to here.
+        </p>
+    </div>
+    <h2 class="sectionedit6" id="extends">Extends</h2>
+    <div class="level2">
+        <p>
+            the route type is exposed on route.Route, you can inherit this type to implement a new type to extend the routing functionality, which is useful when developing the framework.
+        </p>
+        <p>
+            In fact, the singe page application framework(skylark/spa) embedded router, and defined a new route type, to add the page render function.
+        </p>
+        <p>
+            As a reference, the following is its implementation code：
+            <br>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+    var Route = router.Route = router.Route.inherit({ 
+        klassName: "SpaRoute", 
+
+        init: function(name, setting) { 
+            this.overrided(name, setting); 
+            this.content = setting.content; 
+            this.data = setting.data; 
+            this.lazy = !!setting.lazy; 
+            var self = this; 
+            ["preparing", "rendering", "rendered"].forEach(function(eventName) { 
+                if (utils.isFunction(setting[eventName])) { 
+                    self.on(eventName, setting[eventName]); 
+                } 
+            }); 
+        }, 
+
+        _entering: function(ctx) { 
+            if (this.lazy) { 
+                return this.prepare(); 
+            } 
+            return this; 
+        }, 
+
+        getConfigData: function(key) { 
+            return key ? this.data[key] : this.data; 
+        }, 
+
+        prepare: function() { 
+            var d = new Deferred(), 
+                setting = this._setting, 
+                self = this, 
+                content = setting.content, 
+                contentPath = setting.contentPath; 
+
+            if (contentPath) { 
+                require(["text!" + contentPath], function(v) { 
+                    content = setting.content = v; 
+                    d.resolve(); 
+                }); 
+            } else { 
+                d.resolve(); 
+            } 
+
+            return d.then(function() { 
+                var e = eventer.create("preparing", { 
+                    route: self, 
+                    result: true 
+                }); 
+                eventer.trigger(self, e); 
+                return Deferred.when(e.result); 
+            }); 
+        }, 
+
+        render: function() { 
+            var e = eventer.create("rendering", { 
+                route: this, 
+                content: this.content 
+            }); 
+            eventer.trigger(this, e); 
+            return e.content; 
+        } 
+    }); 
+     
+    var Page = utils.klass({ 
+        klassName: "SpaPage", 
+
+        init: function(params) { 
+            params = utils.mixin({ 
+                "routeViewer": "body" 
+            }, params); 
+
+            this._params = params; 
+            this._$rvc = velm.find(params.routeViewer); 
+            this._router = router; 
+
+            router.on("routing", utils.proxy(this, "refresh")); 
+        }, 
+
+        prepare: function() { 
+
+        }, 
+
+        //Refreshes the route 
+        refresh: function() { 
+            var curCtx = router.current(), 
+                prevCtx = router.previous(); 
+            this._$rvc.html(curCtx.route.render()); 
+        } 
+    }); 
+</pre>
+    </div>
+    <!-- wikipage stop -->
+</div>

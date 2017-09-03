@@ -1,0 +1,188 @@
+.home-page {
+    #pageContainer {
+        .skylark-desc {
+            height: 400px;
+            color: #fff;
+            .container {
+                max-width: 600px;
+            }
+            background-color: #5bc0de;
+            .headline-container {
+                margin: 30px auto;
+                text-align: center;
+                .first {
+                    @include hexagon(1, #077fc3, #fff, #8395ee);
+                }
+                .second {
+                    position: relative;
+                    top: -65px;
+                    @include hexagon(0.5, #fff, #2d2937, #d6e9f2);
+                }
+                img.logo {
+                    -webkit-transform: rotate(15deg) scale(1);
+                    transform: rotate(15deg) scale(1);
+                    &:hover {
+                        -webkit-transition: .3s ease-in-out;
+                        transition: .3s ease-in-out;
+                        -webkit-transform: rotate(0) scale(1.2);
+                        transform: rotate(0) scale(1.2);
+                    }
+                }
+            }
+            .desc-container {
+                padding: 0 10px;
+                text-align: center;
+            }
+            @include respond-to($except-phone) {
+
+                .headline-container {
+                    margin: 30px auto;
+                    .headline {
+                        display: block;
+                        background-color: transparent;
+                        padding-top: 10px;
+                        font-size: 48px;
+                        color: #fff;
+                    }
+                }
+                .head-desc {
+                    font-size: 30px;
+                    color: #fff;
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+            }
+            @include respond-to($phone) {
+                .logo {
+                    text-align: center;
+                    .polygon {
+                        border: 1px dotted #077fc3;
+                        border-left: 0;
+                        border-right: 0;
+                    }
+                    .second .polygon {
+                        border-color: #fff;
+                    }
+                }
+
+                .headline-container {
+                    margin: 30px auto 10px auto;
+                    .headline {
+                        display: block;
+                        background-color: transparent;
+                        text-align: center;
+                        padding-top: 10px;
+                        font-size: 38px;
+                        color: #fff;
+                    }
+                }
+                .head-desc {
+                    font-size: 18px;
+                    color: #fff;
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+            }
+            .jumbotron {
+                background-color: #5bc0de;
+                margin-bottom: 0;
+            }
+            .btns {
+                .btn {
+                    display: inline-block;
+                    position: relative;
+                    top: 20px;
+                }
+                i {
+                    margin: 0 6px;
+                }
+            }
+
+            .github {
+                margin-left: 30px;
+            }
+        }
+        #particles {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+        }
+        .features {
+            padding-bottom: 0;
+            background-color: #fff;
+            margin: 50px auto;
+            img {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        @include respond-to($except-phone) {
+            .features {
+                max-width: 60%;
+            }
+        }
+        @include respond-to($phone) {
+            .features {
+                max-width: 100%;
+            }
+        }
+        .feature {
+            padding: 30px;
+            margin-bottom: 20px;
+            line-height: 1.42857143;
+            .title {
+                color: #286090;
+                text-align: center;
+            }
+        }
+        .spa-framework {
+            background-color: #fff;
+        }
+        .lib-content {
+            height: 500px;
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+        }
+        .home-tree {
+            height: 100%;
+            span {
+                width: 100%;
+                display: inline-block;
+                &.folder {
+                    color: green;
+                    font-weight: bolder;
+                }
+            }
+            i {
+                color: green;
+            }
+        }
+        .lib-tree {
+            width: 200px;
+            border-right: 1px #ccc solid;
+        }
+        .app-tree {
+            width: 300px;
+        }
+        .scroll-down {
+            display: block;
+            position: absolute;
+            z-index: 100;
+            bottom: 45px;
+            left: 50%;
+            margin-left: -25px;
+            width: 34px;
+            height: 34px;
+            font-size: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+    .footer {
+        text-align: center;
+        background: #f2f2f2;
+        border-top: 1px solid #e4e4e4;
+        padding: 20px;
+    }
+}

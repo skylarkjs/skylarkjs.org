@@ -1,0 +1,271 @@
+[
+{
+    "parent": "/guide",
+    "path": "/guide/starting Skylark.js",
+    "className": "root",
+    "name": "Starting Skylark.js",
+    "files": [
+    {
+        "name": "starting Skylark",
+        "parent": "/guide/starting Skylark.js",
+        "path": "/guide/starting Skylark.js/starting Skylark.sdoc.html",
+        "structure":
+        {
+            "hash": "#starting Skylark/starting_skylarkjs",
+            "type": "h1",
+            "title": "starting skylark.js",
+            "id": "starting_skylarkjs",
+            "children": [
+            {
+                "hash": "#starting Skylark/folder_structure",
+                "type": "h2",
+                "title": "Folder structure",
+                "id": "folder_structure",
+                "children": []
+            },
+            {
+                "hash": "#starting Skylark/use_requirejs",
+                "type": "h2",
+                "title": "use requirejs",
+                "id": "use_requirejs",
+                "children": []
+            },
+            {
+                "hash": "#starting Skylark/base_config",
+                "type": "h2",
+                "title": "base config",
+                "id": "base_config",
+                "children": []
+            },
+            {
+                "hash": "#starting Skylark/integrate_other_libraries",
+                "type": "h2",
+                "title": "Integrate other libraries",
+                "id": "integrate_other_libraries",
+                "children": [
+                {
+                    "hash": "#starting Skylark/amd_libray",
+                    "type": "h3",
+                    "title": "amd libray",
+                    "id": "amd_libray"
+                },
+                {
+                    "hash": "#starting Skylark/non_amd_libray",
+                    "type": "h3",
+                    "title": "non amd libray",
+                    "id": "non_amd_libray"
+                }]
+            },
+            {
+                "hash": "#starting Skylark/replace_jquery",
+                "type": "h2",
+                "title": "replace jquery",
+                "id": "replace_jquery",
+                "children": []
+            }]
+        }
+    },
+    {
+        "name": "use utility functions",
+        "parent": "/guide/starting Skylark.js",
+        "path": "/guide/starting Skylark.js/use utility functions.sdoc.html",
+        "structure":
+        {
+            "hash": "#use utility functions/use_utility_functions",
+            "type": "h1",
+            "title": "use utility functions",
+            "id": "use_utility_functions",
+            "children": [
+            {
+                "hash": "#use utility functions/composition",
+                "type": "h2",
+                "title": "Composition",
+                "id": "composition",
+                "children": []
+            },
+            {
+                "hash": "#use utility functions/usage",
+                "type": "h2",
+                "title": "Usage",
+                "id": "usage",
+                "children": []
+            },
+            {
+                "hash": "#use utility functions/examples",
+                "type": "h2",
+                "title": "Examples",
+                "id": "examples",
+                "children": []
+            }]
+        }
+    },
+    {
+        "name": "use vme",
+        "parent": "/guide/starting Skylark.js",
+        "path": "/guide/starting Skylark.js/use vme.sdoc.html",
+        "structure":
+        {
+            "hash": "#use vme/use_vme",
+            "type": "h1",
+            "title": "use vme",
+            "id": "use_vme",
+            "children": [
+            {
+                "hash": "#use vme/usage",
+                "type": "h2",
+                "title": "Usage",
+                "id": "usage",
+                "children": []
+            },
+            {
+                "hash": "#use vme/extends",
+                "type": "h2",
+                "title": "Extends",
+                "id": "extends",
+                "children": []
+            }
+            ]
+        }
+    }
+    ],
+    "folders": []
+},
+{
+    "parent": "/guide",
+    "path": "/guide/Single Page Application",
+    "className": "root",
+    "name": "Single Page Application",
+    "files": [
+    {
+        "name": "spa startup",
+        "parent": "/guide/Single Page Application",
+        "path": "/guide/Single Page Application/spa startup.sdoc.html",
+        "structure":
+        {
+            "hash": "#spa startup/develop_single_page_application",
+            "type": "h1",
+            "title": "develop single page application",
+            "id": "develop_single_page_application",
+            "children": [
+            {
+                "hash": "#spa startup/overview",
+                "type": "h2",
+                "title": "Overview",
+                "id": "overview",
+                "children": []
+            },
+            {
+                "hash": "#spa startup/architecure",
+                "type": "h2",
+                "title": "Architecure",
+                "id": "architecure",
+                "children": [
+                {
+                    "hash": "#spa startup/application_elements",
+                    "type": "h3",
+                    "title": "Application elements",
+                    "id": "application_elements"
+                },
+                {
+                    "hash": "#spa startup/front_controller_pattern",
+                    "type": "h3",
+                    "title": "Front controller pattern",
+                    "id": "front_controller_pattern"
+                }]
+            },
+            {
+                "hash": "#spa startup/develop_a_skylark_application",
+                "type": "h2",
+                "title": "Develop a skylark application",
+                "id": "develop_a_skylark_application",
+                "children": [
+                {
+                    "hash": "#spa startup/decide_folder_structure",
+                    "type": "h3",
+                    "title": "decide Folder structure",
+                    "id": "decide_folder_structure"
+                },
+                {
+                    "hash": "#spa startup/configure_the_applicattion",
+                    "type": "h3",
+                    "title": "configure the applicattion",
+                    "id": "configure_the_applicattion"
+                },
+                {
+                    "hash": "#spa startup/create_layout_html",
+                    "type": "h3",
+                    "title": "create layout html",
+                    "id": "create_layout_html"
+                },
+                {
+                    "hash": "#spa startup/coding_startup_script",
+                    "type": "h3",
+                    "title": "coding startup script",
+                    "id": "coding_startup_script"
+                },
+                {
+                    "hash": "#spa startup/coding_route_controller",
+                    "type": "h3",
+                    "title": "coding route controller",
+                    "id": "coding_route_controller"
+                },
+                {
+                    "hash": "#spa startup/coding_plugin_controller",
+                    "type": "h3",
+                    "title": "coding plugin controller",
+                    "id": "coding_plugin_controller"
+                }]
+            }]
+        }
+    },
+    {
+        "name": "use router framework alone",
+        "parent": "/guide/Single Page Application",
+        "path": "/guide/Single Page Application/use router framework alone.sdoc.html",
+        "structure":
+        {
+            "hash": "#use router framework alone/use_router_framework_alone",
+            "type": "h1",
+            "title": "use router framework alone",
+            "id": "use_router_framework_alone",
+            "children": [
+            {
+                "hash": "#use router framework alone/usage",
+                "type": "h2",
+                "title": "Usage",
+                "id": "usage",
+                "children": []
+            },
+            {
+                "hash": "#use router framework alone/hooker",
+                "type": "h2",
+                "title": "Hooker",
+                "id": "hooker",
+                "children": []
+            },
+            {
+                "hash": "#use router framework alone/select_engine",
+                "type": "h2",
+                "title": "Select engine",
+                "id": "select_engine",
+                "children": []
+            },
+            {
+                "hash": "#use router framework alone/example",
+                "type": "h2",
+                "title": "Example",
+                "id": "example",
+                "children": []
+            },
+            {
+                "hash": "#use router framework alone/extends",
+                "type": "h2",
+                "title": "Extends",
+                "id": "extends",
+                "children": []
+            }]
+        }
+    }
+    ],
+    "folders": []
+}]

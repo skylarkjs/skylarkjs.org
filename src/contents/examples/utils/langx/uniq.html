@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylark"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <h4>Example : Removes any duplicate elements from the array.</h4>
+    Is [1,2,2,3,3,4,4,5] an Array  <span>uniq </span>
+    <input></input>
+    <script>
+    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+        var text = langx.uniq("1,2,2,3,3,4,4,5");
+        datax.val(finder.find("input"),text)
+    });
+    </script>
+</body>
+
+</html>

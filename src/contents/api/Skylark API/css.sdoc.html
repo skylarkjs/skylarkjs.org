@@ -1,0 +1,252 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#createstylesheet">.createStyleSheet</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#loadstylesheet">.loadStyleSheet</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#deletesheetrule">.deleteSheetRule</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#deleterule">.deleteRule</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#removestylesheet">.removeStyleSheet</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#insertrule">.insertRule</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#insertsheetrule">.insertSheetRule</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="css">css</h1>
+    <div class="level1">
+        <p>
+            This module contains some methods related to stylesheet and css rule.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="createstylesheet">.createStyleSheet()</h2>
+    <div class="level2">
+        <p>
+            <blockquote >css.createStyleSheet(cssText)</blockquote>
+        </p>
+        <p>
+            Create a stylesheet with css text and add to the document.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            An id identifing the created stylesheet.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> cssText
+                    <br> TYPE : String
+                    <br> The css text of the stylesheet. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit3" id="loadstylesheet">.loadStyleSheet()</h2>
+    <div class="level2">
+        <blockquote>
+            css.loadStyleSheet(url, loadedCallback, errorCallback)
+        </blockquote>
+        <p>
+            Create a stylesheet from a url and add to the document.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            An id identifing the created stylesheet.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> url
+                    <br> The stylesheet file url. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> loadedCallback
+                    <br> A callback function when the stylesheet is loaded successful. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> errorCallback
+                    <br> A callback function when the stylesheet fails to load. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit4" id="deletesheetrule">.deleteSheetRule()</h2>
+    <div class="level2">
+        <blockquote>
+            css.deleteSheetRule(sheetId, rule)
+        </blockquote>
+        <p>
+            Remove a rule from the specified stylesheet.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            The css module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> sheetId
+                    <br> TYPE: Number
+                    <br> Id identifing the target stylesheet. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> rule
+                    <br> TYPE: Number or CSSRule
+                    <br> The rule to be removed. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit5" id="deleterule">.deleteRule()</h2>
+    <div class="level2">
+        <blockquote>
+            css.deleteRule(rule)
+        </blockquote>
+        <p>
+            Remove a rule from the default stylesheet.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            The css module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> rule
+                    <br> TYPE: Number or CSSRule
+                    <br> The rule to be removed. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit6" id="removestylesheet">.removeStyleSheet()</h2>
+    <div class="level2">
+        <blockquote>
+            css.removeStyleSheet(sheetId)
+        </blockquote>
+        <p>
+            Remove the specified stylesheet from the document.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            The css module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> sheetId
+                    <br> TYPE: Number
+                    <br> Id identifing the target stylesheet. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit7" id="insertrule">.insertRule()</h2>
+    <div class="level2">
+        <blockquote>
+            css.insertRule(selector, css, index)
+        </blockquote>
+        <p>
+            Add a rule to the default stylesheet.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            The css module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> selector
+                    <br> TYPE: String
+                    <br> selector of the rule to be inserted. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> css
+                    <br> TYPE: String
+                    <br> css properties of the rule to be inserted. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> index
+                    <br> TYPE: Number
+                    <br> the position in the stylesheet to insert at, </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit8" id="insertsheetrule">.insertSheetRule()</h2>
+    <div class="level2">
+        <blockquote>
+            css.insertSheetRule(sheetId, selector, css, index)
+        </blockquote>
+        <p>
+            Add a rule to the specified stylesheet.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            The css module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> sheetId
+                    <br> TYPE: Number
+                    <br> Id identifing the target stylesheet. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> selector
+                    <br> TYPE: String
+                    <br> selector of the rule to be inserted. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> css
+                    <br> TYPE: String
+                    <br> css properties of the rule to be inserted. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> index
+                    <br> TYPE: Number
+                    <br> the position in the stylesheet to insert at, </div>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

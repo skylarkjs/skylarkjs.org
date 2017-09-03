@@ -1,0 +1,81 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->   
+     <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+             <li class="level1">
+                    <div class="li"><a href="#use_vme">use vme</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#usage">Usage</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#extends">Extends</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="use_vme">use vme</h1>
+    <div class="level1">
+        <p>
+            The skylark/vme module implemented VisuleElement type for wrapping a visual dom node.
+        </p>
+        <p>
+            VisualElment provides a number of methods encapsulated from the basic utility module function and supports chain calls.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="usage">Usage</h2>
+    <div class="level2">
+        <p>
+            <em class="u">Refence vme module object</em>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+define(["skylark/vme"],function(vme){    
+});      
+OR   
+requre(["skylark/vme"],function(vme){    
+});  </pre>
+        <p>
+            <em class="u">Get a VisualElement object from id</em>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+var ve = vme("id11");    </pre>
+        <p>
+            <em class="u">Get a VisualElement object from dom node</em>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+var ve = vme(document.getElementById("id11"));   </pre>
+        <p>
+            <em class="u">Get a VisualElement object from selector</em>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+var ve = vme.find(".cls1 .cls2");    </pre>
+        <p>
+            <em class="u">Chains call</em>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+ve.removeClass("cls1").addClass("cls2 cls3")     </pre>
+    </div>
+    <h2 class="sectionedit3" id="extends">Extends</h2>
+    <div class="level2">
+        <p>
+            The VisualElement type is exposed on vme.VisualElement, you can extend it with adding new prototype method or static method.
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+define(["skylark/utils","skylark/vme"],function(utils,vme){      
+  vme.VisualElement.partial({    
+    newProp1 : "value1",     
+    newMethod1 : function() {}   
+  });    
+});      
+OR   
+define(["skylark/utils","skylark/vme"],function(utils,vme){      
+  vme.VisualElement.prototype.newProp1 = "value1";   
+  vme.VisualElement.prototype.newMethod1 = function() {};    
+});      </pre>
+    </div>
+    <!-- wikipage stop -->
+</div>
