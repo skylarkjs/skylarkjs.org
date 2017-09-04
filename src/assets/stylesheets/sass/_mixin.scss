@@ -98,6 +98,96 @@
         overflow-x: hidden;
         z-index: 10;
     }
+    .entities {
+        padding: 20px;
+        >ul {
+            padding: 0;
+        }
+
+        .folder-entity.root {
+            font-size: 0.9em;
+            font-weight: bolder;
+            color: #5bc0de;
+        }
+
+        .folder-entity.sub {
+            font-size: 0.9em;
+            font-weight: bolder;
+        }
+
+        .file-entity {
+            font-size: 0.85em;
+        }
+        .section-entity.root {
+            font-weight: bolder;
+        }
+        .sections.menu-root {
+            .section-entity {
+                font-style: normal;
+            }
+        }
+        .sections.menu-sub {
+            .section-entity {
+                font-style: oblique;
+            }
+        }
+        .section-entity {
+            font-size: 0.8em;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            line-height: 1.5em;
+            padding-left: 1em;
+            outline-style: none;
+        }
+        .side-link {
+            padding: 0 5px;
+            display: flex;
+            &:hover {
+                background-color: #d9edf7;
+            }
+            a {
+                display: inline-block;
+                flex: 1;
+                text-decoration: none;
+                color: #34495e;
+            }
+            i {
+                font-size: 1rem;
+                width: 10px;
+                padding-top: 4px;
+            }
+        }
+        .active {
+            &>.side-link {
+                background-color: #d9edf7;
+                i {
+                    padding-left: 2px;
+                    transform: rotateZ(90deg);
+                    transition: transform .3s;
+                }
+            }
+            &>a {
+                i {
+                    padding-left: 2px;
+                    transform: rotateZ(90deg);
+                    transition: transform .3s;
+                }
+            }
+        }
+        li {
+            cursor: pointer;
+            margin-top: 0.5em;
+            list-style-type: none;
+            cursor: pointer;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    }
     .sidebar-close-btn {
         padding-bottom: 5px;
         padding-right: 20px;

@@ -26,7 +26,7 @@ define([
                 (new Date()).getFullYear() +
                 "  <a href='http://www.hudaokeji.com'>Hudaokeji Co.,Ltd.</a> <br> powered by the skylark.js singe page application framework!"
             );
-            if (isMobile()) noder.reverse($("#second-feature")[0]);
+            // if (isMobile()) noder.reverse($("#second-feature")[0]);
             $(document.body).addClass("home-page");
         },
         exited: function() {
