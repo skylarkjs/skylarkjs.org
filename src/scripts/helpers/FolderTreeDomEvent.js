@@ -52,74 +52,68 @@ define([
                         }
                         this.clickTree[path] = {
                             type: "root",
+                            path: path,
                             currentSub: {
-                                selector: firstFolderS,
-                                file: firstFileS.find(".file-entity:first")
+                                selector: firstFolderS
                             }
                         }
+                        parent.find(".files:first").removeClass("hide");
                     }
                     this._setFolderActive(parent);
-                    parent.find(".files:first").removeClass("hide");
                     this._setFolderActive(this.clickTree[path].currentSub.selector);
-                    this.selectFile(this.clickTree[path].currentSub.file, args);
-                    if (args.section) {
-                        if (this.clickTree[path].currentSub.section) {
-                            this.selectSection(this.clickTree[path].currentSub.section, args);
-                        } else {
-                            window._goTop();
-                        }
+                    if (this.clickTree[path].currentSub.file) {
+                        this.selectFile(this.clickTree[path].currentSub.file.selector, args, true);
+                    } else {
+                        this.selectFile(firstFileS.find(".file-entity:first"), args);
                     }
                 } else {
                     var parentPath = path.replace(path.replace(/^.*[\\\/]/, ''), "").slice(0, -1);
                     // 显示该folder中第一个file的内容
-                    var sub = this.clickTree[parentPath].currentSub;
+                    var prevSub = this.clickTree[parentPath].currentSub;
                     // 隐藏二级folder中active的folder
-                    this._setFolderUnActive(sub.selector);
-                    sub = this.clickTree[parentPath].currentSub = {
+                    this._setFolderUnActive(prevSub.selector);
+                    var sub = this.clickTree[parentPath].currentSub = {
                         type: "sub",
                         selector: parent,
-                        file: parent.find(".file-entity:first")
                     };
                     // 显示点击folder的内容
                     this.currentRootPath = parentPath;
                     this._setFolderActive(sub.selector);
-                    this.selectFile(sub.file, args);
-                    if (args.section && sub.section) this.selectSection(sub.section, args);
+                    var reg = new RegExp("^" + path);
+                    if (prevSub.file && prevSub.file.filePath.match(reg)) {
+                        this.selectFile(prevSub.file.selector, args);
+                    } else {
+                        this.selectFile(parent.find(".file-entity:first"), args);
+                    }
+                    sub.prevFile = prevSub.file;
                 }
             }
         },
-        // selectFolder: function(target, args) {
-        //     // 不够严谨，目前只适用于单层folder，多层folder会有问题
-        //     // 实现的功能是点击当前folder隐藏上次展看的folder
-        //     // 当上次与当前点击的是同一个folder，这个folder也会被折叠
-        //     // 多层次folder需要记录层级结构
-        //     var parent = $(target.parent().parent()),
-        //         data = target.data(),
-        //         path = data.path,
-        //         matchPath = function(p1, p2) {
-        //             return p1.match(new RegExp(p2)) || p2.match(new RegExp(p1));
-        //         };
-        //     if (this.currentFolder && !matchPath(path, this.currentFolderPath)) {
-        //         this._setFolderActive(this.currentFolder);
-        //     }
-        //     this.currentFolder = parent;
-        //     this._setFolderActive(this.currentFolder);
-        //     this.currentFolderPath = path;
-        //     this.selectFile(parent.find(".files .file-entity:first"), args);
-        //     if (args.onFolder) args.onFolder(target);
-        // },
-        selectFile: function(target, args) {
+        selectFile: function(target, args, selectFileOnly) {
             if (target.length === 0) return;
-            var data = target.data();
-            if (this.activeItem) $(this.activeItem).removeClass("active");
+            var self = this;
+            this._toggleCurrentFileS();
             if (this.currentFile) $(this.currentFile).removeClass("active");
-            this.currentFile = $(target.parent());
-            this._updateClickTreeFile(target);
-            if (this.currentFile) this.currentFile.addClass("active");
-            this.currentFilePath = data.path;
-            if (args.onFile) args.onFile(target);
-            this.activeItem = this.currentFile;
+            this.currentFile = $(target.parent().parent());
+            this.currentFile.addClass("active");
+            this._toggleCurrentFileS();
+            if (selectFileOnly) return args.onFile(target, function() {
+                var sub = self.clickTree[self.currentRootPath].currentSub;
+                if(sub.file.section) {
+                    self.selectSection(sub.file.section, args);
+                } else {
+                    window._goTop();
+                }
+                sub.file.selector.parent().addClass("active");
+            });
+            var data = target.data();
             this.hideContent();
+            if (args.onFile) args.onFile(target, function() {
+                self._updateClickTreeFile(target, args);
+            });
+        },
+        _toggleCurrentFileS: function() {
+            if (this.currentFile) this.currentFile.find(">.sections").toggleClass("hide");
         },
 
         selectSection: function(target, args) {
@@ -137,20 +131,58 @@ define([
         },
 
         setSectionActived: function(target) {
-            if (this.activeItem) $(this.activeItem).removeClass("active");
             if (this.currentSection) $(this.currentSection).removeClass("active");
-            this.currentSection = $(target.parent());
+            this.currentSection = $(target.parent().parent());
             this.currentSection.addClass("active");
             this._updateClickTreeSection(target);
-            this.activeItem = this.currentSection;
         },
 
-        _updateClickTreeFile: function(file) {
-            this.clickTree[this.currentRootPath].currentSub.file = file;
+        _updateClickTreeFile: function(file, args) {
+            var sub = this.clickTree[this.currentRootPath].currentSub;
+            // sub.file = null第一次进入不需要管
+            if (args.section && sub.file) {
+                if (sub.file.filePath === file.data().path) {
+                    // 点击相同file
+                    if (sub.file.section) {
+                        this.selectSection(sub.file.section, args);
+                    } else {
+                        window._goTop();
+                    }
+                    file.parent().parent().find(".sections:first").toggleClass("hide");
+                } else {
+                    if (sub.prevFile && sub.prevFile.filePath === file.data().path) {
+                        // 再次点击上一次file，选中上一次file中保存的section
+                        if (sub.prevFile.section) {
+                            this.selectSection(sub.prevFile.section, args);
+                        }
+                        sub.prevFile = sub.file;
+                        sub.file = {
+                            selector: file,
+                            section: sub.file.section,
+                            filePath: file.data().path
+                        };
+                    } else {
+                        window._goTop();
+                        sub.prevFile = sub.file;
+                        sub.file = {
+                            selector: file,
+                            filePath: file.data().path
+                        };
+                    }
+                }
+            } else {
+                window._goTop();
+                file.parent().parent().find(".sections:first").removeClass("hide");
+                sub.prevFile = sub.file;
+                sub.file = {
+                    selector: file,
+                    filePath: file.data().path
+                };
+            }
         },
 
         _updateClickTreeSection: function(section) {
-            this.clickTree[this.currentRootPath].currentSub.section = section;
+            this.clickTree[this.currentRootPath].currentSub.file.section = section;
         },
 
         _setFolderActive: function(selector) {

@@ -62,7 +62,7 @@ define([
                 editor = baseSelector.find("#editor"),
                 args = {
                     selector: baseSelector,
-                    onFile: function(target) {
+                    onFile: function(target, callback) {
                         var data = target.data(),
                             path = data.path;
                         editor.empty();
@@ -81,6 +81,7 @@ define([
                             aceEditor.getSession().setTabSize(4);
                             aceEditor.getSession().setUseWrapMode(true);
                         }
+                        callback();
                     },
                     onFolder: function(target) {
                         if (!firstClick) {

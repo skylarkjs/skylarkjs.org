@@ -39,10 +39,11 @@ require(["skylark-all"], function() {
         "scripts/config/config",
         "jquery"
     ], function(noder, scripter, router, spa, config, $) {
-        window._goTop = function() {
+        window._goTop = function(time) {
+            time = time || 200;
             $(document.body).animate({
                 "scrollTop": 0
-            }, 200, function() {
+            }, time, function() {
                 goTopShown = false;
             });
             $(".go-top-btn").css({

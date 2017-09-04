@@ -30,11 +30,8 @@ define([
                 args = {
                     section: true,
                     currentFile: null,
-                    _toggleCurrentFile: function() {
-                        if (this.currentFile) this.currentFile.parent().parent().find(">.sections").toggleClass("hide");
-                    },
                     selector: baseSelector,
-                    onFile: function(target) {
+                    onFile: function(target, callback) {
                         var self = this,
                             data = target.data();
                         require(["text!contents" + data.path], function(tpl) {
@@ -58,11 +55,7 @@ define([
                                 });
                                 $(node).html(div);
                             });
-                            self._toggleCurrentFile();
-                            var old = this.currentFile;
-                            self.currentFile = target;
-                            self._toggleCurrentFile();
-                            window._goTop();
+                            callback();
                         });
                     },
                     onSection: function(target) {

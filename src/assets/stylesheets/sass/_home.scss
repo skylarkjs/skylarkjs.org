@@ -119,11 +119,26 @@
         @include respond-to($except-phone) {
             .features {
                 max-width: 60%;
+                .container {
+                    padding: 0 60px;
+                }
             }
         }
         @include respond-to($phone) {
             .features {
                 max-width: 100%;
+            }
+        }
+        @include respond-to($tablet-portrait) {
+            #second-feature {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+        @include respond-to($except-tablet-portrait) {
+            .feature-item {
+                display: flex;
+                align-items: center;
             }
         }
         .feature {

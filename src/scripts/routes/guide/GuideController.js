@@ -104,7 +104,7 @@ define([
                 args = this._domEvtArgs = {
                     section: true,
                     selector: baseSelector,
-                    onFile: function(target) {
+                    onFile: function(target, callback) {
                         var data = target.data();
                         require(["text!contents" + data.path], function(tpl) {
                             var content = $("<div>").attr({
@@ -129,19 +129,20 @@ define([
                             });
                             _rangeInfo = createRangeInfo();
                             evt.route._anchorData = Object.values(_heightObj);
+                            callback();
                         });
                     },
                     onSection: function(target) {
                         var data = target.data(),
                             sectionId = data.sectionId;
-                        eventer.off(window, "scroll");
+                        // eventer.off(window, "scroll");
                         if($("#" + sectionId).length) {
                             $(document.body).animate({
                                 "scrollTop": $("#" + sectionId).position().top
                             }, 200, function() {
-                                setTimeout(function() {
-                                    createWinScrollHandler(domEvt);
-                                }, 2000)
+                                // setTimeout(function() {
+                                //     createWinScrollHandler(domEvt);
+                                // }, 2000)
                             });
                         }
                     }
@@ -149,7 +150,7 @@ define([
                 domEvt = this._domEvt = new FolderTreeDomEvent(args);
             domEvt.selectFolder(baseSelector.find(".entities .folder-entity:first"), args);
             $(document.body).addClass("guide-page");
-            createWinScrollHandler(domEvt);
+            // createWinScrollHandler(domEvt);
         },
 
         searched: function(e) {

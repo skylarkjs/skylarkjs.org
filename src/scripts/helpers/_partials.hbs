@@ -13,7 +13,7 @@
                         {{#if structure}}
                             <div class="side-link"><a id="{{@root.sectionPrefix}}{{structure.id}}" data-section-id="{{structure.id}}" data-path="{{path}}" class="file-entity" href="{{structure.hash}}">{{structure.title}}</a></div>
                             {{!-- <div class="side-link"><a data-section-id="{{structure.id}}" class="root section-entity" href="{{structure.hash}}">{{structure.title}}</a></div> --}}
-                            <ul class="sections menu-root">
+                            <ul class="sections menu-root hide">
                                 {{#each structure.children}}
                                 <li>
                                      <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="sub section-entity" href="#{{id}}">{{title}}</a></div>
