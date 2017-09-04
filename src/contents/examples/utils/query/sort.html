@@ -236,10 +236,15 @@
             if (event.target === dropdown) {
                 dropdown.classList.toggle('is-opened');
             }
-
             if (event.target.classList.contains('js-dropdown-option')) {
-                dropdownValue.innerText = event.target.innerText;
+                var text = event.target.innerText;
+                dropdownValue.innerText = text;
                 dropdown.classList.remove('is-opened');
+                $('table thead tr th').each(function(index, el) {
+                    if ($(el).text() === text) {
+                        $(el).trigger("click");
+                    }
+                });
             }
         });
         // table sort

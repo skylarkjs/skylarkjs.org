@@ -63,7 +63,8 @@
                 "id": "replace_jquery",
                 "children": []
             }]
-        }
+        },
+        "iconClass": "fa fa-caret-right"
     },
     {
         "name": "use utility functions",
@@ -97,7 +98,8 @@
                 "id": "examples",
                 "children": []
             }]
-        }
+        },
+        "iconClass": "fa fa-caret-right"
     },
     {
         "name": "use vme",
@@ -125,10 +127,12 @@
                 "children": []
             }
             ]
-        }
+        },
+        "iconClass": "fa fa-caret-right"
     }
     ],
-    "folders": []
+    "folders": [],
+    "iconClass": "fa fa-caret-right"
 },
 {
     "parent": "/guide",
@@ -216,7 +220,8 @@
                     "id": "coding_plugin_controller"
                 }]
             }]
-        }
+        },
+        "iconClass": "fa fa-caret-right"
     },
     {
         "name": "use router framework alone",
@@ -264,8 +269,10 @@
                 "id": "extends",
                 "children": []
             }]
-        }
+        },
+        "iconClass": "fa fa-caret-right"
     }
     ],
-    "folders": []
+    "folders": [],
+    "iconClass": "fa fa-caret-right"
 }]

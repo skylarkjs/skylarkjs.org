@@ -18,14 +18,14 @@ define([
             mobileSidebar.start();
             var self = this;
             args.selector.find(".entities").delegate(".folder-entity", "click", function(e) {
-                self.selectFolder($(e.target), args);
+                self.selectFolder($(e.currentTarget), args);
             });
             args.selector.find(".entities").delegate(".file-entity", "click", function(e) {
-                self.selectFile($(e.target), args);
+                self.selectFile($(e.currentTarget), args);
             });
 
             args.selector.find(".entities").delegate(".section-entity", "click", function(e) {
-                self.selectSection($(e.target), args)
+                self.selectSection($(e.currentTarget), args)
             });
         },
         selectFolder: function(target, args) {
@@ -92,28 +92,20 @@ define([
         selectFile: function(target, args, selectFileOnly) {
             if (target.length === 0) return;
             var self = this;
-            this._toggleCurrentFileS();
-            if (this.currentFile) $(this.currentFile).removeClass("active");
-            this.currentFile = $(target.parent().parent());
-            this.currentFile.addClass("active");
-            this._toggleCurrentFileS();
-            if (selectFileOnly) return args.onFile(target, function() {
-                var sub = self.clickTree[self.currentRootPath].currentSub;
-                if(sub.file.section) {
-                    self.selectSection(sub.file.section, args);
-                } else {
-                    window._goTop();
-                }
-                sub.file.selector.parent().addClass("active");
-            });
-            var data = target.data();
             this.hideContent();
             if (args.onFile) args.onFile(target, function() {
-                self._updateClickTreeFile(target, args);
+                if (selectFileOnly) {
+                    var sub = self.clickTree[self.currentRootPath].currentSub;
+                    if (sub.file.section) {
+                        self.selectSection(sub.file.section, args);
+                    } else {
+                        window._goTop();
+                    }
+                    sub.file.selector.parent().parent().toggleClass("active");
+                } else {
+                    self._updateClickTreeFile(target, args);
+                }
             });
-        },
-        _toggleCurrentFileS: function() {
-            if (this.currentFile) this.currentFile.find(">.sections").toggleClass("hide");
         },
 
         selectSection: function(target, args) {
@@ -140,45 +132,60 @@ define([
         _updateClickTreeFile: function(file, args) {
             var sub = this.clickTree[this.currentRootPath].currentSub;
             // sub.file = null第一次进入不需要管
-            if (args.section && sub.file) {
-                if (sub.file.filePath === file.data().path) {
-                    // 点击相同file
-                    if (sub.file.section) {
-                        this.selectSection(sub.file.section, args);
-                    } else {
-                        window._goTop();
-                    }
-                    file.parent().parent().find(".sections:first").toggleClass("hide");
-                } else {
-                    if (sub.prevFile && sub.prevFile.filePath === file.data().path) {
-                        // 再次点击上一次file，选中上一次file中保存的section
-                        if (sub.prevFile.section) {
-                            this.selectSection(sub.prevFile.section, args);
+            if (sub.file) {
+                if (args.section) {
+                    if (sub.file.filePath === file.data().path) {
+                        // 点击相同file
+                        var parent = file.parent().parent();
+                        if (parent.hasClass("active")) {
+                            this._setFileUnActive(file, true);
+                        } else {
+                            if (sub.file.section) {
+                                this.selectSection(sub.file.section, args);
+                            } else {
+                                window._goTop();
+                            }
+                            this._setFileActive(sub, file, true);
                         }
-                        sub.prevFile = sub.file;
-                        sub.file = {
-                            selector: file,
-                            section: sub.file.section,
-                            filePath: file.data().path
-                        };
                     } else {
-                        window._goTop();
-                        sub.prevFile = sub.file;
-                        sub.file = {
-                            selector: file,
-                            filePath: file.data().path
-                        };
+                        if (sub.prevFile && sub.prevFile.filePath === file.data().path) {
+                            // 再次点击上一次file，选中上一次file中保存的section
+                            if (sub.prevFile.section) {
+                                this.selectSection(sub.prevFile.section, args);
+                            }
+                            var prevSection = sub.file.section;
+                            this._setFileActive(sub, file, true);
+                            sub.file.section = sub.file.section;
+                        } else {
+                            window._goTop();
+                            this._setFileActive(sub, file, true);
+                        }
                     }
+                } else {
+                    this._setFileActive(sub, file, false);
                 }
             } else {
-                window._goTop();
-                file.parent().parent().find(".sections:first").removeClass("hide");
-                sub.prevFile = sub.file;
-                sub.file = {
-                    selector: file,
-                    filePath: file.data().path
-                };
+                if (args.section) window._goTop();
+                this._setFileActive(sub, file, args.section);
             }
+        },
+
+        _setFileActive: function(sub, file, needSection) {
+            if (sub.file) this._setFileUnActive(sub.file.selector, needSection);
+            var parent = file.parent().parent();
+            parent.addClass("active");
+            if (needSection) parent.find(">.sections").removeClass("hide");
+            sub.prevFile = sub.file;
+            sub.file = {
+                selector: file,
+                filePath: file.data().path
+            };
+        },
+
+        _setFileUnActive: function(file, needSection) {
+            var parent = file.parent().parent();
+            parent.removeClass("active");
+            if (needSection) parent.find(">.sections").addClass("hide");
         },
 
         _updateClickTreeSection: function(section) {

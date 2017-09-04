@@ -52,7 +52,8 @@
             "parent": "/examples/utils/datax",
             "path": "/examples/utils/datax/val.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -70,7 +71,8 @@
             "parent": "/examples/utils/dnd",
             "path": "/examples/utils/dnd/droppable.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -123,7 +125,8 @@
             "parent": "/examples/utils/eventer",
             "path": "/examples/utils/eventer/shortcuts.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -226,7 +229,8 @@
             "parent": "/examples/utils/finder",
             "path": "/examples/utils/finder/siblings.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -274,7 +278,8 @@
             "parent": "/examples/utils/fx",
             "path": "/examples/utils/fx/toggle.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -382,7 +387,8 @@
             "parent": "/examples/utils/geom",
             "path": "/examples/utils/geom/width.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -550,7 +556,8 @@
             "parent": "/examples/utils/langx",
             "path": "/examples/utils/langx/upperFirst.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -567,9 +574,9 @@
             "name": "movable.nonamd",
             "parent": "/examples/utils/mover",
             "path": "/examples/utils/mover/movable.nonamd.html"
-        }
-        ],
-        "folders": []
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -692,7 +699,8 @@
             "parent": "/examples/utils/noder",
             "path": "/examples/utils/noder/wrapper.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -704,7 +712,8 @@
             "name": "sort",
             "parent": "/examples/utils/query",
             "path": "/examples/utils/query/sort.html"
-        }]
+        }],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -717,7 +726,8 @@
             "parent": "/examples/utils/scripter",
             "path": "/examples/utils/scripter/loadJavaScript.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/utils",
@@ -770,8 +780,10 @@
             "parent": "/examples/utils/styler",
             "path": "/examples/utils/styler/isInvisible.html"
         }],
-        "folders": []
-    }]
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    }],
+    "iconClass": "fa fa-caret-right"
 },
 {
     "parent": "/examples",
@@ -806,7 +818,8 @@
             "parent": "/examples/fw/router",
             "path": "/examples/fw/router/useInternalEngine.html"
         }],
-        "folders": []
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
     },
     {
         "parent": "/examples/fw",
@@ -823,7 +836,8 @@
             "name": "sidebar",
             "parent": "/examples/fw/spa",
             "path": "/examples/fw/spa/sidebar.html"
-        }
-        ]
-    }]
+        }],
+        "iconClass": "fa fa-caret-right"
+    }],
+    "iconClass": "fa fa-caret-right"
 }]
