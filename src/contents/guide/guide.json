@@ -7,8 +7,8 @@
     "files": [
     {
         "name": "starting Skylark",
-        "parent": "/guide/starting Skylark.js",
-        "path": "/guide/starting Skylark.js/starting Skylark.sdoc.html",
+        "parent": "/guide/Starting Skylark.js",
+        "path": "/guide/Starting Skylark.js/starting Skylark.sdoc.html",
         "structure":
         {
             "hash": "#starting Skylark/starting_skylarkjs",
@@ -68,8 +68,8 @@
     },
     {
         "name": "use utility functions",
-        "parent": "/guide/starting Skylark.js",
-        "path": "/guide/starting Skylark.js/use utility functions.sdoc.html",
+        "parent": "/guide/Starting Skylark.js",
+        "path": "/guide/Starting Skylark.js/use utility functions.sdoc.html",
         "structure":
         {
             "hash": "#use utility functions/use_utility_functions",
@@ -103,8 +103,8 @@
     },
     {
         "name": "use vme",
-        "parent": "/guide/starting Skylark.js",
-        "path": "/guide/starting Skylark.js/use vme.sdoc.html",
+        "parent": "/guide/Starting Skylark.js",
+        "path": "/guide/Starting Skylark.js/use vme.sdoc.html",
         "structure":
         {
             "hash": "#use vme/use_vme",
