@@ -8,15 +8,16 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 
 var src = [util.assetSrc + 'stylesheets/sass/**/*.scss'];
+gutil.log('The env is : ', gutil.colors.magenta((util.isProd()) ? '"prod"' : '"dev"'));
 
 module.exports = function() {
 
     return gulp.src(src)
         .pipe(sourcemaps.init())
-        .pipe(sass({
+        .pipe(sass(util.isProd() ? {
             outputStyle: 'compressed'
-        }).on('error', sass.logError))
-        .pipe(rename("main.min.css"))
+        } : {}).on('error', sass.logError))
+        .pipe(util.isProd() ? rename("main.min.css") : gutil.noop())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(util.assetDest + "assets/stylesheets"));
 };

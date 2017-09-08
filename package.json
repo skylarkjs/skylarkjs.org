@@ -20,7 +20,10 @@
   "author": "Hudaokeji Co.,Ltd",
   "license": "MIT",
   "bugs": "https://github.com/skylarkjs/skylarkjs.org/issues",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-ignore": "^2.0.2",
+    "gulp-livereload": "^3.8.1"
+  },
   "devDependencies": {
     "del": "^1.2.1",
     "gulp": "^3.9.0",

@@ -97,33 +97,33 @@
             Refence a module object, take skylark/geom、skylark/finder and skylark/styler an example.
         </p>
         <pre class="code  _doc-code_ code-type-js">
-define([ 
-    "skylark/geom", 
-    "skylark/finder", 
-    "skylark/styler" 
-],function(geom,finder,styler){ 
-}); 
-OR 
-requre([ 
-    "skylark/geom", 
-    "skylark/finder", 
-    "skylark/styler" 
-],function(geom,finder,styler) { 
+define([
+    "skylark/geom",
+    "skylark/finder",
+    "skylark/styler"
+],function(geom,finder,styler){
+});
+OR
+requre([
+    "skylark/geom",
+    "skylark/finder",
+    "skylark/styler"
+],function(geom,finder,styler) {
 }); </pre>
         <p>
             use function, to get the position of the element on the page as an example.
             <br>
         </p>
         <pre class="code  _doc-code_ code-type-js">
-  var el = finder.find(".target:first"); 
-  if (el) { 
-    var p = geom.pagePosition(el); 
-    p.left = p.left + 10; 
-    p.top = p.top + 30; 
-    styler.css(el,{ 
-      position : "absoute" 
-    }); 
-    geom.pagePosition(el,p);   
+  var el = finder.find(".target:first");
+  if (el) {
+    var p = geom.pagePosition(el);
+    p.left = p.left + 10;
+    p.top = p.top + 30;
+    styler.css(el,{
+      position : "absoute"
+    });
+    geom.pagePosition(el,p);
   } </pre>
     </div>
     <h2 class="sectionedit4" id="examples">Examples</h2>

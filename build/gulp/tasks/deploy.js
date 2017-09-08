@@ -11,11 +11,11 @@ module.exports = function() {
     });
     del.sync([util.apacheDeploy + '/**/*', '!' + util.apacheDeploy + "/"], {
         force: true
-    });    	
-    
-    gulp.src(util.dest + '**//*')
+    });
+
+    gulp.src(util.dest + '**/*')
         .pipe(gulp.dest(util.nodeDeploy));
-    gulp.src(util.dest + '**//*')
+    gulp.src(util.dest + '**/*')
         .pipe(gulp.dest(util.apacheDeploy));
 
 };

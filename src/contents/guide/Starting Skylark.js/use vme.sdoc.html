@@ -1,5 +1,5 @@
 <div class="page group" style="min-height: 198px;">
-    <!-- wikipage start -->   
+    <!-- wikipage start -->
      <!-- TOC START -->
     <div id="dw__toc">
         <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
@@ -33,10 +33,10 @@
             <em class="u">Refence vme module object</em>
         </p>
         <pre class="code  _doc-code_ code-type-js">
-define(["skylark/vme"],function(vme){    
-});      
-OR   
-requre(["skylark/vme"],function(vme){    
+define(["skylark/vme"],function(vme){
+});
+OR
+requre(["skylark/vme"],function(vme){
 });  </pre>
         <p>
             <em class="u">Get a VisualElement object from id</em>
@@ -65,16 +65,16 @@ ve.removeClass("cls1").addClass("cls2 cls3")     </pre>
             The VisualElement type is exposed on vme.VisualElement, you can extend it with adding new prototype method or static method.
         </p>
         <pre class="code  _doc-code_ code-type-js">
-define(["skylark/utils","skylark/vme"],function(utils,vme){      
-  vme.VisualElement.partial({    
-    newProp1 : "value1",     
-    newMethod1 : function() {}   
-  });    
-});      
-OR   
-define(["skylark/utils","skylark/vme"],function(utils,vme){      
-  vme.VisualElement.prototype.newProp1 = "value1";   
-  vme.VisualElement.prototype.newMethod1 = function() {};    
+define(["skylark/utils","skylark/vme"],function(utils,vme){
+  vme.VisualElement.partial({
+    newProp1 : "value1",
+    newMethod1 : function() {}
+  });
+});
+OR
+define(["skylark/utils","skylark/vme"],function(utils,vme){
+  vme.VisualElement.prototype.newProp1 = "value1";
+  vme.VisualElement.prototype.newMethod1 = function() {};
 });      </pre>
     </div>
     <!-- wikipage stop -->

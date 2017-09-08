@@ -22,9 +22,9 @@ define([
             if (pjs) pjs.fn.vendors.stopAnimation();
             var id = "particles"
             pjs = particles(id);
-            $(".footer").html("Copyright © 2016-" +
+            $(".footer").html("<div>Copyright © 2016-" +
                 (new Date()).getFullYear() +
-                "  <a href='http://www.hudaokeji.com'>Hudaokeji Co.,Ltd.</a> <br> powered by the skylark.js singe page application framework!"
+                "  <a href='http://www.hudaokeji.com'><img src='./assets/images/hudao-logo.png' />Hudaokeji Co.,Ltd.</a> <br> powered by the skylark.js singe page application framework!</div>"
             );
             // if (isMobile()) noder.reverse($("#second-feature")[0]);
             $(document.body).addClass("home-page");

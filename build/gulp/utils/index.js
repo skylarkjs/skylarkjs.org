@@ -1,5 +1,16 @@
 var gutil = require('gulp-util');
+var DEV = 1;
+var PROD = 2;
 
+var env = ((gutil.env.mode && gutil.env.mode.indexOf('prod') > -1) ? PROD : DEV);
+
+function isDev() {
+    return env !== PROD;
+}
+
+function isProd() {
+    return env === PROD;
+}
 
 var pkg = require('../../../package.json');
 var banner = ['/**',
@@ -13,6 +24,8 @@ var banner = ['/**',
 ].join('\n');
 
 module.exports = {
+    isProd: isProd,
+    isDev: isDev,
     src: '../src/',
     lib: '../lib/',
     dest: '../dist/',
