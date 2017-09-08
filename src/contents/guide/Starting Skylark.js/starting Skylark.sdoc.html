@@ -45,12 +45,12 @@
             <br>
         </p>
         <pre class="code  _doc-code_ code-type-text">
-|-index.html 
-`-js/ 
-  |-main.js 
-  `-lib/ 
-     `-skylark/... 
-     `-oth-amd-lib/... 
+|-index.html
+`-js/
+  |-main.js
+  `-lib/
+     `-skylark/...
+     `-oth-amd-lib/...
      |-non-amd-lib.js </pre>
     </div>
     <h2 class="sectionedit3" id="use_requirejs">use requirejs</h2>
@@ -59,18 +59,18 @@
             In index.html,you can use the RequireJS library downloaded , or use a RequireJS CDN Combination.
         </p>
         <pre class="code  _doc-code_ code-type-html">
-&lt;!DOCTYPE html&gt; 
-&lt;html&gt; 
-&lt;head&gt; 
-&lt;script type="text/javascript" data-main="./main.js"  
-        src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"&gt; &lt;/script&gt; 
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/javascript" data-main="./main.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"&gt; &lt;/script&gt;
 
-&lt;/head&gt; 
+&lt;/head&gt;
 
-&lt;body&gt; 
-&lt;/body&gt; 
+&lt;body&gt;
+&lt;/body&gt;
 
-&lt;/html&gt; 
+&lt;/html&gt;
 </pre>
     </div>
     <h2 class="sectionedit4" id="base_config">base config</h2>
@@ -79,12 +79,12 @@
             Use requirejs.config () in main.js to define skylark packages and so on.
         </p>
         <pre class="code  _doc-code_ code-type-js">
-    require.config({ 
-        baseUrl: "./", 
-        packages: [{ 
-            name: "skylark", 
-            location: "./lib/skylark" 
-        }, ] 
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "./lib/skylark"
+        }, ]
     }); </pre>
     </div>
     <h2 class="sectionedit5" id="integrate_other_libraries">Integrate other libraries</h2>
@@ -102,16 +102,16 @@
             You can use a non-AMD library, such as underscore, which follows the requirejs syntax
         </p>
         <pre class="code  _doc-code_ code-type-js">
-require.config({ 
-  shim: { 
-    underscore: { 
-      exports: '_' 
-    } 
-  } 
-  , paths: { 
-    underscore : "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min" 
-  }   
-   
+require.config({
+  shim: {
+    underscore: {
+      exports: '_'
+    }
+  }
+  , paths: {
+    underscore : "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min"
+  }
+
 }); </pre>
     </div>
     <h2 class="sectionedit8" id="replace_jquery">replace jquery</h2>

@@ -11,12 +11,12 @@
                 margin: 30px auto;
                 text-align: center;
                 .first {
-                    @include hexagon(1, #077fc3, #fff, #8395ee);
+                    @include hexagon(1, #3BAFDA, #fff, #4FC1E9);
                 }
                 .second {
                     position: relative;
                     top: -65px;
-                    @include hexagon(0.5, #fff, #2d2937, #d6e9f2);
+                    @include hexagon(0.5, #E6E9ED, #2d2937, #F5F7FA);
                 }
                 img.logo {
                     -webkit-transform: rotate(15deg) scale(1);
@@ -118,9 +118,8 @@
         }
         @include respond-to($except-phone) {
             .features {
-                max-width: 60%;
                 .container {
-                    padding: 0 60px;
+                    max-width: 900px;
                 }
             }
         }
@@ -145,6 +144,23 @@
             padding: 30px;
             margin-bottom: 20px;
             line-height: 1.42857143;
+            em {
+                padding: 0 3px;
+                color: #5bc0de;
+                font-weight: bold;
+            }
+            span {
+                font-family: cursive;
+                font-style: oblique;
+                display: inline-block;
+                color: #4e4d4d;
+                padding: 4px 0;
+                &:hover {
+                    color: #333;
+                    font-weight: bolder;
+                    font-style: normal;
+                }
+            }
             .title {
                 color: #286090;
                 text-align: center;
@@ -195,9 +211,22 @@
         }
     }
     .footer {
+        a {
+            -webkit-transition: color 0.3s linear;
+            transition: color 0.3s linear;
+            cursor: pointer;
+            color: #fff;
+            &:hover {
+                color: #5bc0de;
+                text-decoration: none;
+            }
+            img {
+                padding: 0 2px 2px 2px;
+            }
+        }
+        color: #fff;
         text-align: center;
-        background: #f2f2f2;
-        border-top: 1px solid #e4e4e4;
-        padding: 20px;
+        background: #343c40;
+        padding: 30px;
     }
 }

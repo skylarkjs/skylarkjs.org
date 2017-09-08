@@ -10,6 +10,11 @@ body {
     overflow: auto;
 }
 
+*::selection {
+    background: #00c4b6;
+    color: #f7f7f7;
+}
+
 nav.navbar {
     height: 50px;
     z-index: 40;
@@ -49,11 +54,12 @@ nav.navbar {
         }
     }
     .logo-nav {
-        padding: 0
+        padding: 10px;
     }
     img.logo {
-        display: inline;
-        padding: 10px;
+        position: relative;
+        bottom: 4px;
+        padding: 0 5px;
     }
 }
 

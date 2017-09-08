@@ -4,5 +4,7 @@ require('./gulp')([
     'src',
     'lib',
     'sass',
+    'watch',
+    'runSequence',
     'deploy'
 ]);
