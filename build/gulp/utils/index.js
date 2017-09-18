@@ -32,6 +32,8 @@ module.exports = {
     assetSrc: '../src/assets/',
     assetDest: '../dist/',
     jsDistFolders: ["../dist/", "../src/scripts/"],
+    electronPath: '../server/electron',
+    electronDeploy: '../server/electron/public',
     nodeDeploy: '../server/node/public',
     apacheDeploy: '../server/apache',
     banner: banner,

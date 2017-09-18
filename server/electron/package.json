@@ -1,0 +1,20 @@
+{
+  "name": "skylarkjs-website",
+  "version": "1.0.0",
+  "description": "skylarkjs website",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/skylarkjs/skylarkjs-website.git",
+  "keywords": [
+    "Electron",
+    "skylark",
+    "spa"
+  ],
+  "author": "hudaokeji",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}

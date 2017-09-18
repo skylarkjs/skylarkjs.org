@@ -1,0 +1,137 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#composition">Composition</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#usage">Usage</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#examples">Examples</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="use_utility_functions">use utility functions</h1>
+    <div class="level1">
+        <p>
+            The skylark javascript library provides a large number of simple but powerful utility functions, and you can use this modules separately as needed.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="composition">Composition</h2>
+    <div class="level2">
+        <p>
+            The skylark javascript library provides the following utility modules：
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> skylark/async
+                    <br> This module defines some APIs about Asynchronous function </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/browser
+                    <br> This module defines some APIs about brower compatibility. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/css
+                    <br> This module defines some APIs about stylesheet and rule. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/datax
+                    <br> This module defines some APIs wrapping DOM attribute and property. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/dnd
+                    <br> This module defines some APIs wrapping DOM drag and drop. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/eventer This module defines some APIs wrapping DOM event. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/filer
+                    <br> This module defines some APIs wrapping local file reand and write. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/finder
+                    <br> This module defines some APIs wrapping dom query. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/fx
+                    <br> This module defines some APIs wrapping DOM transition and animation. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/geom
+                    <br> This module defines some APIs wrapping DOM geometry. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/langx
+                    <br> This module defines some APIs that extend language functionality </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/mover
+                    <br> This module defines some APIs wrapping DOM move. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/noder
+                    <br> This module defines some APIs wrapping DOM construction. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/scripter
+                    <br> This module defines some APIs wrapping script load and unload. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> skylark/styler
+                    <br> This module defines some APIs wrapping dom style and class. </div>
+            </li>
+        </ol>
+    </div>
+    <h2 class="sectionedit3" id="usage">Usage</h2>
+    <div class="level2">
+        <p>
+            Refence a module object, take skylark/geom、skylark/finder and skylark/styler an example.
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+define([
+    "skylark/geom",
+    "skylark/finder",
+    "skylark/styler"
+],function(geom,finder,styler){
+});
+OR
+requre([
+    "skylark/geom",
+    "skylark/finder",
+    "skylark/styler"
+],function(geom,finder,styler) {
+}); </pre>
+        <p>
+            use function, to get the position of the element on the page as an example.
+            <br>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+  var el = finder.find(".target:first");
+  if (el) {
+    var p = geom.pagePosition(el);
+    p.left = p.left + 10;
+    p.top = p.top + 30;
+    styler.css(el,{
+      position : "absoute"
+    });
+    geom.pagePosition(el,p);
+  } </pre>
+    </div>
+    <h2 class="sectionedit4" id="examples">Examples</h2>
+    <div class="level2">
+        <p>
+            please see the examples
+            <br>
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

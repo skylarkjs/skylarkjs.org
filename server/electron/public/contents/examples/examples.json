@@ -1,0 +1,843 @@
+[
+{
+    "parent": "/examples",
+    "path": "/examples/utils",
+    "className": "root",
+    "name": "utility library",
+    "files": [],
+    "folders": [
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/datax",
+        "className": "sub",
+        "name": "datax",
+        "files": [
+        {
+            "name": "attr",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/attr.html"
+        },
+        {
+            "name": "data",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/data.html"
+        },
+        {
+            "name": "pluck",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/pluck.html"
+        },
+        {
+            "name": "prop",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/prop.html"
+        },
+        {
+            "name": "removeAttr",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/removeAttr.html"
+        },
+        {
+            "name": "removeData",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/removeData.html"
+        },
+        {
+            "name": "text",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/text.html"
+        },
+        {
+            "name": "val",
+            "parent": "/examples/utils/datax",
+            "path": "/examples/utils/datax/val.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/dnd",
+        "className": "sub",
+        "name": "dnd",
+        "files": [
+        {
+            "name": "draggable",
+            "parent": "/examples/utils/dnd",
+            "path": "/examples/utils/dnd/draggable.html"
+        },
+        {
+            "name": "droppable",
+            "parent": "/examples/utils/dnd",
+            "path": "/examples/utils/dnd/droppable.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/eventer",
+        "className": "sub",
+        "name": "eventer",
+        "files": [
+        {
+            "name": "create",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/create.html"
+        },
+        {
+            "name": "off",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/off.html"
+        },
+        {
+            "name": "on",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/on.html"
+        },
+        {
+            "name": "one",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/one.html"
+        },
+        {
+            "name": "proxy",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/proxy.html"
+        },
+        {
+            "name": "ready",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/ready.html"
+        },
+        {
+            "name": "stop",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/stop.html"
+        },
+        {
+            "name": "trigger",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/trigger.html"
+        },
+        {
+            "name": "shortcuts",
+            "parent": "/examples/utils/eventer",
+            "path": "/examples/utils/eventer/shortcuts.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/finder",
+        "className": "sub",
+        "name": "finder",
+        "files": [
+        {
+            "name": "ancestors",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/ancestors.html"
+        },
+        {
+            "name": "ancestor",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/ancestor.html"
+        },
+        {
+            "name": "byId",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/byId.html"
+        },
+        {
+            "name": "children",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/children.html"
+        },
+        {
+            "name": "closest",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/closest.html"
+        },
+        {
+            "name": "descendants",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/descendants.html"
+        },
+        {
+            "name": "descendant",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/descendant.html"
+        },
+        {
+            "name": "find",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/find.html"
+        },
+        {
+            "name": "findAll",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/findAll.html"
+        },
+        {
+            "name": "firstChild",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/firstChild.html"
+        },
+        {
+            "name": "lastChild",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/lastChild.html"
+        },
+        {
+            "name": "matches",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/matches.html"
+        },
+        {
+            "name": "nextSibling",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/nextSibling.html"
+        },
+        {
+            "name": "previousSibling",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/previousSibling.html"
+        },
+        {
+            "name": "nextSiblings",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/nextSiblings.html"
+        },
+        {
+            "name": "parent",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/parent.html"
+        },
+        {
+            "name": "previousSiblings",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/previousSiblings.html"
+        },
+        {
+            "name": "pseudos",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/pseudos.html"
+        },
+        {
+            "name": "siblings",
+            "parent": "/examples/utils/finder",
+            "path": "/examples/utils/finder/siblings.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/fx",
+        "className": "sub",
+        "name": "fx",
+        "files": [
+        {
+            "name": "animate",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/animate.html"
+        },
+        {
+            "name": "fadeIn",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/fadeIn.html"
+        },
+        {
+            "name": "fadeOut",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/fadeOut.html"
+        },
+        {
+            "name": "fadeTo",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/fadeTo.html"
+        },
+        {
+            "name": "fadeToggle",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/fadeToggle.html"
+        },
+        {
+            "name": "hide",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/hide.html"
+        },
+        {
+            "name": "show",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/show.html"
+        },
+        {
+            "name": "toggle",
+            "parent": "/examples/utils/fx",
+            "path": "/examples/utils/fx/toggle.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/geom",
+        "className": "sub",
+        "name": "geom",
+        "files": [
+        {
+            "name": "borderExtents",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/borderExtents.html"
+        },
+        {
+            "name": "boundingPosition",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/boundingPosition.html"
+        },
+        {
+            "name": "clientHeight",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/clientHeight.html"
+        },
+        {
+            "name": "boundingRect",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/boundingRect.html"
+        },
+        {
+            "name": "clientSize",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/clientSize.html"
+        },
+        {
+            "name": "contentRect",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/contentRect.html"
+        },
+        {
+            "name": "clientWidth",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/clientWidth.html"
+        },
+        {
+            "name": "getDocumentSize",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/getDocumentSize.html"
+        },
+        {
+            "name": "height",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/height.html"
+        },
+        {
+            "name": "offsetParent",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/offsetParent.html"
+        },
+        {
+            "name": "marginExtents",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/marginExtents.html"
+        },
+        {
+            "name": "paddingExtents",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/paddingExtents.html"
+        },
+        {
+            "name": "pagePosition",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/pagePosition.html"
+        },
+        {
+            "name": "pageRect",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/pageRect.html"
+        },
+        {
+            "name": "relativePosition",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/relativePosition.html"
+        },
+        {
+            "name": "relativeRect",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/relativeRect.html"
+        },
+        {
+            "name": "scrollLeft",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/scrollLeft.html"
+        },
+        {
+            "name": "scrollTop",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/scrollTop.html"
+        },
+        {
+            "name": "size",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/size.html"
+        },
+        {
+            "name": "width",
+            "parent": "/examples/utils/geom",
+            "path": "/examples/utils/geom/width.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/langx",
+        "className": "sub",
+        "name": "langx",
+        "files": [
+        {
+            "name": "camelCase",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/camelCase.html"
+        },
+        {
+            "name": "each",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/each.html"
+        },
+        {
+            "name": "deserializeValue",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/deserializeValue.html"
+        },
+        {
+            "name": "flatten",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/flatten.html"
+        },
+        {
+            "name": "inArray",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/inArray.html"
+        },
+        {
+            "name": "isArray",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isArray.html"
+        },
+        {
+            "name": "compact",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/compact.html"
+        },
+        {
+            "name": "isArrayLike",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isArrayLike.html"
+        },
+        {
+            "name": "isBoolean",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isBoolean.html"
+        },
+        {
+            "name": "funcArg",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/funcArg.html"
+        },
+        {
+            "name": "dasherize",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/dasherize.html"
+        },
+        {
+            "name": "isEmptyObject",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isEmptyObject.html"
+        },
+        {
+            "name": "isDefined",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isDefined.html"
+        },
+        {
+            "name": "isDocument",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isDocument.html"
+        },
+        {
+            "name": "isNumber",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isNumber.html"
+        },
+        {
+            "name": "isPlainObject",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isPlainObject.html"
+        },
+        {
+            "name": "isWindow",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isWindow.html"
+        },
+        {
+            "name": "isFunction",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isFunction.html"
+        },
+        {
+            "name": "makeArray",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/makeArray.html"
+        },
+        {
+            "name": "isObject",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isObject.html"
+        },
+        {
+            "name": "isString",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/isString.html"
+        },
+        {
+            "name": "mixin",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/mixin.html"
+        },
+        {
+            "name": "map",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/map.html"
+        },
+        {
+            "name": "lowerFirst",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/lowerFirst.html"
+        },
+        {
+            "name": "returnTrue",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/returnTrue.html"
+        },
+        {
+            "name": "returnFalse",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/returnFalse.html"
+        },
+        {
+            "name": "safeMixin",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/safeMixin.html"
+        },
+        {
+            "name": "toPixel",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/toPixel.html"
+        },
+        {
+            "name": "trim",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/trim.html"
+        },
+        {
+            "name": "type",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/type.html"
+        },
+        {
+            "name": "uniq",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/uniq.html"
+        },
+        {
+            "name": "upperFirst",
+            "parent": "/examples/utils/langx",
+            "path": "/examples/utils/langx/upperFirst.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/mover",
+        "className": "sub",
+        "name": "mover",
+        "files": [
+        {
+            "name": "movable",
+            "parent": "/examples/utils/mover",
+            "path": "/examples/utils/mover/movable.html"
+        },
+        {
+            "name": "movable.nonamd",
+            "parent": "/examples/utils/mover",
+            "path": "/examples/utils/mover/movable.nonamd.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/noder",
+        "className": "sub",
+        "name": "noder",
+        "files": [
+        {
+            "name": "after",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/after.html"
+        },
+        {
+            "name": "append",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/append.html"
+        },
+        {
+            "name": "clone",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/clone.html"
+        },
+        {
+            "name": "contains",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/contains.html"
+        },
+        {
+            "name": "contents",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/contents.html"
+        },
+        {
+            "name": "createElement",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/createElement.html"
+        },
+        {
+            "name": "before",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/before.html"
+        },
+        {
+            "name": "createFragment",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/createFragment.html"
+        },
+        {
+            "name": "createTextNode",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/createTextNode.html"
+        },
+        {
+            "name": "doc",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/doc.html"
+        },
+        {
+            "name": "empty",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/empty.html"
+        },
+        {
+            "name": "html",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/html.html"
+        },
+        {
+            "name": "ownerDoc",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/ownerDoc.html"
+        },
+        {
+            "name": "remove",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/remove.html"
+        },
+        {
+            "name": "replace",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/replace.html"
+        },
+        {
+            "name": "throb",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/throb.html"
+        },
+        {
+            "name": "traverse",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/traverse.html"
+        },
+        {
+            "name": "unwrap",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/unwrap.html"
+        },
+        {
+            "name": "prepend",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/prepend.html"
+        },
+        {
+            "name": "wrapperInner",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/wrapperInner.html"
+        },
+        {
+            "name": "isChildOf",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/isChildOf.html"
+        },
+        {
+            "name": "isDoc",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/isDoc.html"
+        },
+        {
+            "name": "wrapper",
+            "parent": "/examples/utils/noder",
+            "path": "/examples/utils/noder/wrapper.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/query",
+        "className": "sub",
+        "name": "query",
+        "files": [
+        {
+            "name": "sort",
+            "parent": "/examples/utils/query",
+            "path": "/examples/utils/query/sort.html"
+        }],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/scripter",
+        "className": "sub",
+        "name": "scripter",
+        "files": [
+        {
+            "name": "loadJavaScript",
+            "parent": "/examples/utils/scripter",
+            "path": "/examples/utils/scripter/loadJavaScript.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/utils",
+        "path": "/examples/utils/styler",
+        "className": "sub",
+        "name": "styler",
+        "files": [
+        {
+            "name": "hasClass",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/hasClass.html"
+        },
+        {
+            "name": "className",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/className.html"
+        },
+        {
+            "name": "addClass",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/addClass.html"
+        },
+        {
+            "name": "css",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/css.html"
+        },
+        {
+            "name": "show",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/show.html"
+        },
+        {
+            "name": "toggleClass",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/toggleClass.html"
+        },
+        {
+            "name": "hide",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/hide.html"
+        },
+        {
+            "name": "removeClass",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/removeClass.html"
+        },
+        {
+            "name": "isInvisible",
+            "parent": "/examples/utils/styler",
+            "path": "/examples/utils/styler/isInvisible.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    }],
+    "iconClass": "fa fa-caret-right"
+},
+{
+    "parent": "/examples",
+    "path": "/examples/fw",
+    "className": "root",
+    "name": "Application Framework",
+    "files": [],
+    "folders": [
+    {
+        "parent": "/examples/fw",
+        "path": "/examples/fw/router",
+        "className": "sub",
+        "name": "router",
+        "files": [
+        {
+            "name": "index.auto",
+            "parent": "/examples/fw/router",
+            "path": "/examples/fw/router/auto.html"
+        },
+        {
+            "name": "index.useHashbangEngine",
+            "parent": "/examples/fw/router",
+            "path": "/examples/fw/router/useHashbangEngine.html"
+        },
+        {
+            "name": "index.useHistoryApiEngine",
+            "parent": "/examples/fw/router",
+            "path": "/examples/fw/router/useHistoryApiEngine.html"
+        },
+        {
+            "name": "index.useInternalEngine",
+            "parent": "/examples/fw/router",
+            "path": "/examples/fw/router/useInternalEngine.html"
+        }],
+        "folders": [],
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "parent": "/examples/fw",
+        "path": "/examples/fw/spa",
+        "className": "sub",
+        "name": "spa",
+        "files": [
+        {
+            "name": "chapters",
+            "parent": "/examples/fw/spa",
+            "path": "/examples/fw/spa/chapters.html"
+        },
+        {
+            "name": "sidebar",
+            "parent": "/examples/fw/spa",
+            "path": "/examples/fw/spa/sidebar.html"
+        }],
+        "iconClass": "fa fa-caret-right"
+    }],
+    "iconClass": "fa fa-caret-right"
+}]

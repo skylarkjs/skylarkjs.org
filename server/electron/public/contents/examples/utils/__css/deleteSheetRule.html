@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylark"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <script>
+    require(["skylark/finder", "skylark/css"], function(finder, css) {
+        css.deleteSheetRule("rel");
+    });
+    </script>
+</body>
+
+</html>
