@@ -1,0 +1,655 @@
+<div class="page group" style="min-height: 187px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#overview">Overview</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#architecure">Architecure</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#application_elements">Application elements</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#front_controller_pattern">Front controller pattern</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#develop_a_skylark_application">Develop a skylark application</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#decide_folder_structure">decide Folder structure</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#configure_the_applicattion">configure the applicattion</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#create_layout_html">create layout html</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#coding_startup_script">coding startup script</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#coding_route_controller">coding route controller</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#coding_plugin_controller">coding plugin controller</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="develop_single_page_application">develop single page application</h1>
+    <div class="level1">
+        <p>
+            The skylark/spa module provides a sophisticated html5 single application framework.
+        </p>
+    </div>
+    <div class="secedit editbutton_section editbutton_1">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[develop single page application] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="17-151">
+            </div>
+        </form>
+    </div>
+    <h2 class="sectionedit2" id="overview">Overview</h2>
+    <div class="level2">
+        <p>
+            <em class="u"><strong>what is a single page application</strong></em>
+            <br>
+        </p>
+        <p>
+            A single-page application (SPA) is a web application or web site that fits on a single web page.
+            <br>the application runs within an&nbsp;html document, and different views are rendered within same html document.
+        </p>
+        <p>
+            In a SPA, either all necessary code –
+            <abbr title="HyperText Markup Language">HTML</abbr>, JavaScript, and
+            <abbr title="Cascading Style Sheets">CSS</abbr> – is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does control transfer to another page, although the location hash or the HTML5 History
+            <abbr title="Application Programming Interface">API</abbr> can be used to provide the perception and navigability of separate logical pages in the application.
+        </p>
+        <p>
+            <em class="u"><strong>Lifecycle of a Single Page Application</strong></em>
+            <br>
+        </p>
+        <p>
+            Lifecycle of a Single Page Application is follows:
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> An appliation is identified by a base url
+                    <br> Base
+                    <abbr title="Uniform Resource Locator">URL</abbr> is the part before “#” if location hash is used, or root part of url if html5 api is used </div>
+            </li>
+            <li class="level1">
+                <div class="li"> Application launches when on entering this url in address bar. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> The part after base url changes with views. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> When base url part changes, application is destroyed. </div>
+            </li>
+        </ol>
+        <p>
+            <em class="u"><strong>Routes and Views</strong></em>
+            <br> In context of a single page app, route is the part after “#!”(if location hash is used) or base url (if html5 api is used) in address bar.
+            <br>Each route represents a view.
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> “/”
+                    <br> represents home/default view </div>
+            </li>
+            <li class="level1">
+                <div class="li"> “/section1”
+                    <br> show section view </div>
+            </li>
+            <li class="level1">
+                <div class="li"> “/view1?a=1&amp;b=2”
+                    <br> show view1, with argument {a: 1, b:2} </div>
+            </li>
+        </ul>
+        <p>
+            <em class="u"><strong>Cross Origin Requests (CORS or Cross origin resource sharing)</strong></em>
+        </p>
+        <p>
+            Interaction with the single page application often involves dynamic communication with the web server behind the scenes, This time Cross Origin Requests(CORS) may be used.
+        </p>
+        <p>
+            CORS is an ajax request to a server, other than one that served the page.browsers block such requests, unless response headers allows so.
+        </p>
+        <p>
+            “Access-Control-Allow-Origin” value in response header, determines pages from which origin(s) can access the response,if it doesn't include our current location origin, browser blocks access the response.
+        </p>
+    </div>
+    <div class="secedit editbutton_section editbutton_2">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[Overview] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="152-2305">
+            </div>
+        </form>
+    </div>
+    <h2 class="sectionedit3" id="architecure">Architecure</h2>
+    <div class="level2">
+        <p>
+            <a href="contents/guide/Single Page Application/architecure.jpg" class="media doc-img" target="_blank" title="architecure.jpg"><img src="contents/guide/Single Page Application/architecure.jpg" class="mediacenter" alt=""></a>
+        </p>
+    </div>
+    <div class="secedit editbutton_section editbutton_3">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[Architecure] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="2306-2375">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit4" id="application_elements">Application elements</h3>
+    <div class="level3">
+        <p>
+            The elements of skylark application are as follows.
+        </p>
+        <p>
+            <em class="u"><strong>Framework-side elements</strong></em>
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> Application
+                    <br> Application is the type used for a skylark single page application, and the framework automatically declares an Application variable as the instance of the application.
+                    <br> The application type is exposed on spa.Application. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> Page
+                    <br> Page is used to encapsulate the host
+                    <abbr title="HyperText Markup Language">HTML</abbr>.
+                    <br> The page type is exposed on spa.Page. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> Route
+                    <br> Route represents a viewport of the application page, and that is identified and navigated through a path.
+                    <br> The route type is exposed on sap.Route. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> Plugin
+                    <br> Plugin provides a mechanism to implement common logic not belonging to a single route view ,such as navigation menu processing.
+                    <br> The plugin type is exposed on spa.Plugin. </div>
+            </li>
+        </ol>
+        <p>
+            Only when necessary, developper can inherit these types to implement new type to extend the framework functionality.
+        </p>
+        <p>
+            <em class="u"><strong>Development-side elements</strong></em>
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> index.html
+                    <br> index.html is the host
+                    <abbr title="HyperText Markup Language">HTML</abbr> where the application runs, and the name can be freely defined.
+                    <br> The index.html can be an empty
+                    <abbr title="HyperText Markup Language">HTML</abbr> file, the developer can also directly define the basic layout of the application in this file. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> Controller
+                    <br> Controllers are the active parts of a skylark single page application. They define how the user can interact with the skylark application.
+                    <br> The data that a controller can access is defined in the corresponding context, Different instances of controllers and contexts exist within a skylark application.
+                    <br> Controllers contain the process logic of a skylark application; they hold the context data and care for event handling and navigation.
+                    <br> There are four types of controllers in an ABAP Web Dynpro component. These different controller types differ in the entities they are composed of: </div>
+                <ol>
+                    <li class="level2">
+                        <div class="li"> Route Controller
+                            <br> Each route consists of the route config and exactly one route controller. route events are sent to the corresponding routing controller for processing.
+                            <br> route events are follows : </div>
+                        <ul>
+                            <li class="level3">
+                                <div class="li"> entering
+                                    <br> The route will be entered </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> rendering
+                                    <br> The route needs to render the view </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> entered
+                                    <br> The route has been entered </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> exiting
+                                    <br> The route will be exited </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> exited
+                                    <br> The route has been exited </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> Plugin Controller
+                            <br> Each plugin consists of the plugin config and exactly one route controller. global events are sent to the corresponding routing controller for processing.
+                            <br> Global events are follows : </div>
+                        <ul>
+                            <li class="level3">
+                                <div class="li"> starting
+                                    <br> The application is starting. </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> routing
+                                    <br> The application is changing current route. </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> routed
+                                    <br> The application has changed current route. </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li class="level1">
+                <div class="li"> config.js
+                    <br> The config.js configuration file defines the entire composition of a skylark application, such as: </div>
+                <ul>
+                    <li class="level2">
+                        <div class="li"> name and title </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> base
+                            <abbr title="Uniform Resource Locator">URL</abbr>
+                        </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> route define </div>
+                        <ul>
+                            <li class="level3">
+                                <div class="li"> pathto </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> controller </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> plugin define </div>
+                        <ul>
+                            <li class="level3">
+                                <div class="li"> hookers </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> controller </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div class="secedit editbutton_section editbutton_4">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[Application elements] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="2376-5317">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit5" id="front_controller_pattern">Front controller pattern</h3>
+    <div class="level3">
+        <p>
+            The front controller design pattern means that all requests or event in an application will be handled by a single handler and then dispatched to the appropriate handler for that type of request or event.&nbsp;
+            <br>Skylark application follows front controller design pattern, and in the framework the Application type serves as the front-end controller.
+            <br>The events that are processed in the Application object are only associated with route and other application-level events, not including the mouse, keyboard and other UI events.
+            <br>UI events belong to the implemation scope of the route view, Developers can integrate jquery-ui, bootstrap, backbone and other UI framework to develop skylark route view
+        </p>
+    </div>
+    <div class="secedit editbutton_section editbutton_5">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[Front controller pattern] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="5318-6057">
+            </div>
+        </form>
+    </div>
+    <h2 class="sectionedit6" id="develop_a_skylark_application">Develop a skylark application</h2>
+    <div class="level2">
+        <p>
+            Take “Chapters” as an example, let's explain how to develop a skylark single page application.
+            <br>The application contains a welcome view and three chapter views, which can be switched between different views by the navigation menu at the top of the web page.
+        </p>
+    </div>
+    <div class="secedit editbutton_section editbutton_6">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[Develop a skylark application] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="6058-6367">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit7" id="decide_folder_structure">decide Folder structure</h3>
+    <div class="level3">
+        <p>
+            First, you should decide the folder structure of the application, for example：
+        </p>
+        <pre class="code  _doc-code_ code-type-text">
+├── assets
+│   ├── images
+│   └── stylesheets
+├── index.html
+├── lib
+│   ├── skylark
+│   └── skylarkx
+└── scripts
+    ├── config
+    │   └── config.js
+    ├── helpers
+    ├── main.js
+    ├── plugins
+    │   └── navbar
+    │       └── navbar.js
+    └── routes
+        ├── home.html
+        └── home.js
+        </pre>
+    </div>
+    <div class="secedit editbutton_section editbutton_7">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[decide Folder structure] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="6368-6663">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit8" id="configure_the_applicattion">configure the applicattion</h3>
+    <div class="level3">
+        <p>
+            You need to configure the configuration file for the application.
+        </p>
+        <p>
+            <strong>config.js</strong>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+define([],function(){
+    var config = {
+        "name" : "chaptersApp",  // default:app
+        "title": "A exmaple with navbar and a welcome view and three chapter views",
+
+        "page" : {
+            "routeViewer" : "#yield"
+        },
+        "plugins" : {
+          "highlight" : {
+              hookers: "routed",
+              controller : {
+                type  : "scripts/plugins/highlight/HighlightController"
+              },
+              priority : "normal"
+          }
+        },
+        "routes" : {
+          "home": {
+              pathto : "/",
+              controller : {
+                type : "scripts/routes/home/HomeController"
+              }
+          },
+          "chapter": {
+              pathto : "/chapter/:id",
+              controller : {
+                type : "scripts/routes/chapter/ChapterController"
+              }
+          }
+        }
+    };
+
+    return config;
+});
+</pre>
+    </div>
+    <div class="secedit editbutton_section editbutton_8">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[configure the applicattion] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="6664-7639">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit9" id="create_layout_html">create layout html</h3>
+    <div class="level3">
+        <p>
+            create the host html file, and define the base layout for the application.
+        </p>
+        <p>
+            <em class="u"><strong>index.html</strong></em>
+        </p>
+        <pre class="code  _doc-code_ code-type-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang="en"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;spa&lt;/title&gt;
+    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js" data-main="./scripts/main.js"&gt;&lt;/script&gt;
+
+    &lt;link rel="stylesheet" href="./assets/css/main.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div id="chapter"&gt;
+    &lt;nav&gt;
+        &lt;a href="javascript:go('/')"&gt;Home&lt;/a&gt;
+        &lt;a href="javascript:go('/chapter/1')"&gt;Chapter 1&lt;/a&gt;
+        &lt;a href="javascript:go('/chapter/2')"&gt;Chapter 2&lt;/a&gt;
+        &lt;a href="javascript:go('/chapter/3')"&gt;Chapter 3&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;div id="yield"&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+        A skylark single page application example, the application contains a welcome screen and three chapter views, which can be switched between different views  by the navigation menu at the top of the web page.
+    &lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+    <div class="secedit editbutton_section editbutton_9">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[create layout html] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="7640-8687">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit10" id="coding_startup_script">coding startup script</h3>
+    <div class="level3">
+        <p>
+            You needs to create startup script for the application.
+        </p>
+        <p>
+            <em class="u"><strong>main.js</strong></em>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+require.config({
+    baseUrl: "./",
+    packages: [
+        { name: "skylark", location: "../../../src/skylark" }
+    ],
+    paths: {
+        "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text"
+    }
+});
+
+require([
+    "skylark/spa",
+    "scripts/config"
+], function(spa, config) {
+    var app = spa(config);
+
+    window.go = function(path) {
+        app.go(path);
+    };
+
+    app.prepare().then(function() {
+        app.run();
+    });
+});
+        </pre>
+    </div>
+    <div class="secedit editbutton_section editbutton_10">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[coding startup script] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="8688-9250">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit11" id="coding_route_controller">coding route controller</h3>
+    <div class="level3">
+        <p>
+            You need to create a controller class for each route(view).
+        </p>
+        <p>
+            The following plugin generates a different view rendering based on the path parameters.
+        </p>
+        <p>
+            <em class="u"><strong>ChapterController.js</strong></em>
+        </p>
+        <pre class="code  _doc-code_ code-type-js">
+define([
+    "skylark/spa",
+    "skylark/query",
+    "text!./templates/chapter1.html",
+    "text!./templates/chapter2.html",
+    "text!./templates/chapter3.html"
+], function(spa, $, tpl1, tpl2, tpl3) {
+    return spa.RouteController.inherit({
+        klassName: "ChapterController",
+
+        prepare: function() {
+            //return this.overrided();
+        },
+
+        rendering: function(e) {
+            var html;
+            switch (e.context.params.id) {
+                case "1":
+                    html = tpl1;
+                    break;
+                case "2":
+                    html = tpl2;
+                    break;
+                case "3":
+                    html = tpl3;
+                    break;
+                default:
+                    html = "";
+                    break;
+            }
+            e.content = html;
+        },
+
+        exiting: function(e) {
+            var field = $('[name="field"]').val();
+            if (field) {
+                var ret = confirm('Are you sure you want to quit this chapter ?');
+                if (!ret) {
+                    e.result = false;
+                }
+            }
+        }
+    });
+});
+        </pre>
+    </div>
+    <div class="secedit editbutton_section editbutton_11">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[coding route controller] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="9251-10598">
+            </div>
+        </form>
+    </div>
+    <h3 class="sectionedit12" id="coding_plugin_controller">coding plugin controller</h3>
+    <div class="level3">
+        <p>
+            If you have a plugin, you need to create a plugin controller.
+        </p>
+        <p>
+            The following plugin implements the function that automatically highlights the menu corresponding to the current view when the view changes.
+        </p>
+        <p>
+            <em class="u"><strong>HighlightController</strong></em>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+define([
+    "skylark/spa",
+    "skylark/query"
+], function(spa, $, tpl) {
+    return spa.PluginController.inherit({
+        klassName: "HighlightController",
+
+        prepare: function() {},
+
+        routed: function(e) {
+            var links = $("a.active");
+            links.removeClass("active");
+            links = $("a[href*=\"'" + e.current.path + "'\"]");
+            links.addClass("active");
+            links[0].focus();
+        }
+    });
+});
+        </pre>
+    </div>
+    <div class="secedit editbutton_section editbutton_12">
+        <form class="button btn_secedit" method="post" action="/doku.php/16/26/16/16/76/46/76">
+            <div class="no">
+                <input type="hidden" name="do" value="edit">
+                <input type="hidden" name="rev" value="1502430907">
+                <input type="hidden" name="summary" value="[coding plugin controller] ">
+                <input type="hidden" name="target" value="section">
+                <input type="hidden" name="range" value="10599-">
+            </div>
+        </form>
+    </div>
+    <!-- wikipage stop -->
+</div>

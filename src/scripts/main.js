@@ -11,13 +11,15 @@ require.config({
     }],
 
     paths: {
-        "skylark-all": "lib/skylark/skylark-all.min",
+        "skylark-all": "lib/skylarkjs-all.min",
+        "skylark-utils": "http://registry.skylarkjs.org/packages/skylark-utils/v0.9.0/skylark-utils",
+        "skylark-router": "http://registry.skylarkjs.org/packages/skylark-router/v0.9.0/skylark-router",
         "caret": "https://cdn.bootcss.com/Caret.js/0.3.1/jquery.caret",
         "atwho": "https://cdn.bootcss.com/at.js/1.5.4/js/jquery.atwho",
-        "bootstrap": "https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap",
+        "bootstrap": "https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min",
         "handlebars": "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.amd.min",
         "jotted": "https://cdn.jsdelivr.net/jotted/1.5.1/jotted.min",
-        "jquery": "lib/skylark-jquery/skylark-jquery-all.min",
+        "jquery": "lib/skylark-jquery-all.min",
         "particles": "lib/particles",
         "tether": "https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min",
         "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text"
@@ -32,13 +34,14 @@ require.config({
 });
 require(["skylark-all"], function() {
     require([
-        "skylark/noder",
-        "skylark/scripter",
-        "skylark/router",
+        "skylark-utils/noder",
+        "skylark-router",
         "skylark/spa",
         "scripts/config/config",
         "jquery"
-    ], function(noder, scripter, router, spa, config, $) {
+    ], function(noder, router, spa, config, $) {
+        router.useHistoryApi = false;
+        router.useHashbang = false
         window._goTop = function(time) {
             time = time || 200;
             $(document.body).animate({

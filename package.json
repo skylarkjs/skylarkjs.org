@@ -22,7 +22,8 @@
   "bugs": "https://github.com/skylarkjs/skylarkjs.org/issues",
   "dependencies": {
     "gulp-ignore": "^2.0.2",
-    "gulp-livereload": "^3.8.1"
+    "gulp-livereload": "^3.8.1",
+    "gulp-shell": "^0.6.3"
   },
   "devDependencies": {
     "del": "^1.2.1",

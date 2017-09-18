@@ -1,0 +1,334 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#spa1">spa()</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#application">.Application</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#applicationprototypego">Application.prototype.go()</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#applicationprototypepage">Application.prototype.page()</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#applicationprototypeprepare">Application.prototype.prepare()</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#applicationprototyperun">Application.prototype.run()</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#page">.Page</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#pageprototyperefresh">Page.prototype.refresh()</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#plugin">.Plugin</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#pluginprototypeprepare">Plugin.prototype.prepare()</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#plugincontroller">.PluginController</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#plugincontrollerprototypeperform">PluginController.prototype.perform()</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#route">.Route</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#routeprototypeprepare">Route.prototype.prepare()</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#routecontroller">.RouteController</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#routecontrollerprototypeperform">RouteController.prototype.perform()</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="spa">spa</h1>
+    <div class="level1">
+        <p>
+            This module contains some types and methods related to single page application.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="spa1">spa()</h2>
+    <div class="level2">
+        <blockquote>
+            spa(config)
+        </blockquote>
+        <p>
+            Create the application instance and init application with the specified config when starting application
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the application instance
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> config
+                    <br> TYPE: PlainObject
+                    <br> the application configuration defines the entire composition of a skylark application, such as: </div>
+                <ul>
+                    <li class="level2">
+                        <div class="li"> name and title </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> base
+                            <abbr title="Uniform Resource Locator">URL</abbr>
+                        </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> route define </div>
+                        <ul>
+                            <li class="level3">
+                                <div class="li"> pathto </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> controller </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> plugin define </div>
+                        <ul>
+                            <li class="level3">
+                                <div class="li"> hookers </div>
+                            </li>
+                            <li class="level3">
+                                <div class="li"> controller </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <blockquote>
+            spa()
+        </blockquote>
+        <p>
+            Get the global Application instance.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the application instance
+        </p>
+    </div>
+    <h2 class="sectionedit3" id="application">.Application</h2>
+    <div class="level2">
+        <blockquote>
+            spa.Application
+        </blockquote>
+        <p>
+            Application is the type used for a skylark single page application, and the framework automatically declares an Application variable as the instance of the application.
+        </p>
+        <p>
+            if necessary, developper could create a new type inherited from this build-in type and set to spa.Application before calling spa(config), the application instance of custom type will be created.
+        </p>
+    </div>
+    <h3 class="sectionedit4" id="applicationprototypego">Application.prototype.go()</h3>
+    <div class="level3">
+        <blockquote>
+            spa().go(path)
+        </blockquote>
+    </div>
+    <h3 class="sectionedit5" id="applicationprototypepage">Application.prototype.page()</h3>
+    <div class="level3">
+        <blockquote>
+            spa().page()
+        </blockquote>
+        <p>
+            Get the Page instance of the application.
+        </p>
+    </div>
+    <h3 class="sectionedit6" id="applicationprototypeprepare">Application.prototype.prepare()</h3>
+    <div class="level3">
+        <blockquote>
+            spa().prepare()
+        </blockquote>
+        <p>
+            Perform preparation process before　the application becomes runnable.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            a promise object
+        </p>
+    </div>
+    <h3 class="sectionedit7" id="applicationprototyperun">Application.prototype.run()</h3>
+    <div class="level3">
+        <blockquote>
+            spa().run()
+        </blockquote>
+        <p>
+            Let the application go into the running state, the router function will be started.
+        </p>
+    </div>
+    <h2 class="sectionedit8" id="page">.Page</h2>
+    <div class="level2">
+        <blockquote>
+            spa.Page
+        </blockquote>
+        <p>
+            Page is the type used to encapsulate the host
+            <abbr title="HyperText Markup Language">HTML</abbr> and the framework automatically declares an Page instance in initing application.
+        </p>
+        <p>
+            the Page instance can be obtained by page() method of the applicaiton instance.
+        </p>
+        <p>
+            if necessary, developper could create a new type inherited from this build-in type and set to spa.Page before calling spa(config), the Page instance of custom type will be created.
+        </p>
+    </div>
+    <h3 class="sectionedit9" id="pageprototyperefresh">Page.prototype.refresh()</h3>
+    <div class="level3">
+        <blockquote>
+            .refresh()
+        </blockquote>
+        <p>
+            After the current path of the application is transformed, the method is invoked internally, displaying the view of the current path.
+        </p>
+    </div>
+    <h2 class="sectionedit10" id="plugin">.Plugin</h2>
+    <div class="level2">
+        <blockquote>
+            spa.Plugin
+        </blockquote>
+        <p>
+            Plugin provides a mechanism to implement common logic not belonging to a single route view ,such as navigation menu processing.
+        </p>
+    </div>
+    <h3 class="sectionedit11" id="pluginprototypeprepare">Plugin.prototype.prepare()</h3>
+    <div class="level3">
+        <blockquote>
+            .prepare()
+        </blockquote>
+        <p>
+            Perform preparation process such as setuping PluginController before　the plugin becomes runnable.
+        </p>
+        <p>
+            while preparing application, the method is invoked internally,
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            a promise object
+        </p>
+    </div>
+    <h2 class="sectionedit12" id="plugincontroller">.PluginController</h2>
+    <div class="level2">
+        <blockquote>
+            spa.PluginController
+        </blockquote>
+        <p>
+            PluginController is a type used to describe the interface that should be implemented by custom plugin controller.
+        </p>
+    </div>
+    <h3 class="sectionedit13" id="plugincontrollerprototypeperform">PluginController.prototype.perform()</h3>
+    <div class="level3">
+        <blockquote>
+            .perform(event)
+        </blockquote>
+        <p>
+            the method is called by the framework for notifing global event to custom application program.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> event
+                    <br> TYPE: Event
+                    <br> the event object </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit14" id="route">.Route</h2>
+    <div class="level2">
+        <blockquote>
+            spa.Route
+        </blockquote>
+        <p>
+            Route represents a viewport of the application page, and that is identified and navigated through a path.
+        </p>
+    </div>
+    <h3 class="sectionedit15" id="routeprototypeprepare">Route.prototype.prepare()</h3>
+    <div class="level3">
+        <blockquote>
+            .prepare()
+        </blockquote>
+        <p>
+            Perform preparation process such as setuping RouteController before　the route becomes runnable.
+        </p>
+        <p>
+            Normally, this method is delayed until the route needs to be displayed , but if the route is configured to forbid lazy loading (lazy = false) in the configuration, it is called when the application is initialized.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            a promise object
+        </p>
+    </div>
+    <h2 class="sectionedit16" id="routecontroller">.RouteController</h2>
+    <div class="level2">
+        <blockquote>
+            spa.RouteController
+        </blockquote>
+        <p>
+            RouteController is a type used to describe the interface that should be implemented by custom route controller.
+        </p>
+    </div>
+    <h3 class="sectionedit17" id="routecontrollerprototypeperform">RouteController.prototype.perform()</h3>
+    <div class="level3">
+        <blockquote>
+            .perform(event)
+        </blockquote>
+        <p>
+            the method is called by the framework for notifing route event to custom application program.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> event
+                    <br> TYPE: Event
+                    <br> the event object </div>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

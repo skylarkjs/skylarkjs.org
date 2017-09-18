@@ -6,5 +6,6 @@ require('./gulp')([
     'sass',
     'watch',
     'runSequence',
+    'electronBuild',
     'deploy'
 ]);

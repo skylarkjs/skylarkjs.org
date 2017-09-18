@@ -158,7 +158,6 @@ define([
         },
 
         exited: function() {
-            eventer.off(window, "scroll");
             $(document.body).removeClass("guide-page");
         }
     });
