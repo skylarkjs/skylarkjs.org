@@ -13,6 +13,8 @@ module.exports = function() {
         .pipe(gulp.dest(util.dest + "assets"));
     gulp.src(util.src + 'index.html')
         .pipe(gulp.dest(util.dest));
+    gulp.src(util.src + 'skylark-config.json')
+        .pipe(gulp.dest(util.dest));
     gulp.src(util.src + 'contents/**/*')
         .pipe(gulp.dest(util.dest + "contents"));
     gulp.src(util.src + 'scripts/**/*')

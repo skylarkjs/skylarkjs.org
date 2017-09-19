@@ -7,10 +7,6 @@ var gulp = require('gulp'),
 
 
 module.exports = function() {
-    del.sync([util.asarDeploy + '/**/*', '!' + util.asarDeploy + "/"], {
-        force: true
-    });
-
     del.sync([util.nodeDeploy + '/**/*', '!' + util.nodeDeploy + "/"], {
         force: true
     });
@@ -19,8 +15,6 @@ module.exports = function() {
         force: true
     });
 
-    gulp.src(util.dest + '**/*')
-        .pipe(gulp.dest(util.asarDeploy));
     gulp.src(util.dest + '**/*')
         .pipe(gulp.dest(util.nodeDeploy));
     gulp.src(util.dest + '**/*')

@@ -37,9 +37,10 @@ require(["skylark-all"], function() {
         "skylark-utils/noder",
         "skylark-router",
         "skylark/spa",
-        "scripts/config/config",
+        "text!./skylark-config.json",
         "jquery"
-    ], function(noder, router, spa, config, $) {
+    ], function(noder, router, spa, txtConfig, $) {
+        var config = JSON.parse(txtConfig);
         router.useHistoryApi = false;
         router.useHashbang = false
         window._goTop = function(time) {
