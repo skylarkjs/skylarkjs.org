@@ -1,5 +1,5 @@
 {
-  "name": "skylark-org",
+  "name": "skylarkjs-website",
   "version": "0.9.0",
   "description": "The skylarkjs official site.",
   "main": "-",
@@ -26,9 +26,11 @@
     "gulp-shell": "^0.6.3"
   },
   "devDependencies": {
+    "asar": "^0.13.0",
     "del": "^1.2.1",
     "gulp": "^3.9.0",
     "gulp-amd-optimizer": "^0.3.4",
+    "gulp-asar": "^1.0.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-footer": "^1.0.5",

@@ -32,10 +32,11 @@ module.exports = {
     assetSrc: '../src/assets/',
     assetDest: '../dist/',
     jsDistFolders: ["../dist/", "../src/scripts/"],
-    electronPath: '../server/electron',
-    electronDeploy: '../server/electron/public',
+    asarScript: './asar/',
+    asarDeploy: '../desktop/asar',
     nodeDeploy: '../server/node/public',
     apacheDeploy: '../server/apache',
+    slaxDeploy: '../desktop/slax',
     banner: banner,
     pkg: pkg
 };

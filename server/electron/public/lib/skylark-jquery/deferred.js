@@ -1,8 +1,0 @@
-/**
- * skylark-jquery - The skylark plugin library for fully compatible API with jquery.
- * @author Hudaokeji Co.,Ltd
- * @version v0.9.0
- * @link www.skylarkjs.org
- * @license MIT
- */
-define("skylark-jquery/deferred",["skylark-jquery/core"],function(e){function r(n){var i=[["resolve","done",e.Callbacks({once:1,memory:1}),"resolved"],["reject","fail",e.Callbacks({once:1,memory:1}),"rejected"],["notify","progress",e.Callbacks({memory:1})]],t="pending",o={state:function(){return t},always:function(){return s.done(arguments).fail(arguments),this},then:function(){var n=arguments;return r(function(r){e.each(i,function(i,t){var a=e.isFunction(n[i])&&n[i];s[t[1]](function(){var n=a&&a.apply(this,arguments);if(n&&e.isFunction(n.promise))n.promise().done(r.resolve).fail(r.reject).progress(r.notify);else{var i=this===o?r.promise():this,s=a?[n]:arguments;r[t[0]+"With"](i,s)}})}),n=null}).promise()},promise:function(r){return null!=r?e.extend(r,o):o}},s={};return e.each(i,function(e,r){var n=r[2],a=r[3];o[r[1]]=n.add,a&&n.add(function(){t=a},i[1^e][2].disable,i[2][2].lock),s[r[0]]=function(){return s[r[0]+"With"](this===s?o:this,arguments),this},s[r[0]+"With"]=n.fireWith}),o.promise(s),n&&n.call(s,s),s}var n=Array.prototype.slice;return e.when=function(i){var t,o,s,a=n.call(arguments),c=a.length,l=0,u=1!==c||i&&e.isFunction(i.promise)?c:0,f=1===u?i:r(),h=function(e,r,i){return function(o){r[e]=this,i[e]=arguments.length>1?n.call(arguments):o,i===t?f.notifyWith(r,i):--u||f.resolveWith(r,i)}};if(c>1)for(t=new Array(c),o=new Array(c),s=new Array(c);l<c;++l)a[l]&&e.isFunction(a[l].promise)?a[l].promise().done(h(l,s,a)).fail(f.reject).progress(h(l,o,t)):--u;return u||f.resolveWith(s,a),f.promise()},e.Deferred=r,e});
