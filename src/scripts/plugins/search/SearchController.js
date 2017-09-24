@@ -1,8 +1,8 @@
 define([
-    "skylark/spa",
+    "skylarkjs/spa",
     "jquery",
-    "skylark/router",
-    "skylark/eventer",
+    "skylarkjs/router",
+    "skylarkjs/eventer",
     "caret",
     "atwho"
 ], function(spa, $, router, eventer, caret, atwho) {
@@ -30,7 +30,7 @@ define([
                 basePath = spa.getConfig("baseUrl"),
                 routes = spa.getConfig("routes");
             router.on("routed", function(e) {
-                var r = e._args.current.route,
+                var r = e.current.route,
                     searchConfig = r.getConfigData("search");
                 if (searchConfig) {
                     if (!searchConfig.searchBar) {

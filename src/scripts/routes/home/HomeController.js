@@ -1,9 +1,9 @@
 define([
-    "skylark/spa",
-    "skylark/langx",
-    "skylark/noder",
+    "skylarkjs/spa",
+    "skylarkjs/langx",
+    "skylarkjs/noder",
     "jquery",
-    "skylark/eventer",
+    "skylarkjs/eventer",
     "jotted",
     "particles",
     "scripts/helpers/isMobile",

@@ -1,6 +1,6 @@
 define([
     "./isMobile",
-    "skylark/langx",
+    "skylarkjs/langx",
     "ace",
     // "ace/ext-beautify"
 ], function(isMobile, langx, ace) {

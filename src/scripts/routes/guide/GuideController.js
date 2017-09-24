@@ -1,16 +1,15 @@
 define([
-    "skylark/spa",
-    "skylark/async",
+    "skylarkjs/spa",
     "jquery",
-    "skylark/eventer",
-    "skylark/langx",
+    "skylarkjs/eventer",
+    "skylarkjs/langx",
     "handlebars",
     "scripts/helpers/AceEditor",
     "scripts/helpers/Partial",
     "scripts/helpers/FolderTreeDomEvent",
     "text!contents/guide/guide.json",
     "text!scripts/routes/guide/guide.hbs"
-], function(spa, async, $, eventer, langx, handlebars, AceEditor, Partial, FolderTreeDomEvent, guideJson, guideTpl) {
+], function(spa, $, eventer, langx, handlebars, AceEditor, Partial, FolderTreeDomEvent, guideJson, guideTpl) {
     var _heightObj = {},
         _currentRange = null,
         _isClickScroll = false,

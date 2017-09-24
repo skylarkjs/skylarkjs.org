@@ -1,20 +1,19 @@
 define([
-    "skylark/spa",
-    "skylark/async",
+    "skylarkjs/spa",
     "jquery",
-    "skylark/langx",
+    "skylarkjs/langx",
     "handlebars",
     "scripts/helpers/AceEditor",
     "scripts/helpers/Partial",
     "scripts/helpers/FolderTreeDomEvent",
     "text!contents/api/api.json",
     "text!scripts/routes/api/api.hbs"
-], function(spa, async, $, langx, handlebars, AceEditor, Partial, FolderTreeDomEvent, apiJson, apiTpl) {
+], function(spa, $, langx, handlebars, AceEditor, Partial, FolderTreeDomEvent, apiJson, apiTpl) {
     return spa.RouteController.inherit({
         klassName: "GuideController",
         preparing: function(e) {
             var selector = $(langx.trim(apiTpl)),
-                deferred = new async.Deferred();
+                deferred = new langx.Deferred();
             Partial.get("file-section-partial");
             Partial.get("folder-tree-partial");
             Partial.get("folder-tree-loop-partial");

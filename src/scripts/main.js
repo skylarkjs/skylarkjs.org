@@ -11,15 +11,13 @@ require.config({
     }],
 
     paths: {
-        "skylark-all": "lib/skylarkjs-all.min",
-        "skylark-utils": "http://registry.skylarkjs.org/packages/skylark-utils/v0.9.0/skylark-utils",
-        "skylark-router": "http://registry.skylarkjs.org/packages/skylark-router/v0.9.0/skylark-router",
+        "skylarkjs": "lib/skylarkjs",
         "caret": "https://cdn.bootcss.com/Caret.js/0.3.1/jquery.caret",
         "atwho": "https://cdn.bootcss.com/at.js/1.5.4/js/jquery.atwho",
         "bootstrap": "https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min",
         "handlebars": "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.amd.min",
         "jotted": "https://cdn.jsdelivr.net/jotted/1.5.1/jotted.min",
-        "jquery": "lib/skylark-jquery-all.min",
+        "jquery": "lib/skylark-jquery",
         "particles": "lib/particles",
         "tether": "https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min",
         "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text"
@@ -32,11 +30,11 @@ require.config({
     }
 
 });
-require(["skylark-all"], function() {
+require(["skylarkjs"], function() {
     require([
-        "skylark-utils/noder",
-        "skylark-router",
-        "skylark/spa",
+        "skylarkjs/noder",
+        "skylarkjs/router",
+        "skylarkjs/spa",
         "text!./skylark-config.json",
         "jquery"
     ], function(noder, router, spa, txtConfig, $) {
@@ -56,9 +54,9 @@ require(["skylark-all"], function() {
         };
         window.addThrob = function(node, callback) {
             $(node).css("opacity", 0.5);
-            return noder.throb(node, {
-                callback: callback
-            });
+            var throb = noder.throb(node, {});
+           callback();
+           return throb;
         };
         var goTop = function(selector) {
             var goTopShown = false;
@@ -83,7 +81,7 @@ require(["skylark-all"], function() {
                 }
             });
         };
-        var main = $("#main-wrap")[0],
+        var main = $("#main-wrap")[0];
             throb = window.addThrob(main, function() {
                 require(["bootstrap"], function() {
                     var app = spa(config);

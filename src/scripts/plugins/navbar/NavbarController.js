@@ -1,7 +1,7 @@
 define([
-    "skylark/spa",
+    "skylarkjs/spa",
     "jquery",
-    "skylark/router"
+    "skylarkjs/router"
 ], function(spa, $, router) {
     var currentNav,
         setActive = function(selector) {
@@ -42,7 +42,7 @@ define([
             });
             var selector = $("#main-wrap");
             router.one("prepared", function(e) {
-                var curR = e._args.route;
+                var curR = e.route;
                 setActive(curR.name);
             });
             $(".logo-nav").on("click", function() {

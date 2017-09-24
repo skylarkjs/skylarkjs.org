@@ -1,12 +1,11 @@
 define([
     "ace",
-    "skylark/spa",
-    "skylark/css",
-    "skylark/eventer",
-    "skylark/finder",
-    "skylark/async",
+    "skylarkjs/spa",
+    "skylarkjs/css",
+    "skylarkjs/eventer",
+    "skylarkjs/finder",
     "jquery",
-    "skylark/langx",
+    "skylarkjs/langx",
     "handlebars",
     "jotted",
     "scripts/helpers/isMobile",
@@ -14,7 +13,7 @@ define([
     "scripts/helpers/FolderTreeDomEvent",
     "text!contents/examples/examples.json",
     "text!scripts/routes/examples/examples.hbs"
-], function(ace, spa, css, eventer, finder, async, $, langx, handlebars, Jotted, isMobile,
+], function(ace, spa, css, eventer, finder, $, langx, handlebars, Jotted, isMobile,
     Partial, FolderTreeDomEvent, examplesJson, examplesTpl) {
     var currentFileItem;
     return spa.RouteController.inherit({

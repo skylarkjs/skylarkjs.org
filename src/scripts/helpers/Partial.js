@@ -1,6 +1,6 @@
 define([
     "jquery",
-    "skylark/langx",
+    "skylarkjs/langx",
     "text!./_partials.hbs",
     "handlebars"
 ], function($, langx, partialsTpl, handlebars) {

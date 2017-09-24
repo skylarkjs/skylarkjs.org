@@ -1,7 +1,7 @@
 define([
     "./isMobile",
     "./mobileSidebar",
-    "skylark/langx",
+    "skylarkjs/langx",
     "jquery"
 ], function(isMobile, mobileSidebar, langx, $) {
     var _sectionPrefix = "_section-";
