@@ -9,17 +9,17 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
 
 <body>
     <script>
-    require(["skylark/langx"], function(langx) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var langx=skylarkjs.langx;
         var obj = {
             func: function(name) {
                 alert(name);

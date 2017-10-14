@@ -8,10 +8,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -20,7 +19,10 @@
 <h4>Example : <span>langx.compact([1,,3,null,,5,,6,undefined,])，input shows the result 1,3,5,6 。</span></h4>
     <input></input>
     <script>
-    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                langx=skylarkjs.langx,
+                datax=skylarkjs.datax;
         var text = langx.compact([1,,3,null,,5,,6,undefined,]);
         datax.val(finder.find("input"),text)
     });

@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -20,7 +19,10 @@
     <div></div>
     Is 'test' a is plain object? <b></b>
     <script>
-    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                langx=skylarkjs.langx,
+                datax=skylarkjs.datax;
         datax.text(finder.find("b:first"), langx.isPlainObject({}));
         datax.text(finder.find("b:last"), langx.isPlainObject("test"));
     });

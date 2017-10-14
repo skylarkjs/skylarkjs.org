@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        } ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -19,9 +18,11 @@
     <input id="check" type="checkbox" checked=true />
     <button id="btn" type="button">toggle check</button>
     <script>
-    require(["skylark/query", "skylark/datax"], function($, datax) {
-        var input = $("#check")[0];
-        var value = datax.prop(input, "checked");
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                datax=skylarkjs.datax,
+                input = $("#check")[0],
+                value = datax.prop(input, "checked");
         $("#btn").on("click", function() {
             value = !value;
             datax.prop(input, "checked", value);

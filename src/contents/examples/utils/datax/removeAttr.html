@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -28,9 +27,12 @@
     <button>remove title</button>
     <strong></strong>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/datax"], function($, finder, datax) {
-        var em = finder.find("em");
-        var title = datax.attr(em, "title");
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                finder=skylarkjs.finder,
+                datax=skylarkjs.datax,
+                em = finder.find("em"),
+                title = datax.attr(em, "title");
         $("div:first").text(title);
         $("button").click(function() {
             datax.removeAttr(em, "title");

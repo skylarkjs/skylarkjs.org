@@ -6,22 +6,23 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
 
 <body>
-    <h4>Example : <span> Finds out if the parameter is a window.</span></h4>
-   Is 'window' a window?<b></b>
+    <h4>Example : <span> Finds out if the parameter is a window.</span></h4> Is 'window' a window?<b></b>
     <input></input>
     <script>
-    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder = skylarkjs.finder,
+            langx = skylarkjs.langx,
+            datax = skylarkjs.datax;
         var text = langx.isWindow(window);
-        datax.val(finder.find("input"),text)
+        datax.val(finder.find("input"), text)
     });
     </script>
 </body>

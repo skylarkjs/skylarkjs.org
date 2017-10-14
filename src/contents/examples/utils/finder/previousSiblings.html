@@ -10,10 +10,8 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -25,7 +23,9 @@
     <p class="selected">And Again</p>
     <p >Again And Again</p>
     <script>
-    require(["skylark/styler", "skylark/finder"], function(styler, finder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var styler=skylarkjs.styler,
+                finder=skylarkjs.finder;
         finder.previousSiblings(finder.find(".selected"), "p").forEach(function(node, index) {
             styler.css(node, "border", "2px dotted blue");
         });

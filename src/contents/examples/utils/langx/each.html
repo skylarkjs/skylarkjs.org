@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +22,9 @@
     <div>to iterate through</div>
     <div>these divs.</div>
     <script>
-    require(["skylark/query","skylark/langx"], function($, langx) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                langx=skylarkjs.langx;
         $(document.body).on("click", function() {
             langx.each($("div"), function(i) {
                 if (this.style.color != "blue") {

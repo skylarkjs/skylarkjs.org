@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -26,7 +25,11 @@
     <div>Left: <b></b></div>
     <div class="border"></div>
     <script>
-    require(["skylark/query","skylark/finder", "skylark/geom", "skylark/datax"], function($,finder, geom, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                finder=skylarkjs.finder,
+                geom=skylarkjs.geom,
+                datax=skylarkjs.datax;
       var border =  geom.borderExtents(finder.find("div:last"));
         datax.text($("b")[0],border.top);
         datax.text($("b")[1],border.right);

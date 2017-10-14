@@ -8,10 +8,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -20,7 +19,10 @@
     <h4>Example : <span>Determines whether the 'isDefined' is defined, and the b element shows the judgment value.</span></h4>
     Is it a is Defined? <b></b>
     <script>
-    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                langx=skylarkjs.langx,
+                datax=skylarkjs.datax;
         var isDefined;
         datax.text(finder.find("b"), langx.isDefined(isDefined));
     });

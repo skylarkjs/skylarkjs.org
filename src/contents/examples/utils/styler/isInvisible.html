@@ -6,9 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylarkjs/skylarkjs" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -18,7 +18,10 @@
     <p>This is a p </p>
       Is 'p' element  isInvisible ? <input></input>
     <script>
-    require(["skylark/finder", "skylark/datax", "skylark/styler"], function(finder, datax,styler) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                styler=skylarkjs.styler,
+                datax=skylarkjs.datax;
       var bool =  styler.isInvisible(finder.find("p"));
         datax.val(finder.find("input"),bool);
     });

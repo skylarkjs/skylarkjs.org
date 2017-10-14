@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -21,7 +20,9 @@
 <span>noder.contains(document.body, document.documentElement)</span>
 <strong></strong>
     <script>
-    require(["skylark/query", "skylark/noder"], function($, noder) {
+    require(["skylarkjsr"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                noder=skylarkjs.noder;
         var div1 = noder.contains(document.documentElement, document.body); // true
         $("strong:first").text(div1);
         var div2 = noder.contains(document.body, document.documentElement); // false

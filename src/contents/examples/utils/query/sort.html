@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
     <style>
@@ -226,7 +225,8 @@
         </div>
     </div>
     <script type="text/javascript">
-    require(["skylark/query"], function($) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query;
         // downdown
         var dropdown = document.querySelector('.js-dropdown');
         var dropdownValue = dropdown.querySelector('.js-dropdown-value');

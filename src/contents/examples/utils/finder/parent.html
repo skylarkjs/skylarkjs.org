@@ -6,9 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylarkjs/skylarkjs" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -27,7 +27,9 @@
         <li class="child3">Item 3</li>
     </ul>
     <script>
-    require(["skylark/styler", "skylark/finder"], function(styler, finder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var styler=skylarkjs.styler,
+                finder=skylarkjs.finder;
         styler.css(finder.parent(finder.find("ul.subnav"), ".child2"), "border", "3px double red");
     });
     </script>

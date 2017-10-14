@@ -10,9 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylarkjs/skylarkjs" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -21,7 +21,9 @@
     <h4>Example : <span> if an element in the matched set of elements already has the ''foo', then it is removed; if an element does not have the 'foo'.</span></h4>
     <p id="target" class="foo">This is a 'foo' item </p>
     <script>
-    require(["skylark/finder", "skylark/styler"], function(finder, styler) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                styler=skylarkjs.styler;
         styler.toggleClass(finder.byId("target"), "foo");
     });
     </script>

@@ -10,9 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylarkjs/skylarkjs" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -22,7 +22,9 @@
     <p id="target" class="hide">This is a 'hide' item </p>
     <p> This is not a 'hide' item </p>
     <script>
-    require(["skylark/finder", "skylark/styler"], function(finder, styler) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                styler=skylarkjs.styler;
         styler.show(finder.byId("target"));
     });
     </script>

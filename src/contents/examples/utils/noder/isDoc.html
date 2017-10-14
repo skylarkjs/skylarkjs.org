@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -18,7 +17,9 @@
     <h4>Example : <span>Determines whether element p belongs to document element, alert result.</span></h4>
     <p>Hello</p>
     <script>
-    require(["skylark/finder", "skylark/noder"], function(finder, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                noder=skylarkjs.noder;
         alert(noder.isDoc(finder.find("p")));
     });
     </script>

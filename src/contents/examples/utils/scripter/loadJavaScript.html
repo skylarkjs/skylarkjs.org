@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -18,8 +17,11 @@
     <h4>Example : <span>Load a js file, successful output "load success" Otherwise output "load error"</span></h4>
     <strong></strong>
     <script>
-    require(["skylark/scripter", "skylark/datax", "skylark/finder"], function(scripter, datax, finder) {
-        scripter.loadJavaScript(["/lib/skylark/fx.js"], function(fx) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var scripter=skylarkjs.scripter,
+                finder=skylarkjs.finder,
+                datax=skylarkjs.datax;
+        scripter.loadJavaScript(["/lib/skylarkjs/skylark/fx.js"], function(fx) {
             datax.text(finder.find("strong"), "load success");
         },function(){
             datax.text(finder.find("strong"), "load error");

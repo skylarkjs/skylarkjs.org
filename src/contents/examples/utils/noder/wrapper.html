@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +22,9 @@
     <p>Hello</p>
     <p>World</p>
     <script>
-    require(["skylark/finder", "skylark/noder"], function(finder, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                noder=skylarkjs.noder;
         noder.wrapper(finder.find("p"), "<div></div>");
         noder.wrapper(finder.find("p"), noder.createElement("div"));
     });

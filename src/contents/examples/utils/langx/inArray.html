@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylarkjs/skylarkjs"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -25,7 +24,9 @@
     <div>"Karl" not found, so <span></span></div>
     <div>"Pete" is in the array, but not at or after index 2, so <span></span></div>
     <script>
-    require(["skylark/query", "skylark/langx"], function($, langx) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $= skylarkjs.query,
+                langx=skylarkjs.langx;
         var arr = [4, "Pete", 8, "John"];
         var spans = $("span");
         $(spans.eq(0)).text(langx.inArray("John", arr));
