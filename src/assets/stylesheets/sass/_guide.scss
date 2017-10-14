@@ -1,0 +1,10 @@
+.guide-page {
+    .page-content {
+        overflow: hidden;
+        position: relative;
+        max-width: 600px;
+        .doc-img img {
+            width: 100%;
+        }
+    }
+}

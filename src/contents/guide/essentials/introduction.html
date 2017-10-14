@@ -1,0 +1,122 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#runtime">Runtime</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#different_builds">different builds</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#installation">installation</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#usage">usage</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#sdk">sdk</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="introduction">Introduction</h1>
+    <div class="level1">
+        <p>
+            Skylark.js is an unified framework for building modern html5 applications across web and desktop, including the runtime library and many development tools.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="runtime">Runtime</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit3" id="different_builds">different builds</h3>
+    <div class="level3">
+        <div class="table sectionedit4">
+            <table class="inline">
+                <thead>
+                    <tr class="row0">
+                        <th class="col0 leftalign"> </th>
+                        <th class="col1"> build </th>
+                        <th class="col2"> Description </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row1">
+                        <td class="col0"> full </td>
+                        <td class="col1"> skylarkjs.js </td>
+                        <td class="col2"> included dom utilities </td>
+                    </tr>
+                    <tr class="row2">
+                        <td class="col0"> core </td>
+                        <td class="col1"> skylarkjs-core.js </td>
+                        <td class="col2"> not included dom utilities </td>
+                    </tr>
+                    <tr class="row3">
+                        <td class="col0"> full （development） </td>
+                        <td class="col1"> uncompressed/skylarkjs.js </td>
+                        <td class="col2"> included dom utilities </td>
+                    </tr>
+                    <tr class="row4">
+                        <td class="col0"> core （development）</td>
+                        <td class="col1"> uncompressed/skylarkjs-core.js </td>
+                        <td class="col2"> not included dom utilities </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3 class="sectionedit5" id="installation">installation</h3>
+    <div class="level3">
+        <p>
+            There are multiple ways to install the skylark.js runtime library.
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> cdn
+                    <br>
+                    <a href="http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/skylarkjs.js" class="urlextern" target="_blank" title="http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/skylarkjs.js">http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/skylarkjs.js</a> or
+                    <br>
+                    <a href="http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/uncompressed/skylarkjs.js" class="urlextern" target="_blank" title="http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/uncompressed/skylarkjs.js">http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/uncompressed/skylarkjs.js</a>
+                    <br> 0.9.3 is the version number, please replace to the required version, usually the latest version. </div>
+            </li>
+            <li class="level2">
+                <div class="li"> bower
+                    <br> bower install skylarkjs </div>
+            </li>
+            <li class="level2">
+                <div class="li"> sdk tool
+                    <br> When you create a project skeleton with the SDK tool, the runtime library is automatically copied to the project's lib directory. </div>
+            </li>
+        </ol>
+    </div>
+    <h3 class="sectionedit6" id="usage">usage</h3>
+    <div class="level3">
+        <p>
+            Using the skylarkjs library for a AMD module.
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+&lt;script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"
+            data-main="http://registry.skylarkjs.org/packages/skylarkjs/v0.9.3/uncompressed/skylarkjs.js"&gt;
+&lt;/script&gt;
+&lt;script&gt;
+ &nbsp;require(["skylarkjs"],funciton(skylarkjs){
+  skylarkjs.xxx();
+  });
+&lt;/script&gt; </pre>
+    </div>
+    <h2 class="sectionedit7" id="sdk">sdk</h2>
+    <div class="level2">
+        <p>
+            Skylark.js sdk is released as nodejs npm package, please refer to the 「Quick Start」 section for details.
+            <br>
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

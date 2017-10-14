@@ -1,0 +1,499 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#baseurl">.baseUrl</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#current">.current</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#go">.go</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#map">.map</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#off">.off</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#on">.on</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#one">.one</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#path">.path</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#previous">.previous</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#route">.Route</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#routeprototypematch">.Route.prototype.match</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#routeprototypepath">.Route.prototype.path</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#route1">.route</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#routes">.routes</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#start">.start</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#trigger">.trigger</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="router">router</h1>
+    <div class="level1">
+        <p>
+            This module contains some types and methods related to routing.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="baseurl">.baseUrl()</h2>
+    <div class="level2">
+        <blockquote>
+            router.baseUrl(path)
+        </blockquote>
+        <p>
+            Get or set the base url for the router.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the base url value on getting or the router module object for chains call on setting.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> path
+                    <br> TYPE : String
+                    <br> The base url to be setted </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit3" id="current">.current()</h2>
+    <div class="level2">
+        <blockquote>
+            router.current()
+        </blockquote>
+        <p>
+            Get the current route path.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            a plain object contains the following properties :
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> route
+                    <br> TYPE:Route
+                    <br> a Route object with route define such as /section/:id, /home </div>
+            </li>
+            <li class="level2">
+                <div class="li"> params
+                    <br> TYPE:PlainObject
+                    <br> a plain object contains param-value pairs for parameterized route, such as {id :3} for the route /section/:id </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit4" id="go">.go()</h2>
+    <div class="level2">
+        <blockquote>
+            router.go(path,force)
+        </blockquote>
+        <p>
+            Change the current route path.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            true when successful, otherwise false
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> path
+                    <br> TYPE:String
+                    <br> the path to be changed to </div>
+            </li>
+            <li class="level1">
+                <div class="li"> force
+                    <br>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit5" id="map">.map()</h2>
+    <div class="level2">
+        <blockquote>
+            router.map(path,noCache)
+        </blockquote>
+        <p>
+            Map a Route object for the specified path.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the mapped Route object, or null if not founded.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> path
+                    <br> TYPE:String
+                    <br> the path to be searched. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> noCache
+                    <br>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit6" id="off">.off()</h2>
+    <div class="level2">
+        <blockquote>
+            router.off(names, callback)
+        </blockquote>
+        <p>
+            Remove the registered global router event listeners.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the router module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> names
+                    <br> TYPE: String
+                    <br> One or more space-separated event types </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function
+                    <br> the callback function </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit7" id="on">.on()</h2>
+    <div class="level2">
+        <blockquote>
+            router.on(names, data, callback, ctx)
+        </blockquote>
+        <p>
+            Register a global router event listener.
+        </p>
+        <p>
+            The router supports global events and you can implement hooker functions by listening to global events.
+            <br>Built-in global events have routing before current route change and routed after current route change.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the router module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> names
+                    <br> TYPE: String
+                    <br> One or more space-separated event types </div>
+            </li>
+            <li class="level1">
+                <div class="li"> data
+                    <br> TYPE: PlainObject Optional
+                    <br> Data to be passed to the handler in event.data when an event is triggered. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function
+                    <br> the callback function </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> TYPE: Object OPtional
+                    <br> the context object of the callback function </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit8" id="one">.one()</h2>
+    <div class="level2">
+        <blockquote>
+            router.one(names, data, callback, ctx)
+        </blockquote>
+        <ul>
+            <li class="level1">
+                <div class="li"> names
+                    <br> TYPE: String
+                    <br> One or more space-separated event types </div>
+            </li>
+            <li class="level1">
+                <div class="li"> data
+                    <br> TYPE: PlainObject Optional
+                    <br> Data to be passed to the handler in event.data when an event is triggered. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function
+                    <br> the callback function </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> TYPE: Object OPtional
+                    <br> the context object of the callback function </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit9" id="path">.path()</h2>
+    <div class="level2">
+        <blockquote>
+            router.path(routeName, params)
+        </blockquote>
+        <p>
+            Get the path string from route define and params.
+        </p>
+        <p>
+            <blockquote class="u">Return value</blockquote>
+        </p>
+        <p>
+            the path string
+        </p>
+        <p>
+            <blockquote class="u">Parameter</blockquote>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> routeName
+                    <br> TYPE:String
+                    <br> the route define name </div>
+            </li>
+            <li class="level1">
+                <div class="li"> params
+                    <br> TYPE:PlainObject
+                    <br> a plain object contains param-value pairs </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit10" id="previous">.previous()</h2>
+    <div class="level2">
+        <blockquote>
+            router.previous()
+        </blockquote>
+        <p>
+            Get the previous route path.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            a plain object contains the following properties :
+        </p>
+    </div>
+    <h2 class="sectionedit11" id="route">.Route</h2>
+    <div class="level2">
+        <pblockquote>
+            router.Route
+            </blockquote>
+            <p>
+                A skylark class type contains a route define, inherited from langx.Evented.
+            </p>
+            <p>
+                The Route Object contains four build-in events, When the route is changed, these events are triggered in order.
+            </p>
+            <ol>
+                <li class="level1">
+                    <div class="li"> exiting (for previous route) </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> entering (for new route) </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> entered (for new route) </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> exited (for previous route) </div>
+                </li>
+            </ol>
+    </div>
+    <h3 class="sectionedit12" id="routeprototypematch">Route.prototype.match</h3>
+    <div class="level3">
+        <blockquote>
+            .match(path)
+        </blockquote>
+        <p>
+            Check whether the specified path is path of this route define.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            a plain object contains param values if matched, otherwise false.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> path
+                    <br> TYPE: String
+                    <br> the path to be checked. </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit13" id="routeprototypepath">Route.prototype.path</h3>
+    <div class="level3">
+        <blockquote>
+            .path(params)
+        </blockquote>
+        <p>
+            Get the path string with the specified params.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the path string
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> params
+                    <br> TYPE:PlainObject
+                    <br> a plain object contains param-value pairs </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit14" id="route1">.route()</h2>
+    <div class="level2">
+        <pblockquote>
+            router.route(name, setting)
+            </blockquote>
+            <p>
+                Add a route define.
+            </p>
+            <p>
+                <strong class="u">Return value</strong>
+            </p>
+            <p>
+                the router module object for chains call.
+            </p>
+            <p>
+                <strong class="u">Parameter</strong>
+            </p>
+            <ul>
+                <li class="level1">
+                    <div class="li"> name
+                        <br> TYPE:String
+                        <br> the route define name </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> setting
+                        <br> TYPE:PlainObject
+                        <br> a plain object contains route setting </div>
+                </li>
+            </ul>
+    </div>
+    <h2 class="sectionedit15" id="routes">.routes()</h2>
+    <div class="level2">
+        <pblockquote>
+            router.routes(settings)
+            </blockquote>
+            <p>
+                Add routes define.
+            </p>
+            <p>
+                <strong class="u">Return value</strong>
+            </p>
+            <p>
+                the router module object for chains call.
+            </p>
+            <p>
+                <strong class="u">Parameter</strong>
+            </p>
+            <ul>
+                <li class="level1">
+                    <div class="li"> settings
+                        <br> TYPE: PlainObject
+                        <br> a plain object contains name-setting pairs. </div>
+                </li>
+            </ul>
+    </div>
+    <h2 class="sectionedit16" id="start">.start()</h2>
+    <div class="level2">
+        <pblockquote>
+            router.start()
+            </blockquote>
+            <p>
+                start router function and listen routing event
+            </p>
+            <p>
+                <blockquote class="u">Return value</blockquote>
+            </p>
+            <p>
+                the router module object for chains call.
+            </p>
+    </div>
+    <h2 class="sectionedit17" id="trigger">.trigger()</h2>
+    <div class="level2">
+        <blockquote>
+            router.trigger(type, props)
+        </blockquote>
+        <p>
+            trigger a global custom router event.
+        </p>
+        <p>
+            <blockquote class="u">Return value</blockquote>
+        </p>
+        <p>
+            the router module object for chains call.
+        </p>
+        <p>
+            <blockquote class="u">Parameter</blockquote>
+        </p>
+        <p>
+            Similar to eventer.trigger()
+            <br>
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

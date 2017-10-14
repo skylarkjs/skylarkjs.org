@@ -1,0 +1,18 @@
+{
+  "name": "skylarkjs-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "browse": "sjs browse ./deploy/skylarkjs-website.slax",
+    "serve": "sjs serve ./deploy/skylarkjs-website.slax",
+    "build": "sjs build .",
+    "deploy": "sjs deploy .",
+    "route-add": "sjs routes add . ",
+    "route-list": "sjs routes list . ",
+    "route-delete": "sjs routes delete .",
+    "plugin-add": "sjs plugins add .",
+    "plugin-list": "sjs plugins list .",
+    "plugin-delete": "sjs plugins delete ."
+  },
+  "dependencies": {}
+}

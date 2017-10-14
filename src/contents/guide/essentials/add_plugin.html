@@ -1,0 +1,270 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#overview">Overview</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#plugin_controller">Plugin controller</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#plugin_config">Plugin Config</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#global_events">Global Events</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#starting">starting</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#started">started</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#routing">routing</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#routed">routed</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#cli_command">Cli Command</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#sjs_commands">sjs commands</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#npm_run_commands">npm run commands</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="coding_plugin">Coding Plugin</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit2" id="overview">Overview</h2>
+    <div class="level2">
+        <p>
+            Plugin provides a mechanism to implement common logic not belonging to a single route view ,such as navigation menu processing.
+        </p>
+        <p>
+            Each plugin consists of the plugin config and exactly one route controller. global events are sent to the corresponding routing controller for processing.
+        </p>
+    </div>
+    <h2 class="sectionedit3" id="plugin_controller">Plugin controller</h2>
+    <div class="level2">
+        <p>
+            You need to create a controller class for each plugin, and in controller class, You should create a method with the same name for each global event to be processed.
+        </p>
+        <p>
+            The following plugin implements the function that automatically highlights the menu corresponding to the current view when the view changes.
+        </p>
+        <p>
+            <em class="u"><strong>HighlightController</strong></em>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+define([
+    "skylarkjs",
+],function(skylarkjs){
+    var spa = skylarkjs.spa,
+        $ = skylark.query;
+
+    return spa.PluginController.inherit({
+        klassName: "HighlightController",
+        routing (e) {
+        },
+        routed (e) {
+            var links = $("a.active");
+
+            links.removeClass("active");
+
+            links = $("a[href*=\"'" + e.current.path + "'\"]");
+            links.addClass("active");
+            links[0].focus();
+        }
+    })
+
+}); </pre>
+    </div>
+    <h2 class="sectionedit4" id="plugin_config">Plugin Config</h2>
+    <div class="level2">
+        <p>
+            All plugins need to be configured in slax-config.json, the plugin in the example above is configured as follows:
+        </p>
+        <p>
+            slax-config.json
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+{
+...
+   "plugins" : {
+       "highlight": {
+        "hookers": "routing routed",
+        "controller": {
+           "type": "scripts/plugins/highlight/HighlightController"
+       }
+       }
+    }
+...
+
+
+} </pre>
+    </div>
+    <h2 class="sectionedit5" id="global_events">Global Events</h2>
+    <div class="level2">
+        <p>
+            Global events are follows :
+            <br>
+        </p>
+    </div>
+    <h3 class="sectionedit6" id="starting">starting</h3>
+    <div class="level3">
+        <p>
+            triggered when application is starting.
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> spa
+                    <br> the Application instance </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit7" id="started">started</h3>
+    <div class="level3">
+        <p>
+            triggered when application is started.
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> spa
+                    <br> the Application instance </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit8" id="routing">routing</h3>
+    <div class="level3">
+        <p>
+            triggered when application is changing current route.
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> current
+                    <br> the current context </div>
+            </li>
+            <li class="level1">
+                <div class="li"> previous
+                    <br> the previous context </div>
+            </li>
+        </ul>
+        <p>
+            context data example:
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+{
+ path : "/chapters/2",
+ params : {
+   id : "2"
+ }
+} </pre>
+    </div>
+    <h3 class="sectionedit9" id="routed">routed</h3>
+    <div class="level3">
+        <p>
+            triggered when application has changed current route.
+            <br>The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> current
+                    <br> the current context </div>
+            </li>
+            <li class="level1">
+                <div class="li"> previous
+                    <br> the previouscontext </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit10" id="cli_command">Cli Command</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit11" id="sjs_commands">sjs commands</h3>
+    <div class="level3">
+        <p>
+            skylark.js sdk provided the following commands
+        </p>
+    </div>
+    <h4 id="add_plugins">add plugins</h4>
+    <div class="level4">
+        <p>
+            use the following command to add one or more plugins.
+        </p>
+        <p>
+            &lt;plugins&gt; is the definition for name and hook events of the route to add, a single plugin format is &lt;name&gt;: &lt;events&gt;, multiple routes separated with 「,」
+            <br>
+        </p>
+        <pre class="code">
+sjs plugins add &lt;slaxPrjRoot&gt; &lt;routes&gt;  </pre>
+        <p>
+            example:
+            <br>
+        </p>
+        <pre class="code">
+sjs plugins add . highlight:routing+routed </pre>
+    </div>
+    <h4 id="delete_plugins">delete plugins</h4>
+    <div class="level4">
+        <p>
+            use the following command to delete one or more plugins.
+        </p>
+        <pre class="code">
+* sjs plugins delete &lt;slaxPrjRoot&gt; &lt;plugins&gt;  </pre>
+        <p>
+            &lt;plugins&gt; is the name list of the plugins to delete, multiple routes separated with 「,」
+        </p>
+    </div>
+    <h4 id="list_plugins">list plugins</h4>
+    <div class="level4">
+        <p>
+            use the following command to list existed plugins.
+            <br>
+        </p>
+        <pre class="code">
+  * sjs plugins list &lt;slaxPrjRoot&gt;  </pre>
+    </div>
+    <h3 class="sectionedit12" id="npm_run_commands">npm run commands</h3>
+    <div class="level3">
+        <p>
+            When creating slax project with sjs create command, the above sjs command is wrapped into the package script, you can use npm run to execute these scripts, so no need to specify the project path.
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> npm run plugin-add – &lt;plugins&gt; </div>
+            </li>
+            <li class="level1">
+                <div class="li"> npm run plugin-delete – &lt;plugins&gt; </div>
+            </li>
+            <li class="level1">
+                <div class="li"> npm run plugin-list </div>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

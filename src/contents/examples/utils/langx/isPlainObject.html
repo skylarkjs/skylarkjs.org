@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylarkjs/skylarkjs"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <h4>Example : <span>Check an object to see if it's a plain object.</span></h4>
+    Is  '{}' is plain object? <b></b>
+    <div></div>
+    Is 'test' a is plain object? <b></b>
+    <script>
+    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+        datax.text(finder.find("b:first"), langx.isPlainObject({}));
+        datax.text(finder.find("b:last"), langx.isPlainObject("test"));
+    });
+    </script>
+</body>
+
+</html>

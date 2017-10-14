@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylarkjs/skylarkjs"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <h4>Example : <span>Determines whether the 'isDefined' is defined, and the b element shows the judgment value.</span></h4>
+    Is it a is Defined? <b></b>
+    <script>
+    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+        var isDefined;
+        datax.text(finder.find("b"), langx.isDefined(isDefined));
+    });
+    </script>
+</body>
+
+</html>

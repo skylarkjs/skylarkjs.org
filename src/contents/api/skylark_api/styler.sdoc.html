@@ -1,0 +1,313 @@
+<div class="pad group">
+    <div class="pageId"><span>16:26:16:16:76:66:styler</span></div>
+    <div class="page group" style="min-height: 198px;">
+        <!-- wikipage start -->
+        <!-- TOC START -->
+        <div id="dw__toc">
+            <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+            <div>
+                <ul class="toc" aria-expanded="true" style="">
+                    <li class="level1">
+                        <div class="li"><a href="#addclass">.addClass</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#classname">.className</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#css">.css</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#hasclass">.hasClass</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#hide">.hide</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#isinvisible">.isInvisible</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#removeclass">.removeClass</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#show">.show</a></div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"><a href="#toggleclass">.toggleClass</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- TOC END -->
+        <h1 class="sectionedit1" id="styler">styler</h1>
+        <div class="level1">
+            <p>
+                These methods get and set style-related properties of element.
+            </p>
+        </div>
+        <h2 class="sectionedit2" id="addclass">.addClass()</h2>
+        <div class="level2">
+            <blockquote>
+                styler.addClass(elm,className)
+            </blockquote>
+            <p>
+                Adds the specified class(es) to each element in the set of matched elements.
+            </p>
+            <p>
+                <strong class="u">Return value</strong>
+            </p>
+            <p>
+                the styler module object for chains call.
+            </p>
+            <p>
+                <strong class="u">Parameter</strong>
+            </p>
+            <ul>
+                <li class="level1">
+                    <div class="li"> elm
+                        <br> TYPE : HTMLElement
+                        <br> the target dom element </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> className
+                        <br> TYPE: String
+                        <br> One or more space-separated classes to be added to the class attribute of the target element </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="sectionedit3" id="classname">className()</h2>
+        <div class="level2">
+            <blockquote>
+                styler.className(elm, value)
+            </blockquote>
+            <p>
+                Get or set the value of class attribute for the specified element.
+            </p>
+            <p>
+                <strong class="u">Return value</strong>
+            </p>
+            <p>
+                the class attribute value that was set when getting or the styler module object for chains call on setting.
+            </p>
+            <p>
+                <strong class="u">Parameter</strong>
+            </p>
+            <ul>
+                <li class="level1">
+                    <div class="li"> elm
+                        <br> TYPE : HTMLElement
+                        <br> the target dom element </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> value
+                        <br> TYPE: String
+                        <br>The new class attribute value.
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="sectionedit4" id="css">css()</h2>
+        <div class="level2">
+            <blockquote>
+                styler.css(elm, property, value)
+            </blockquote>
+            <p>
+                Get the value of a computed style property for the first element in the set of matched elements or set one or more
+                <abbr title="Cascading Style Sheets">CSS</abbr> properties for every matched element.
+            </p>
+            <p>
+                <strong class="u">Return value</strong>
+            </p>
+            <p>
+                the css attribute value when getting or the styler module object for chains call on setting.
+            </p>
+            <p>
+                <strong class="u">Parameter</strong>
+            </p>
+            <ul>
+                <li class="level1">
+                    <div class="li"> elm
+                        <br> TYPE : HTMLElement
+                        <br> the target dom element </div>
+                </li>
+                <li class="level1">
+                    <div class="li"> property
+                        <br> TYPE : String
+                        <br> The name of the attribute
+                </li>
+                <li class="level1">
+                    <div class="li"> value
+                        <br>TYPE : Any
+                        <br>The new attribute value. If null, the specified attribute will be removed (as in .removeAttr()) </div>
+                </li>
+            </ul>
+            </div>
+            <h2 class="sectionedit5" id="hasclass">hasClass()</h2>
+            <div class="level2">
+                <blockquote>
+                    styler.hasClass(elm,name)
+                </blockquote>
+                <p>
+                    Determine whether any of the matched elements are assigned the given class.
+                </p>
+                <p>
+                    <strong class="u">Return value</strong>
+                </p>
+                <p>
+                    true of false.
+                </p>
+                <p>
+                    <strong class="u">Parameter</strong>
+                </p>
+                <ul>
+                    <li class="level1">
+                        <div class="li"> elm
+                            <br> TYPE : HTMLElement
+                            <br> the target dom element </div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"> name
+                            <br> TYPE : String 
+                            <br>The class name to search for </div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="sectionedit6" id="hide">hide()</h2>
+            <div class="level2">
+                <blockquote>
+                    styler.hide(elm)
+                </blockquote>
+                <p>
+                    Hide the matched elements.
+                </p>
+                <p>
+                    <strong class="u">Return value</strong>
+                </p>
+                <p>
+                    the styler module object for chains call.
+                </p>
+                <p>
+                    <strong class="u">Parameter</strong>
+                </p>
+                <ul>
+                    <li class="level1">
+                        <div class="li"> elm
+                            <br> TYPE : HTMLElement
+                            <br> the target dom element </div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="sectionedit7" id="isinvisible">isInvisible()</h2>
+            <div class="level2">
+                <blockquote>
+                    styler.isInvisible(elm)
+                </blockquote>
+                <p>
+                    Determine whether the specified element is invisible.
+                </p>
+                <p>
+                    <strong class="u">Return value</strong>
+                </p>
+                <p>
+                    true of false
+                </p>
+                <p>
+                    <strong class="u">Parameter</strong>
+                </p>
+                <ul>
+                    <li class="level1">
+                        <div class="li"> elm
+                            <br> TYPE : HTMLElement
+                            <br> the target dom element </div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="sectionedit8" id="removeclass">removeClass()</h2>
+            <div class="level2">
+                <blockquote>
+                    styler.removeClass(elm,name)
+                </blockquote>
+                <p>
+                    Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+                </p>
+                <p>
+                    <strong class="u">Return value</strong>
+                </p>
+                <p>
+                    the styler module object for chains call.
+                </p>
+                <p>
+                    <strong class="u">Parameter</strong>
+                </p>
+                <ul>
+                    <li class="level1">
+                        <div class="li"> elm
+                            <br> TYPE : HTMLElement
+                            <br> the target element </div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"> name
+                            <br> TYPE: String
+                            <br>One or more space-separated classes to be removed</div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="sectionedit9" id="show">show()</h2>
+            <div class="level2">
+                <blockquote>
+                    styler.show(elm)
+                </blockquote>
+                <p>
+                    Display the matched elements.
+                </p>
+                <p>
+                    <strong class="u">Return value</strong>
+                </p>
+                <p>
+                    the styler module object for chains call.
+                </p>
+                <p>
+                    <strong class="u">Parameter</strong>
+                </p>
+                <ul>
+                    <li class="level1">
+                        <div class="li"> elm
+                            <br> TYPE : HTMLElement
+                            <br> the target dom element </div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="sectionedit10" id="toggleclass">toggleClass()</h2>
+            <div class="level2">
+                <blockquote>
+                    styler.toggleClass(elm, name, when)
+                </blockquote>
+                <p>
+                   Add or remove one or more classes from the specified element.
+                </p>
+                <p>
+                    <strong class="u">Return value</strong>
+                </p>
+                <p>the styler module object for chains call.
+                </p>
+                <p>
+                    <strong class="u">Parameter</strong>
+                </p>
+                <ul>
+                    <li class="level1">
+                        <div class="li"> elm
+                            <br> TYPE : HTMLElement
+                            <br> the target element </div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"> name
+                            <br> Type: String
+                            <br> One or more class names (separated by spaces) to be toggled for each element in the matched set </div>
+                    </li>
+                    <li class="level1">
+                        <div class="li"> when </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- wikipage stop -->
+        </div>
+    </div>

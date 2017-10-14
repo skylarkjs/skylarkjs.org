@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+  div { color:blue; }
+  span { color:red; }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylarkjs/skylarkjs"
+        }]
+    });
+    </script>
+</head>
+
+<body>
+    <h4>Example : Report the index of some elements in the array.</h4>
+    <div>"John" found at <span></span></div>
+    <div>4 found at <span></span></div>
+    <div>"Karl" not found, so <span></span></div>
+    <div>"Pete" is in the array, but not at or after index 2, so <span></span></div>
+    <script>
+    require(["skylark/query", "skylark/langx"], function($, langx) {
+        var arr = [4, "Pete", 8, "John"];
+        var spans = $("span");
+        $(spans.eq(0)).text(langx.inArray("John", arr));
+        $(spans.eq(1)).text(langx.inArray(4, arr));
+        $(spans.eq(2)).text(langx.inArray("Karl", arr));
+        $(spans.eq(3)).text(langx.inArray("Pete", arr, 2));
+    });
+    </script>
+</body>
+
+</html>

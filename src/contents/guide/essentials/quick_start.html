@@ -1,0 +1,210 @@
+<div class="page group" style="min-height: 136px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#requirements">Requirements</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#installation">Installation</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#create_project">Create Project</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#build_and_deploy">Build and Deploy</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#run_application">Run Application</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#as_a_desktop_application">as a desktop application</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#as_a_web_application">as a web application</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="quick_start">Quick Start</h1>
+    <div class="level1">
+        <p>
+            With skylark.js sdk you can quickly create html5 applications across web and desktop.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="requirements">Requirements</h2>
+    <div class="level2">
+        <p>
+            Skylark.js sdk is released as npm package, so first make sure that the nodejs and npm have been installed.
+        </p>
+    </div>
+    <h2 class="sectionedit3" id="installation">Installation</h2>
+    <div class="level2">
+        <pre class="code">
+npm install skylarkjs -g </pre>
+    </div>
+    <h2 class="sectionedit4" id="create_project">Create Project</h2>
+    <div class="level2">
+        <p>
+            enter into the workspace root directory, and run the following command to create a slax application with two views.
+        </p>
+        <pre class="code">
+sjs create slaxApp1 --routes home:/,view1:/view1,view2:/view2 </pre>
+        <p>
+            <a href="contents/guide/essentials/quickstart_createproject_001.png" class="media" target="_blank" title="quickstart_createproject_001.png"><img src="contents/guide/essentials/quickstart_createproject_001.png" class="mediacenter" alt=""></a>
+        </p>
+        <p>
+            The source directory files of project created are as follows:
+        </p>
+        <p>
+            <a href="contents/guide/essentials/quickstart_createproject_002.png" class="media" target="_blank" title="quickstart_createproject_002.png"><img src="contents/guide/essentials/quickstart_createproject_002.png" class="mediacenter" alt=""></a>
+        </p>
+        <p>
+            The contents of slax-config.json file automatically generated is as follows：
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+{
+  "name": "slaxApp1",
+  "title": "slaxApp1",
+  "runtime": {
+    "skylarkjs": {
+      "version": "0.9.3"
+    },
+    "paths": {
+      "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text"
+    }
+  },
+  "page": {
+    "routeViewer": "#main"
+  },
+  "plugins": {
+    "app": {
+      "hookers": "starting started",
+      "controller": {
+        "type": "scripts/plugins/app/AppController"
+      }
+    },
+    "highlight": {
+      "hookers": "routing routed",
+      "controller": {
+        "type": "scripts/plugins/highlight/HighlightController"
+      }
+    }
+  },
+  "routes": {
+    "home": {
+      "pathto": "/",
+      "controller": {
+        "type": "scripts/routes/home/HomeController"
+      }
+    },
+    "view1": {
+      "pathto": "/view1",
+      "controller": {
+        "type": "scripts/routes/view1/View1Controller"
+      }
+    },
+    "view2": {
+      "pathto": "/view2",
+      "controller": {
+        "type": "scripts/routes/view2/View2Controller"
+      }
+    }
+  }
+} </pre>
+        <p>
+            The package.json file automatically generated is as following, script define included:
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-js">
+{
+  "name": "slaxApp1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "browse": "sjs browse ./deploy/slaxApp1.slax",
+    "serve": "sjs serve ./deploy/slaxApp1.slax",
+    "build": "sjs build .",
+    "deploy": "sjs deploy .",
+    "route-add": "sjs routes add . ",
+    "route-list": "sjs routes list . ",
+    "route-delete": "sjs routes delete .",
+    "plugin-add": "sjs plugins add .",
+    "plugin-list": "sjs plugins list .",
+    "plugin-delete": "sjs plugins delete ."
+  },
+  "dependencies": {}
+} </pre>
+    </div>
+    <h2 class="sectionedit5" id="build_and_deploy">Build and Deploy</h2>
+    <div class="level2">
+        <p>
+            <em class="u">1.Enter into the project root directory </em>
+        </p>
+        <pre class="code">
+cd slaxApp1 </pre>
+        <p>
+            <em class="u">2.run the following command to build project</em>
+        </p>
+        <pre class="code">
+npm run build </pre>
+        <p>
+            The files builded is output to the /dist directory.
+            <br><a href="contents/guide/essentials/quickstart_buildproject_001.png" class="media" target="_blank" title="quickstart_buildproject_001.png"><img src="contents/guide/essentials/quickstart_buildproject_001.png" class="mediacenter" alt=""></a>
+            <em class="u">3.deploy application</em>
+        </p>
+        <pre class="code">
+npm run deploy </pre>
+        <p>
+            The slax archive file deployed is output to the /deploy directory.
+            <br><a href="contents/guide/essentials/quickstart_deployproject_001.png" class="media" target="_blank" title="quickstart_deployproject_001.png"><img src="contents/guide/essentials/quickstart_deployproject_001.png" class="mediacenter" alt=""></a>
+        </p>
+    </div>
+    <h2 class="sectionedit6" id="run_application">Run Application</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit7" id="as_a_desktop_application">as a desktop application</h3>
+    <div class="level3">
+        <p>
+            run the following command to start the application as desktop application
+            <br>
+        </p>
+        <pre class="code">
+npm run browse </pre>
+        <p>
+            <a href="contents/guide/essentials/quickstart_rundeskapp_001.png" class="media" target="_blank" title="quickstart_rundeskapp_001.png"><img src="contents/guide/essentials/quickstart_rundeskapp_001.png" class="mediacenter" alt=""></a>
+        </p>
+        <p>
+            The running image is as following:
+        </p>
+        <p>
+            <a href="contents/guide/essentials/quickstart_rundeskapp_002.png" class="media" target="_blank" title="quickstart_rundeskapp_002.png"><img src="contents/guide/essentials/quickstart_rundeskapp_002.png" class="mediacenter" alt=""></a>
+        </p>
+    </div>
+    <h3 class="sectionedit8" id="as_a_web_application">as a web application</h3>
+    <div class="level3">
+        <p>
+            run the following command to start server to run the slax application.
+            <br>
+        </p>
+        <pre class="code">
+npm run serve </pre>
+        <p>
+            <a href="contents/guide/essentials/quickstart_runwebapp_001.png" class="media" target="_blank" title="quickstart_runwebapp_001.png"><img src="contents/guide/essentials/quickstart_runwebapp_001.png" class="mediacenter" alt=""></a>
+        </p>
+        <p>
+            The acesss image from browser is as following:
+        </p>
+        <p>
+            <a href="contents/guide/essentials/quickstart_runwebapp_002.png" class="media" target="_blank" title="quickstart_runwebapp_002.png"><img src="contents/guide/essentials/quickstart_runwebapp_002.png" class="mediacenter" alt=""></a>
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

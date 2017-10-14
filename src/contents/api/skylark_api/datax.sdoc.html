@@ -1,0 +1,283 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#attr">.attr</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#data">.data</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#prop">.prop</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#removeattr">.removeAttr</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#removedata">.removeData</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#text">.text</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#val">.val</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="datax">datax</h1>
+    <div class="level1">
+        <p>
+            This module contains some methods related to attribute and property of dom node.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="attr">.attr()</h2>
+    <div class="level2">
+        <blockquote>
+            datax.attr(elm, name, value)
+        </blockquote>
+        <p>
+            Get or set the value of an attribute for the specified element.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the attribute value that was set when getting or the datax module object for chains call on setting.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> The target dom element. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> name
+                    <br> TYPE : String
+                    <br> The name of the attribute </div>
+            </li>
+            <li class="level1">
+                <div class="li"> value
+                    <br> TYPE : Any
+                    <br> The new attribute value. If null, the specified attribute will be removed (as in .removeAttr()) </div>
+            </li>
+        </ul>
+        <blockquote>
+            datax.attr(elm, attrs)
+        </blockquote>
+        <p>
+            set one or more attributes for the specified element.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p> the datax module object for chains call</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> attrs
+                    <br> TYPE : PlainObject
+                    <br> An object of attribute-value pairs to set. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit3" id="data">.data()</h2>
+    <div class="level2">
+        <blockquote>
+            datax.data(elm, name, value)
+        </blockquote>
+        <p>
+            Store arbitrary data associated with the specified element and/or return the value that was set.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p> the data value that was set when getting or the datax module object for chains call on setting.</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> name
+                    <br> TYPE : String
+                    <br> The name for the piece of data. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> value
+                    <br> TYPE : Any
+                    <br> The new data value. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit4" id="prop">.prop()</h2>
+    <div class="level2">
+        <blockquote> datax.prop(elm, name, value)</blockquote>
+        <p>
+            Get or set the value of an property for the specified element.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>the property value that was set when getting or the datax module object for chains call on setting.</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> name
+                    <br> TYPE : String
+                    <br> The name of the property </div>
+            </li>
+            <li class="level1">
+                <div class="li"> value
+                    <br> TYPE : Any
+                    <br> The new property value. </div>
+            </li>
+        </ul>
+        <blockquote>datax.prop(elm, props)</blockquote>
+        <p>set one or more attributes for the target element.</p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>the datax module object for chains call。</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> props
+                    <br> TYPE : PlainObject
+                    <br> An object of property-value pairs to set. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit5" id="removeattr">.removeAttr()</h2>
+    <div class="level2">
+        <blockquote> datax.removeAttr(elm, name)</blockquote>
+        <p>
+            Remove an attribute from the specified element.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>the datax module object for chains call.</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> name
+                    <br> TYPE : String
+                    <br> An attribute to remove </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit6" id="removedata">.removeData()</h2>
+    <div class="level2">
+        <blockquote> datax.removeData(elm, name)</blockquote>
+        <p>
+            Remove a previously-stored piece of data.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the datax module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> name
+                    <br> TYPE: String
+                    <br> A string naming the piece of data to delete </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit7" id="text">.text()</h2>
+    <div class="level2">
+        <blockquote> datax.text(elm,txt)</blockquote>
+        <p>
+            Get or set the text contents of the specified element.
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> txt
+                    <br> TYPE: String or Number or Boolean
+                    <br> The text to set as the content of each matched element. When Number or Boolean is supplied, it will be converted to a String representation </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit8" id="val">.val()</h2>
+    <div class="level2">
+        <blockquote>datax.val(elm, value)</blockquote>
+        <p>
+            Get or set the current value of the specified element.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> value
+                    <br> TYPE: String or Number or Array
+                    <br> A string of text, a number, or an array of strings corresponding to the value of each matched element to set as selected/checked </div>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

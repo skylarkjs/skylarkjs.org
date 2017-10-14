@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+    <script>
+    require.config({
+        baseUrl: "./",
+        packages: [{
+            name: "skylark",
+            location: "/lib/skylarkjs/skylarkjs"
+        }, ]
+    });
+    </script>
+</head>
+
+<body>
+    <h4>Example : <span>Load a js file, successful output "load success" Otherwise output "load error"</span></h4>
+    <strong></strong>
+    <script>
+    require(["skylark/scripter", "skylark/datax", "skylark/finder"], function(scripter, datax, finder) {
+        scripter.loadJavaScript(["/lib/skylark/fx.js"], function(fx) {
+            datax.text(finder.find("strong"), "load success");
+        },function(){
+            datax.text(finder.find("strong"), "load error");
+        });
+    });
+    </script>
+</body>
+
+</html>
