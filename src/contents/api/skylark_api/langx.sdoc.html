@@ -6,6 +6,9 @@
         <div>
             <ul class="toc" aria-expanded="true" style="">
                 <li class="level1">
+                    <div class="li"><a href="#all">.all</a></div>
+                </li>
+                <li class="level1">
                     <div class="li"><a href="#camelCase">.camelCase</a></div>
                 </li>
                 <li class="level1">
@@ -13,6 +16,23 @@
                 </li>
                 <li class="level1">
                     <div class="li"><a href="#dasherize">.dasherize</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#debounce">.debounce</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#deferred">Deferred</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#deferredprototypepromise">Deferred.prototype.promise</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#deferredprototyperesolve">Deferred.prototype.resolve</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#deferredprototypereject">Deferred.prototype.reject</a></div>
+                        </li>
+                    </ul>
                 </li>
                 <li class="level1">
                     <div class="li"><a href="#deserializevalue">.deserializeValue</a></div>
@@ -39,6 +59,9 @@
                             <div class="li"><a href="#eventedprototypetrigger">Evented.prototype.trigger</a></div>
                         </li>
                     </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#first">.first</a></div>
                 </li>
                 <li class="level1">
                     <div class="li"><a href="#flatten">.flatten</a></div>
@@ -98,7 +121,10 @@
                     <div class="li"><a href="#mixin">.mixin</a></div>
                 </li>
                 <li class="level1">
-                    <div class="li"><a href="#substitute">.substitute</a></div>
+                    <div class="li"><a href="#reject">.reject</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#resolve">.resolve</a></div>
                 </li>
                 <li class="level1">
                     <div class="li"><a href="#returntrue">.returnTrue</a></div>
@@ -108,6 +134,9 @@
                 </li>
                 <li class="level1">
                     <div class="li"><a href="#safemixin">.safeMixin</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#substitute">.substitute</a></div>
                 </li>
                 <li class="level1">
                     <div class="li"><a href="#topixel">.toPixel</a></div>
@@ -124,6 +153,9 @@
                 <li class="level1">
                     <div class="li"><a href="#upperfirst">.upperFirst</a></div>
                 </li>
+                <li class="level1">
+                    <div class="li"><a href="#when">.when</a></div>
+                </li>
             </ul>
         </div>
     </div>
@@ -133,6 +165,36 @@
         <p>
             This module contains some methods to extend javascript language function.
         </p>
+    </div>
+    <h2 class="sectionedit2" id="all">.all()</h2>
+    <div class="level2">
+        <blockquote>
+            langx.all(promises)
+        </blockquote>
+        <p>
+            This method can be useful for aggregating the results of multiple promises.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> An already resolved Promise if the An already resolved Promise if the promises passed is empty or contains no promises. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> A pending Promise in all other cases. This returned promise is then resolved/rejected langxhronously (as soon as the stack is empty) when all the promises in the given promises have resolved, or if any of the promises reject. </div>
+            </li>
+        </ul>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> promises
+                    <br> TYPE : Array
+                    <br> Zero or more Promise objects. </div>
+            </li>
+        </ul>
     </div>
     <h2 class="sectionedit2" id="camelCase">.camelCase()</h2>
     <div class="level2">
@@ -214,6 +276,75 @@
                     <br> the string to be transformed. </div>
             </li>
         </ul>
+    </div>
+    <h2 class="sectionedit3" id="debounce">.debounce()</h2>
+    <div class="level2">
+        <blockquote>
+            langx.debounce(fn,wait)
+        </blockquote>
+        <p>
+            This method creates and returns a new debounced version of the passed function which will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            A function that could reset the delay execution.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> fn
+                    <br> TYPE : Function
+                    <br> The function Will be executed by the function. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> wait
+                    <br> TYPE : Number
+                    <br> The delay executed time in milliseconds. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit4" id="deferred">Deferred</h2>
+    <div class="level2">
+        <blockquote>
+            var d = new Deferred();
+        </blockquote>
+        <p>
+            Deferred is a class that is used as the foundation for managing langxhronous threads. use this class to get a promise that gets resolved when the langxhronous thread is complete. In order trigger a callback to occur when the thread is complete, the d.promise.then() method is used.
+        </p>
+    </div>
+    <h3 class="sectionedit5" id="deferredprototypepromise">Deferred.prototype.promise</h3>
+    <div class="level3">
+        <p>
+            Points to the promise object related to this deferred object.
+        </p>
+    </div>
+    <h3 class="sectionedit6" id="deferredprototyperesolve">Deferred.prototype.resolve</h3>
+    <div class="level3">
+        <blockquote>
+            resolve(value)
+        </blockquote>
+        <p>
+            Resolve this deferred object.
+        </p>
+        <p>
+            When the deferred is resolved, any onResolved function added by promise.then() are called. Callbacks are executed in the order they were added. Each callback is passed the value argument.
+        </p>
+    </div>
+    <h3 class="sectionedit7" id="deferredprototypereject">Deferred.prototype.reject</h3>
+    <div class="level3">
+        <blockquote>
+            reject(reason)
+        </blockquote>
+        <p>
+            Reject this deferred object.
+        </p>
+        <p>
+            When the deferred is rejected, any onRejected function added by promise.then() are called. Callbacks are executed in the order they were added. Each callback is passed the reason argument.
+        </p>
     </div>
     <h2 class="sectionedit5" id="deserializevalue">.deserializeValue()</h2>
     <div class="level2">
@@ -447,6 +578,31 @@
                 <div class="li"> event
                     <br> TYPE: Event
                     <br> The event object triggered . </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit8" id="first">.first()</h2>
+    <div class="level2">
+        <blockquote>
+            langx.first(promises)
+        </blockquote>
+        <p>
+            This method returns a promise that resolves or rejects as soon as one of the promises in the promises resolves or rejects, with the value or reason from that promise.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            A pending Promise that resolves or rejects langxhronically (as soon as the stack is empty) as soon as one of the promises in the given promises resolves or rejects, adopting that first promise's value as its value.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> promises
+                    <br> TYPE : Array
+                    <br> Promise objects </div>
             </li>
         </ul>
     </div>
@@ -1006,30 +1162,53 @@
             </li>
         </ul>
     </div>
-    <h2 class="sectionedit32" id="substitute">.substitute()</h2>
+    <h2 class="sectionedit9" id="reject">.reject()</h2>
     <div class="level2">
         <blockquote>
-            langx.substitue(template,params).
+            langx.reject(reason)
         </blockquote>
+        <p>
+            This method returns a Promise object that is rejected with the given reason.
+        </p>
         <p>
             <strong class="u">Return value</strong>
         </p>
         <p>
-            the string substituted.
+            A Promise that is rejected with the given reason.
         </p>
         <p>
             <strong class="u">Parameter</strong>
         </p>
         <ul>
             <li class="level1">
-                <div class="li"> template
-                    <br> TYPE : String
-                    <br> the template string </div>
+                <div class="li"> reason
+                    <br> TYPE : Object
+                    <br> Reason why this Promise rejected. </div>
             </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit10" id="resolve">.resolve()</h2>
+    <div class="level2">
+        <blockquote>
+            langx.resolve(value)
+        </blockquote>
+        <p>
+            This method returns a Promise object that is resolved with the given value.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            A Promise that is resolved with the given value,
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
             <li class="level1">
-                <div class="li"> params
-                    <br> TYPE : PlainObject
-                    <br> a plain object contains param-value pairs. </div>
+                <div class="li"> value
+                    <br> TYPE : Object
+                    <br> Argument to be resolved by this Promise. </div>
             </li>
         </ul>
     </div>
@@ -1086,6 +1265,33 @@
                 <div class="li"> deep
                     <br> TYPE:Boolean Optional
                     <br> if true, the deep copy is performed </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit32" id="substitute">.substitute()</h2>
+    <div class="level2">
+        <blockquote>
+            langx.substitue(template,params).
+        </blockquote>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the string substituted.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> template
+                    <br> TYPE : String
+                    <br> the template string </div>
+            </li>
+            <li class="level1">
+                <div class="li"> params
+                    <br> TYPE : PlainObject
+                    <br> a plain object contains param-value pairs. </div>
             </li>
         </ul>
     </div>
@@ -1232,6 +1438,46 @@
                 <div class="li"> str
                     <br> TYPE : String
                     <br> the string to be converted. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit11" id="when">.when()</h2>
+    <div class="level2">
+        <blockquote>
+            langx.when(valueOrPromise,callback，errback，progback)
+        </blockquote>
+        <p>
+            This method transparently applies callbacks to values or promise.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the langx module object called.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> valueOrPromise
+                    <br> TYPE : Object
+                    <br> Either a value or a promise. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE : Function
+                    <br> The function that should be called back when the promise is fulfilled, or will be called immediately if valueOrPromise is not a promise. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> errback
+                    <br> TYPE : Function Optional
+                    <br> The function that should be called when a promise is rejected. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> progback
+                    <br> TYPE : Function Optional
+                    <br> The function that should be called when a promise provides progress. </div>
             </li>
         </ul>
     </div>
