@@ -138,7 +138,7 @@ define([
                             sectionId = data.sectionId;
                         // eventer.off(window, "scroll");
                         if ($("#" + sectionId).length) {
-                            $(document.body).animate({
+                            $([document.body, document.documentElement]).animate({
                                 "scrollTop": $("#" + sectionId).position().top
                             }, 200, function() {
                                 // setTimeout(function() {
