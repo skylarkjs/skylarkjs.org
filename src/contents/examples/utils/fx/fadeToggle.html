@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -22,7 +21,10 @@
 <button>fadeToggle p1</button>
 <p>This paragraph has a slow, linear fade.</p>
     <script>
-    require(["skylark/query","skylark/finder",  "skylark/fx"], function($, finder,fx) {
+    require(["skylarkjs"], function($, finder,fx) {
+        var $=skylarkjs.query,
+                finder=skylarkjs.finder,
+                fx=skylarkjs.fx;
        $("button").on("click", function() {
             fx.fadeToggle(finder.find("p"),"slow");
         });

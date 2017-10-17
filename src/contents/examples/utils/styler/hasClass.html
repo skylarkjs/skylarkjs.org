@@ -11,9 +11,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylark" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +23,9 @@
     <p id="target" class="foo bar">This is a hasClass "foo" item </p>
     <p class="selected"> This is not a hasClass "foo" item </p>
     <script>
-    require(["skylark/finder", "skylark/styler"], function(finder, styler) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                styler=skylarkjs.styler;
         styler.hasClass(finder.byId("target"), "foo");
     });
     </script>

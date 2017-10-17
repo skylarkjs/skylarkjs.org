@@ -1,9 +1,9 @@
 define([
     "./isMobile",
-    "skylarkjs/langx",
-    "ace",
-    // "ace/ext-beautify"
-], function(isMobile, langx, ace) {
+    "skylarkjs",
+    "ace"
+], function(isMobile, skylarkjs, ace) {
+    var langx = skylarkjs.langx;
     return langx.klass({
         editor: null,
         init: function(args) {

@@ -1,8 +1,9 @@
 define([
-    "skylarkjs/spa",
     "jquery",
-    "skylarkjs/router"
-], function(spa, $, router) {
+    "skylarkjs"
+], function($, skylarkjs) {
+    var spa = skylarkjs.spa,
+        router = skylarkjs.router;
     var currentNav,
         setActive = function(selector) {
             if (currentNav) $(currentNav).removeClass("active");
@@ -40,11 +41,11 @@ define([
                     data = target.data();
                 navClick(data.path, data.name);
             });
-            var selector = $("#main-wrap");
-            router.one("prepared", function(e) {
-                var curR = e.route;
+            router.one("routed", function(e) {
+                var curR = e.current.route;
                 setActive(curR.name);
             });
+            var selector = $("#main-wrap");
             $(".logo-nav").on("click", function() {
                 navClick("/", "home");
             });

@@ -1,14 +1,17 @@
 define([
-    "skylarkjs/spa",
     "jquery",
-    "skylarkjs/langx",
+    "skylarkjs",
     "handlebars",
     "scripts/helpers/AceEditor",
     "scripts/helpers/Partial",
     "scripts/helpers/FolderTreeDomEvent",
     "text!contents/api/api.json",
     "text!scripts/routes/api/api.hbs"
-], function(spa, $, langx, handlebars, AceEditor, Partial, FolderTreeDomEvent, apiJson, apiTpl) {
+], function($, skylarkjs, handlebars, AceEditor, Partial, FolderTreeDomEvent, apiJson, apiTpl) {
+    var spa = skylarkjs.spa,
+        langx = skylarkjs.langx,
+        noder = skylarkjs.noder,
+        eventer = skylarkjs.eventer;
     return spa.RouteController.inherit({
         klassName: "GuideController",
         preparing: function(e) {
@@ -24,7 +27,7 @@ define([
                 folders: JSON.parse(apiJson)
             });
         },
-        entered: function(evt) {
+        rendered: function(evt) {
             var baseSelector = $("#pageContainer"),
                 args = {
                     section: true,

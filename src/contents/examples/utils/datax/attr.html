@@ -3,17 +3,22 @@
 
 <head>
     <style>
-    em { color: blue;font-weight: bold;}
-    div {color: red; }
+    em {
+        color: blue;
+        font-weight: bold;
+    }
+    
+    div {
+        color: red;
+    }
     </style>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        } ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -26,7 +31,10 @@
     The title of the emphasis is:
     <div></div>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/datax"], function($, finder, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $ = skylarkjs.query,
+            finder = skylarkjs.finder,
+            datax = skylarkjs.datax;
         var title = datax.attr(finder.find("em"), "title");
         $("div").text(title);
     });

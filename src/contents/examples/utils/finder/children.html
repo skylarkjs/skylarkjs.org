@@ -8,9 +8,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylark" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -24,7 +24,9 @@
         <p>And One Last Time</p>
     </div>
     <script>
-    require(["skylark/styler", "skylark/finder"], function(styler, finder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var styler=skylarkjs.styler,
+                finder=skylarkjs.finder;
         finder.children(finder.find("div"), "p").forEach(function(node) {
             styler.css(node, "color", "blue");
         });

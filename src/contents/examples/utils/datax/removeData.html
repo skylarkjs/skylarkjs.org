@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,8 +22,10 @@
     <div>value1 after creation: <span></span></div>
     <div>value1 after removal: <span></span></div>
     <script>
-    require(["skylark/query", "skylark/datax"], function($, datax) {
-        var div = $("div")[0];
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                datax=skylarkjs.datax,
+                div = $("div")[0];
         datax.data(div, "test1", "VALUE-1");
         $("span:first").text("" + datax.data(div, "test1"));
         datax.removeData(div, "test1")

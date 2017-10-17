@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -24,7 +23,10 @@
     </p>
     <button>Call empty() on above paragraph</button>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/noder"], function($, finder, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var  $= skylarkjs.query,
+                finder=skylarkjs.finder,
+                noder=skylarkjs.noder;
         $("button").click(function() {
             noder.empty(finder.find("p"));
         });

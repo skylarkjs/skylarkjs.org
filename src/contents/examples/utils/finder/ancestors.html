@@ -15,9 +15,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylark" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -32,7 +32,9 @@
     Sibling to form:
     <input name="none" />
     <script>
-    require(["skylark/finder", "skylark/styler"], function(finder, styler) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                styler=styler.skylarkjs;
         finder.ancestors(finder.find("input "), "form").forEach(function(node, index) {
             styler.css(node, "border", "2px dotted blue");
         });

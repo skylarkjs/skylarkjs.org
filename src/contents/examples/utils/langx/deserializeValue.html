@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -28,7 +27,10 @@
     <div> deserializeValue("JSON") . result <b></b></div>
     <div> deserializeValue("String") . result <b></b></div>
     <script>
-    require(["skylark/query", "skylark/langx", "skylark/datax"], function($, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                langx=skylarkjs.langx,
+                datax=skylarkjs.datax;
         var bs = $("b");
         $(bs.eq(0)).text(langx.deserializeValue("true"));
         $(bs.eq(1)).text(langx.deserializeValue("false"));

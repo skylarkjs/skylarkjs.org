@@ -11,19 +11,19 @@
                     {{#each files}}
                     <li>
                         {{#if structure}}
-                            <div class="side-link"><a id="{{@root.sectionPrefix}}{{structure.id}}" data-section-id="{{structure.id}}" data-path="{{path}}" class="file-entity" href="{{structure.hash}}">
+                            <div class="side-link"><a id="{{@root.sectionPrefix}}{{structure.id}}" data-section-id="{{structure.id}}" data-path="{{path}}" class="file-entity">
                             <i class="{{iconClass}}"></i>{{structure.title}}</a></div>
-                            {{!-- <div class="side-link"><a data-section-id="{{structure.id}}" class="root section-entity" href="{{structure.hash}}">{{structure.title}}</a></div> --}}
+                            {{!-- <div class="side-link"><a data-section-id="{{structure.id}}" class="root section-entity" >{{structure.title}}</a></div> --}}
                             <ul class="sections hide menu-root">
                                 {{#each structure.children}}
                                 <li>
-                                     <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="sub section-entity" href="#{{id}}">{{title}}</a></div>
+                                     <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="sub section-entity">{{title}}</a></div>
                                      {{> file-section-partial}}
                                 </li>
                                 {{/each}}
                             </ul>
                         {{else}}
-                            <div class="side-link"><a data-path="{{path}}" class="file-entity" href="#{{name}}">{{name}}</a></div>
+                            <div class="side-link"><a data-path="{{path}}" class="file-entity">{{name}}</a></div>
                         {{/if}}
                     </li>
                     {{/each}}
@@ -44,18 +44,18 @@
                     {{#each files}}
                     <li>
                         {{#if structure}}
-                            <div class="side-link"><a id="{{@root.sectionPrefix}}{{structure.id}}" data-section-id="{{structure.id}}" data-path="{{path}}" class="file-entity" href="{{structure.hash}}"><i class="{{iconClass}}"></i>{{structure.title}}</a></div>
-                            {{!-- <div class="side-link"><a data-section-id="{{structure.id}}" class="root section-entity" href="{{structure.hash}}">{{structure.title}}</a></div> --}}
+                            <div class="side-link"><a id="{{@root.sectionPrefix}}{{structure.id}}" data-section-id="{{structure.id}}" data-path="{{path}}" class="file-entity"><i class="{{iconClass}}"></i>{{structure.title}}</a></div>
+                            {{!-- <div class="side-link"><a data-section-id="{{structure.id}}" class="root section-entity" >{{structure.title}}</a></div> --}}
                             <ul class="sections menu-root">
                                 {{#each structure.children}}
                                 <li>
-                                     <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="sub section-entity" href="#{{id}}">{{title}}</a></div>
+                                     <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="sub section-entity">{{title}}</a></div>
                                      {{> file-section-partial}}
                                 </li>
                                 {{/each}}
                             </ul>
                         {{else}}
-                            <div class="side-link"><a data-path="{{path}}" class="file-entity" href="#{{name}}">{{name}}</a></div>
+                            <div class="side-link"><a data-path="{{path}}" class="file-entity">{{name}}</a></div>
                         {{/if}}
                     </li>
                     {{/each}}
@@ -69,7 +69,7 @@
         <ul class="sections menu-sub">
             {{#each children}}
             <li>
-                 <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="section-entity" href="#{{id}}">{{title}}</a></div>
+                 <div class="side-link"><a id="{{@root.sectionPrefix}}{{id}}" data-section-id="{{id}}" data-section-hash="{{hash}}" class="section-entity">{{title}}</a></div>
                  <ul>
                     {{> file-section-partial}}
                  </ul>

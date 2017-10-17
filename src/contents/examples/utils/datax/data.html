@@ -3,17 +3,16 @@
 
 <head>
     <style>
-    div { color: blue;}
-    span { color: red;}
+    div {color: blue; }
+    span { color: red; }
     </style>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -26,7 +25,10 @@
         <span></span>
     </div>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/datax"], function($, finder, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $ = skylarkjs.query,
+            finder = skylarkjs.finder,
+            datax = skylarkjs.datax;
         var div = finder.find("div");
         datax.data(div, "test", {
             first: 16,

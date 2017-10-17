@@ -1,6 +1,7 @@
 define([
-    "skylarkjs/langx"
-], function(langx) {
+    "skylarkjs"
+], function(skylarkjs) {
+    var langx = skylarkjs.langx;
     return langx.klass({
         klassName: "FolderTree",
         init: function(args) {

@@ -1,11 +1,7 @@
 define([
     "ace",
-    "skylarkjs/spa",
-    "skylarkjs/css",
-    "skylarkjs/eventer",
-    "skylarkjs/finder",
     "jquery",
-    "skylarkjs/langx",
+    "skylarkjs",
     "handlebars",
     "jotted",
     "scripts/helpers/isMobile",
@@ -13,9 +9,13 @@ define([
     "scripts/helpers/FolderTreeDomEvent",
     "text!contents/examples/examples.json",
     "text!scripts/routes/examples/examples.hbs"
-], function(ace, spa, css, eventer, finder, $, langx, handlebars, Jotted, isMobile,
+], function(ace, $, skylarkjs, handlebars, Jotted, isMobile,
     Partial, FolderTreeDomEvent, examplesJson, examplesTpl) {
-    var currentFileItem;
+    var currentFileItem,
+        spa = skylarkjs.spa,
+        langx = skylarkjs.langx,
+        noder = skylarkjs.noder,
+        eventer = skylarkjs.eventer;
     return spa.RouteController.inherit({
         klassName: "ExamplesController",
         preparing: function(e) {
@@ -49,7 +49,7 @@ define([
             };
             $(".page-content").css(getSize());
         },
-        entered: function(evt) {
+        rendered: function(evt) {
             this.resize();
             var self = this;
             eventer.off(window, "resize");

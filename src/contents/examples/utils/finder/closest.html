@@ -21,10 +21,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -38,7 +37,10 @@
         <p>text</p>
     </div>
     <script>
-    require(["skylark/eventer", "skylark/styler", "skylark/finder"], function(eventer, styler, finder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var eventer=skylarkjs.eventer,
+                styler=skylarkjs.styler,
+                finder=skylarkjs.finder;
         eventer.on(document.body, "click", "b", function(e) {
             var divClosest = finder.closest(this, "div"),
                 liClosest = finder.closest(this, "li");

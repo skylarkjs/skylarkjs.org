@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +22,9 @@
     <p><span>Hello</span>, how are you?</p>
     <p>Me? I'm <span>good</span>.</p>
     <script>
-    require(["skylark/styler", "skylark/finder"], function(styler, finder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var styler=skylarkjs.styler,
+                finder=skylarkjs.finder;
         styler.css(finder.find("span"), "color", "blue");
     });
     </script>

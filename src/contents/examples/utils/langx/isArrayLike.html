@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -19,7 +18,10 @@
     Is [] an ArrayLike? <b></b>
     <input></input>
     <script>
-    require(["skylark/finder", "skylark/langx", "skylark/datax"], function(finder, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                langx=skylarkjs.langx,
+                datax=skylarkjs.datax;
         var text = langx.isArrayLike([]);
         datax.val(finder.find("input"),text)
     });

@@ -1,145 +1,54 @@
-[
-{
+[{
     "parent": "/api",
-    "path": "/api/Skylark API",
+    "path": "/api/skylark_api",
     "className": "root",
     "name": "Skylark API",
-    "files": [
-    {
-        "name": "async",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/async.sdoc.html",
-        "structure":
-        {
-            "hash": "#async/async",
-            "type": "h1",
-            "title": "async",
-            "id": "async",
-            "children": [
-            {
-                "hash": "#async/all",
-                "type": "h2",
-                "title": ".all",
-                "id": "all",
-                "children": []
-            },
-            {
-                "hash": "#async/debounce",
-                "type": "h2",
-                "title": ".debounce",
-                "id": "debounce",
-                "children": []
-            },
-            {
-                "hash": "#async/deferred",
-                "type": "h2",
-                "title": "Deferred",
-                "id": "deferred",
-                "children": [
-                {
-                    "hash": "#async/deferredprototypepromise",
-                    "type": "h3",
-                    "title": "Deferred.prototype.promise",
-                    "id": "deferredprototypepromise"
-                },
-                {
-                    "hash": "#async/deferredprototyperesolve",
-                    "type": "h3",
-                    "title": "Deferred.prototype.resolve",
-                    "id": "deferredprototyperesolve"
-                },
-                {
-                    "hash": "#async/deferredprototypereject",
-                    "type": "h3",
-                    "title": "Deferred.prototype.reject",
-                    "id": "deferredprototypereject"
-                }]
-            },
-            {
-                "hash": "#async/first",
-                "type": "h2",
-                "title": ".first",
-                "id": "first",
-                "children": []
-            },
-            {
-                "hash": "#async/reject",
-                "type": "h2",
-                "title": ".reject",
-                "id": "reject",
-                "children": []
-            },
-            {
-                "hash": "#async/resolve",
-                "type": "h2",
-                "title": ".resolve",
-                "id": "resolve",
-                "children": []
-            },
-            {
-                "hash": "#async/when",
-                "type": "h2",
-                "title": ".when",
-                "id": "when",
-                "children": []
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
+    "files": [{
         "name": "css",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/css.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/css.sdoc.html",
+        "structure": {
             "hash": "#css/css",
             "type": "h1",
             "title": "css",
             "id": "css",
-            "children": [
-            {
+            "children": [{
                 "hash": "#css/createstylesheet",
                 "type": "h2",
                 "title": ".createStyleSheet",
                 "id": "createstylesheet",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#css/loadstylesheet",
                 "type": "h2",
                 "title": ".loadStyleSheet",
                 "id": "loadstylesheet",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#css/deletesheetrule",
                 "type": "h2",
                 "title": ".deleteSheetRule",
                 "id": "deletesheetrule",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#css/deleterule",
                 "type": "h2",
                 "title": ".deleteRule",
                 "id": "deleterule",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#css/removestylesheet",
                 "type": "h2",
                 "title": ".removeStyleSheet",
                 "id": "removestylesheet",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#css/insertrule",
                 "type": "h2",
                 "title": ".insertRule",
                 "id": "insertrule",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#css/insertsheetrule",
                 "type": "h2",
                 "title": ".insertSheetRule",
@@ -148,61 +57,52 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "datax",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/datax.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/datax.sdoc.html",
+        "structure": {
             "hash": "#datax/datax",
             "type": "h1",
             "title": "datax",
             "id": "datax",
-            "children": [
-            {
+            "children": [{
                 "hash": "#datax/attr",
                 "type": "h2",
                 "title": ".attr",
                 "id": "attr",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#datax/data",
                 "type": "h2",
                 "title": ".data",
                 "id": "data",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#datax/prop",
                 "type": "h2",
                 "title": ".prop",
                 "id": "prop",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#datax/removeattr",
                 "type": "h2",
                 "title": ".removeAttr",
                 "id": "removeattr",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#datax/removedata",
                 "type": "h2",
                 "title": ".removeData",
                 "id": "removedata",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#datax/text",
                 "type": "h2",
                 "title": ".text",
                 "id": "text",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#datax/val",
                 "type": "h2",
                 "title": ".val",
@@ -211,33 +111,28 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "dnd",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/dnd.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/dnd.sdoc.html",
+        "structure": {
             "hash": "#dnd/dnd",
             "type": "h1",
             "title": "dnd",
             "id": "dnd",
-            "children": [
-            {
+            "children": [{
                 "hash": "#dnd/draggable",
                 "type": "h2",
                 "title": ".draggable",
                 "id": "draggable",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#dnd/droppable",
                 "type": "h2",
                 "title": ".droppable",
                 "id": "droppable",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#dnd/movable",
                 "type": "h2",
                 "title": ".movable",
@@ -246,236 +141,64 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
-        "name": "finder",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/finder.sdoc.html",
-        "structure":
-        {
-            "hash": "#finder/finder",
-            "type": "h1",
-            "title": "finder",
-            "id": "finder",
-            "children": [
-            {
-                "hash": "#finder/ancestor",
-                "type": "h2",
-                "title": ".ancestor",
-                "id": "ancestor",
-                "children": []
-            },
-            {
-                "hash": "#finder/ancestors",
-                "type": "h2",
-                "title": ".ancestors",
-                "id": "ancestors",
-                "children": []
-            },
-            {
-                "hash": "#finder/byid",
-                "type": "h2",
-                "title": ".byId",
-                "id": "byid",
-                "children": []
-            },
-            {
-                "hash": "#finder/child",
-                "type": "h2",
-                "title": ".child",
-                "id": "child",
-                "children": []
-            },
-            {
-                "hash": "#finder/children",
-                "type": "h2",
-                "title": ".children",
-                "id": "children",
-                "children": []
-            },
-            {
-                "hash": "#finder/descendants",
-                "type": "h2",
-                "title": ".descendants",
-                "id": "descendants",
-                "children": []
-            },
-            {
-                "hash": "#finder/descendant",
-                "type": "h2",
-                "title": ".descendant",
-                "id": "descendant",
-                "children": []
-            },
-            {
-                "hash": "#finder/find",
-                "type": "h2",
-                "title": ".find",
-                "id": "find",
-                "children": []
-            },
-            {
-                "hash": "#finder/findall",
-                "type": "h2",
-                "title": ".findAll",
-                "id": "findall",
-                "children": []
-            },
-            {
-                "hash": "#finder/matches",
-                "type": "h2",
-                "title": ".matches",
-                "id": "matches",
-                "children": []
-            },
-            {
-                "hash": "#finder/nextsibling",
-                "type": "h2",
-                "title": ".nextSibling",
-                "id": "nextsibling",
-                "children": []
-            },
-            {
-                "hash": "#finder/nextsiblings",
-                "type": "h2",
-                "title": ".nextSiblings",
-                "id": "nextsiblings",
-                "children": []
-            },
-            {
-                "hash": "#finder/parent",
-                "type": "h2",
-                "title": ".parent",
-                "id": "parent",
-                "children": []
-            },
-            {
-                "hash": "#finder/previoussibling",
-                "type": "h2",
-                "title": ".previousSibling",
-                "id": "previoussibling",
-                "children": []
-            },
-            {
-                "hash": "#finder/previoussiblings",
-                "type": "h2",
-                "title": ".previousSiblings",
-                "id": "previoussiblings",
-                "children": []
-            },
-            {
-                "hash": "#finder/pseudos",
-                "type": "h2",
-                "title": ".pseudos",
-                "id": "pseudos",
-                "children": []
-            },
-            {
-                "hash": "#finder/siblings",
-                "type": "h2",
-                "title": ".siblings",
-                "id": "siblings",
-                "children": []
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
-        "name": "filer",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/filer.sdoc.html",
-        "structure":
-        {
-            "hash": "#filer/filer",
-            "type": "h1",
-            "title": "filer",
-            "id": "filer",
-            "children": [
-            {
-                "hash": "#filer/dropzone",
-                "type": "h2",
-                "title": ".dropzone",
-                "id": "dropzone",
-                "children": []
-            },
-            {
-                "hash": "#filer/picker",
-                "type": "h2",
-                "title": ".picker",
-                "id": "picker",
-                "children": []
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "eventer",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/eventer.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/eventer.sdoc.html",
+        "structure": {
             "hash": "#eventer/eventer",
             "type": "h1",
             "title": "eventer",
             "id": "eventer",
-            "children": [
-            {
+            "children": [{
                 "hash": "#eventer/create",
                 "type": "h2",
                 "title": ".create",
                 "id": "create",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/off",
                 "type": "h2",
                 "title": ".off",
                 "id": "off",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/on",
                 "type": "h2",
                 "title": ".on",
                 "id": "on",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/one",
                 "type": "h2",
                 "title": ".one",
                 "id": "one",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/proxy",
                 "type": "h2",
                 "title": ".proxy",
                 "id": "proxy",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/ready",
                 "type": "h2",
                 "title": ".ready",
                 "id": "ready",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/shortcuts",
                 "type": "h2",
                 "title": ".shortcuts",
                 "id": "shortcuts",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/stop",
                 "type": "h2",
                 "title": ".stop",
                 "id": "stop",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#eventer/trigger",
                 "type": "h2",
                 "title": ".trigger",
@@ -484,68 +207,196 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
+        "name": "filer",
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/filer.sdoc.html",
+        "structure": {
+            "hash": "#filer/filer",
+            "type": "h1",
+            "title": "filer",
+            "id": "filer",
+            "children": [{
+                "hash": "#filer/dropzone",
+                "type": "h2",
+                "title": ".dropzone",
+                "id": "dropzone",
+                "children": []
+            }, {
+                "hash": "#filer/picker",
+                "type": "h2",
+                "title": ".picker",
+                "id": "picker",
+                "children": []
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }, {
+        "name": "finder",
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/finder.sdoc.html",
+        "structure": {
+            "hash": "#finder/finder",
+            "type": "h1",
+            "title": "finder",
+            "id": "finder",
+            "children": [{
+                "hash": "#finder/ancestor",
+                "type": "h2",
+                "title": ".ancestor",
+                "id": "ancestor",
+                "children": []
+            }, {
+                "hash": "#finder/ancestors",
+                "type": "h2",
+                "title": ".ancestors",
+                "id": "ancestors",
+                "children": []
+            }, {
+                "hash": "#finder/byid",
+                "type": "h2",
+                "title": ".byId",
+                "id": "byid",
+                "children": []
+            }, {
+                "hash": "#finder/child",
+                "type": "h2",
+                "title": ".child",
+                "id": "child",
+                "children": []
+            }, {
+                "hash": "#finder/children",
+                "type": "h2",
+                "title": ".children",
+                "id": "children",
+                "children": []
+            }, {
+                "hash": "#finder/descendants",
+                "type": "h2",
+                "title": ".descendants",
+                "id": "descendants",
+                "children": []
+            }, {
+                "hash": "#finder/descendant",
+                "type": "h2",
+                "title": ".descendant",
+                "id": "descendant",
+                "children": []
+            }, {
+                "hash": "#finder/find",
+                "type": "h2",
+                "title": ".find",
+                "id": "find",
+                "children": []
+            }, {
+                "hash": "#finder/findall",
+                "type": "h2",
+                "title": ".findAll",
+                "id": "findall",
+                "children": []
+            }, {
+                "hash": "#finder/matches",
+                "type": "h2",
+                "title": ".matches",
+                "id": "matches",
+                "children": []
+            }, {
+                "hash": "#finder/nextsibling",
+                "type": "h2",
+                "title": ".nextSibling",
+                "id": "nextsibling",
+                "children": []
+            }, {
+                "hash": "#finder/nextsiblings",
+                "type": "h2",
+                "title": ".nextSiblings",
+                "id": "nextsiblings",
+                "children": []
+            }, {
+                "hash": "#finder/parent",
+                "type": "h2",
+                "title": ".parent",
+                "id": "parent",
+                "children": []
+            }, {
+                "hash": "#finder/previoussibling",
+                "type": "h2",
+                "title": ".previousSibling",
+                "id": "previoussibling",
+                "children": []
+            }, {
+                "hash": "#finder/previoussiblings",
+                "type": "h2",
+                "title": ".previousSiblings",
+                "id": "previoussiblings",
+                "children": []
+            }, {
+                "hash": "#finder/pseudos",
+                "type": "h2",
+                "title": ".pseudos",
+                "id": "pseudos",
+                "children": []
+            }, {
+                "hash": "#finder/siblings",
+                "type": "h2",
+                "title": ".siblings",
+                "id": "siblings",
+                "children": []
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }, {
         "name": "fx",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/fx.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/fx.sdoc.html",
+        "structure": {
             "hash": "#fx/fx",
             "type": "h1",
             "title": "fx",
             "id": "fx",
-            "children": [
-            {
+            "children": [{
                 "hash": "#fx/animate",
                 "type": "h2",
                 "title": ".animate",
                 "id": "animate",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/show",
                 "type": "h2",
                 "title": ".show",
                 "id": "show",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/hide",
                 "type": "h2",
                 "title": ".hide",
                 "id": "hide",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/toggle",
                 "type": "h2",
                 "title": ".toggle",
                 "id": "toggle",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/fadeto",
                 "type": "h2",
                 "title": ".fadeTo",
                 "id": "fadeto",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/fadein",
                 "type": "h2",
                 "title": ".fadeIn",
                 "id": "fadein",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/fadeout",
                 "type": "h2",
                 "title": ".fadeOut",
                 "id": "fadeout",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#fx/fadetoggle",
                 "type": "h2",
                 "title": ".fadeToggle",
@@ -554,159 +405,136 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "geom",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/geom.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/geom.sdoc.html",
+        "structure": {
             "hash": "#geom/geom",
             "type": "h1",
             "title": "geom",
             "id": "geom",
-            "children": [
-            {
+            "children": [{
                 "hash": "#geom/borderextents",
                 "type": "h2",
                 "title": ".borderExtents",
                 "id": "borderextents",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/boundingposition",
                 "type": "h2",
                 "title": ".boundingPosition",
                 "id": "boundingposition",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/boundingrect",
                 "type": "h2",
                 "title": ".boundingRect",
                 "id": "boundingrect",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/clientheight",
                 "type": "h2",
                 "title": ".clientHeight",
                 "id": "clientheight",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/clientsize",
                 "type": "h2",
                 "title": ".clientSize",
                 "id": "clientsize",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/clientwidth",
                 "type": "h2",
                 "title": ".clientWidth",
                 "id": "clientwidth",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/contentrect",
                 "type": "h2",
                 "title": ".contentRect",
                 "id": "contentrect",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/getdocumentsize",
                 "type": "h2",
                 "title": ".getDocumentSize",
                 "id": "getdocumentsize",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/height",
                 "type": "h2",
                 "title": ".height",
                 "id": "height",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/marginextents",
                 "type": "h2",
                 "title": ".marginExtents",
                 "id": "marginextents",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/offsetparent",
                 "type": "h2",
                 "title": ".offsetParent",
                 "id": "offsetparent",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/paddingextents",
                 "type": "h2",
                 "title": ".paddingExtents",
                 "id": "paddingextents",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/pageposition",
                 "type": "h2",
                 "title": ".pagePosition",
                 "id": "pageposition",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/pagerect",
                 "type": "h2",
                 "title": ".pageRect",
                 "id": "pagerect",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/relativeposition",
                 "type": "h2",
                 "title": ".relativePosition",
                 "id": "relativeposition",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/relativerect",
                 "type": "h2",
                 "title": ".relativeRect",
                 "id": "relativerect",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/scrollintoview",
                 "type": "h2",
                 "title": ".scrollIntoView",
                 "id": "scrollintoview",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/scrollleft",
                 "type": "h2",
                 "title": ".scrollLeft",
                 "id": "scrollleft",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/scrolltop",
                 "type": "h2",
                 "title": ".scrollTop",
                 "id": "scrolltop",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/size",
                 "type": "h2",
                 "title": ".size",
                 "id": "size",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#geom/width",
                 "type": "h2",
                 "title": ".width",
@@ -715,19 +543,314 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
+        "name": "langx",
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/langx.sdoc.html",
+        "structure": {
+            "hash": "#langx/langx",
+            "type": "h1",
+            "title": "langx",
+            "id": "langx",
+            "children": [{
+                "hash": "#langx/all",
+                "type": "h2",
+                "title": ".all",
+                "id": "all",
+                "children": []
+            }, {
+                "hash": "#langx/camelCase",
+                "type": "h2",
+                "title": ".camelCase",
+                "id": "camelCase",
+                "children": []
+            }, {
+                "hash": "#langx/compact",
+                "type": "h2",
+                "title": ".compact",
+                "id": "compact",
+                "children": []
+            }, {
+                "hash": "#langx/dasherize",
+                "type": "h2",
+                "title": ".dasherize",
+                "id": "dasherize",
+                "children": []
+            }, {
+                "hash": "#langx/debounce",
+                "type": "h2",
+                "title": ".debounce",
+                "id": "debounce",
+                "children": []
+            }, {
+                "hash": "#langx/deferred",
+                "type": "h2",
+                "title": "Deferred",
+                "id": "deferred",
+                "children": [{
+                    "hash": "#langx/deferredprototypepromise",
+                    "type": "h3",
+                    "title": "Deferred.prototype.promise",
+                    "id": "deferredprototypepromise"
+                }, {
+                    "hash": "#langx/deferredprototyperesolve",
+                    "type": "h3",
+                    "title": "Deferred.prototype.resolve",
+                    "id": "deferredprototyperesolve"
+                }, {
+                    "hash": "#langx/deferredprototypereject",
+                    "type": "h3",
+                    "title": "Deferred.prototype.reject",
+                    "id": "deferredprototypereject"
+                }]
+            }, {
+                "hash": "#langx/deserializevalue",
+                "type": "h2",
+                "title": ".deserializeValue",
+                "id": "deserializevalue",
+                "children": []
+            }, {
+                "hash": "#langx/each",
+                "type": "h2",
+                "title": ".each",
+                "id": "each",
+                "children": []
+            }, {
+                "hash": "#langx/evented",
+                "type": "h2",
+                "title": ".Evented",
+                "id": "evented",
+                "children": [{
+                    "hash": "#langx/eventedprototypelistened",
+                    "type": "h3",
+                    "title": "Evented.prototype.listened",
+                    "id": "eventedprototypelistened"
+                }, {
+                    "hash": "#langx/eventedprototypeoff",
+                    "type": "h3",
+                    "title": "Evented.prototype.off",
+                    "id": "eventedprototypeoff"
+                }, {
+                    "hash": "#langx/eventedprototypeon",
+                    "type": "h3",
+                    "title": "Evented.prototype.on",
+                    "id": "eventedprototypeon"
+                }, {
+                    "hash": "#langx/eventedprototypeone",
+                    "type": "h3",
+                    "title": "Evented.prototype.one",
+                    "id": "eventedprototypeone"
+                }, {
+                    "hash": "#langx/eventedprototypetrigger",
+                    "type": "h3",
+                    "title": "Evented.prototype.trigger",
+                    "id": "eventedprototypetrigger"
+                }]
+            }, {
+                "hash": "#langx/first",
+                "type": "h2",
+                "title": ".first",
+                "id": "first",
+                "children": []
+            }, {
+                "hash": "#langx/flatten",
+                "type": "h2",
+                "title": ".flatten",
+                "id": "flatten",
+                "children": []
+            }, {
+                "hash": "#langx/inarray",
+                "type": "h2",
+                "title": ".inArray",
+                "id": "inarray",
+                "children": []
+            }, {
+                "hash": "#langx/isarray",
+                "type": "h2",
+                "title": ".isArray",
+                "id": "isarray",
+                "children": []
+            }, {
+                "hash": "#langx/isarraylike",
+                "type": "h2",
+                "title": ".isArrayLike",
+                "id": "isarraylike",
+                "children": []
+            }, {
+                "hash": "#langx/isboolean",
+                "type": "h2",
+                "title": ".isBoolean",
+                "id": "isboolean",
+                "children": []
+            }, {
+                "hash": "#langx/isdefined",
+                "type": "h2",
+                "title": ".isDefined",
+                "id": "isdefined",
+                "children": []
+            }, {
+                "hash": "#langx/isdocument",
+                "type": "h2",
+                "title": ".isDocument",
+                "id": "isdocument",
+                "children": []
+            }, {
+                "hash": "#langx/isemptyobject",
+                "type": "h2",
+                "title": ".isEmptyObject",
+                "id": "isemptyobject",
+                "children": []
+            }, {
+                "hash": "#langx/isfunction",
+                "type": "h2",
+                "title": ".isFunction",
+                "id": "isfunction",
+                "children": []
+            }, {
+                "hash": "#langx/isplainobject",
+                "type": "h2",
+                "title": ".isPlainObject",
+                "id": "isplainobject",
+                "children": []
+            }, {
+                "hash": "#langx/isnumber",
+                "type": "h2",
+                "title": ".isNumber",
+                "id": "isnumber",
+                "children": []
+            }, {
+                "hash": "#langx/isstring",
+                "type": "h2",
+                "title": ".isString",
+                "id": "isstring",
+                "children": []
+            }, {
+                "hash": "#langx/issameorigin",
+                "type": "h2",
+                "title": ".isSameOrigin",
+                "id": "issameorigin",
+                "children": []
+            }, {
+                "hash": "#langx/iswindow",
+                "type": "h2",
+                "title": ".isWindow",
+                "id": "iswindow",
+                "children": []
+            }, {
+                "hash": "#langx/klass",
+                "type": "h2",
+                "title": ".klass",
+                "id": "klass",
+                "children": []
+            }, {
+                "hash": "#langx/lowerfirst",
+                "type": "h2",
+                "title": ".lowerFirst",
+                "id": "lowerfirst",
+                "children": []
+            }, {
+                "hash": "#langx/makearray",
+                "type": "h2",
+                "title": ".makeArray",
+                "id": "makearray",
+                "children": []
+            }, {
+                "hash": "#langx/map",
+                "type": "h2",
+                "title": ".map",
+                "id": "map",
+                "children": []
+            }, {
+                "hash": "#langx/mixin",
+                "type": "h2",
+                "title": ".mixin",
+                "id": "mixin",
+                "children": []
+            }, {
+                "hash": "#langx/reject",
+                "type": "h2",
+                "title": ".reject",
+                "id": "reject",
+                "children": []
+            }, {
+                "hash": "#langx/resolve",
+                "type": "h2",
+                "title": ".resolve",
+                "id": "resolve",
+                "children": []
+            }, {
+                "hash": "#langx/returntrue",
+                "type": "h2",
+                "title": ".returnTrue",
+                "id": "returntrue",
+                "children": []
+            }, {
+                "hash": "#langx/returnfalse",
+                "type": "h2",
+                "title": ".returnFalse",
+                "id": "returnfalse",
+                "children": []
+            }, {
+                "hash": "#langx/safemixin",
+                "type": "h2",
+                "title": ".safeMixin",
+                "id": "safemixin",
+                "children": []
+            }, {
+                "hash": "#langx/substitute",
+                "type": "h2",
+                "title": ".substitute",
+                "id": "substitute",
+                "children": []
+            }, {
+                "hash": "#langx/topixel",
+                "type": "h2",
+                "title": ".toPixel",
+                "id": "topixel",
+                "children": []
+            }, {
+                "hash": "#langx/trim",
+                "type": "h2",
+                "title": ".trim",
+                "id": "trim",
+                "children": []
+            }, {
+                "hash": "#langx/type",
+                "type": "h2",
+                "title": ".type",
+                "id": "type",
+                "children": []
+            }, {
+                "hash": "#langx/uniq",
+                "type": "h2",
+                "title": ".uniq",
+                "id": "uniq",
+                "children": []
+            }, {
+                "hash": "#langx/upperfirst",
+                "type": "h2",
+                "title": ".upperFirst",
+                "id": "upperfirst",
+                "children": []
+            }, {
+                "hash": "#langx/when",
+                "type": "h2",
+                "title": ".when",
+                "id": "when",
+                "children": []
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }, {
         "name": "mover",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/mover.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/mover.sdoc.html",
+        "structure": {
             "hash": "#mover/mover",
             "type": "h1",
             "title": "mover",
             "id": "mover",
-            "children": [
-            {
+            "children": [{
                 "hash": "#mover/movable",
                 "type": "h2",
                 "title": ".movable",
@@ -736,572 +859,148 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
-        "name": "langx",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/langx.sdoc.html",
-        "structure":
-        {
-            "hash": "#langx/langx",
-            "type": "h1",
-            "title": "langx",
-            "id": "langx",
-            "children": [
-            {
-                "hash": "#langx/camelCase",
-                "type": "h2",
-                "title": ".camelCase",
-                "id": "camelCase",
-                "children": []
-            },
-            {
-                "hash": "#langx/compact",
-                "type": "h2",
-                "title": ".compact",
-                "id": "compact",
-                "children": []
-            },
-            {
-                "hash": "#langx/dasherize",
-                "type": "h2",
-                "title": ".dasherize",
-                "id": "dasherize",
-                "children": []
-            },
-            {
-                "hash": "#langx/deserializevalue",
-                "type": "h2",
-                "title": ".deserializeValue",
-                "id": "deserializevalue",
-                "children": []
-            },
-            {
-                "hash": "#langx/each",
-                "type": "h2",
-                "title": ".each",
-                "id": "each",
-                "children": []
-            },
-            {
-                "hash": "#langx/evented",
-                "type": "h2",
-                "title": ".Evented",
-                "id": "evented",
-                "children": [
-                {
-                    "hash": "#langx/eventedprototypelistened",
-                    "type": "h3",
-                    "title": "Evented.prototype.listened",
-                    "id": "eventedprototypelistened"
-                },
-                {
-                    "hash": "#langx/eventedprototypeoff",
-                    "type": "h3",
-                    "title": "Evented.prototype.off",
-                    "id": "eventedprototypeoff"
-                },
-                {
-                    "hash": "#langx/eventedprototypeon",
-                    "type": "h3",
-                    "title": "Evented.prototype.on",
-                    "id": "eventedprototypeon"
-                },
-                {
-                    "hash": "#langx/eventedprototypeone",
-                    "type": "h3",
-                    "title": "Evented.prototype.one",
-                    "id": "eventedprototypeone"
-                },
-                {
-                    "hash": "#langx/eventedprototypetrigger",
-                    "type": "h3",
-                    "title": "Evented.prototype.trigger",
-                    "id": "eventedprototypetrigger"
-                }]
-            },
-            {
-                "hash": "#langx/flatten",
-                "type": "h2",
-                "title": ".flatten",
-                "id": "flatten",
-                "children": []
-            },
-            {
-                "hash": "#langx/inarray",
-                "type": "h2",
-                "title": ".inArray",
-                "id": "inarray",
-                "children": []
-            },
-            {
-                "hash": "#langx/isarray",
-                "type": "h2",
-                "title": ".isArray",
-                "id": "isarray",
-                "children": []
-            },
-            {
-                "hash": "#langx/isarraylike",
-                "type": "h2",
-                "title": ".isArrayLike",
-                "id": "isarraylike",
-                "children": []
-            },
-            {
-                "hash": "#langx/isboolean",
-                "type": "h2",
-                "title": ".isBoolean",
-                "id": "isboolean",
-                "children": []
-            },
-            {
-                "hash": "#langx/isdefined",
-                "type": "h2",
-                "title": ".isDefined",
-                "id": "isdefined",
-                "children": []
-            },
-            {
-                "hash": "#langx/isdocument",
-                "type": "h2",
-                "title": ".isDocument",
-                "id": "isdocument",
-                "children": []
-            },
-            {
-                "hash": "#langx/isemptyobject",
-                "type": "h2",
-                "title": ".isEmptyObject",
-                "id": "isemptyobject",
-                "children": []
-            },
-            {
-                "hash": "#langx/isfunction",
-                "type": "h2",
-                "title": ".isFunction",
-                "id": "isfunction",
-                "children": []
-            },
-            {
-                "hash": "#langx/isplainobject",
-                "type": "h2",
-                "title": ".isPlainObject",
-                "id": "isplainobject",
-                "children": []
-            },
-            {
-                "hash": "#langx/isnumber",
-                "type": "h2",
-                "title": ".isNumber",
-                "id": "isnumber",
-                "children": []
-            },
-            {
-                "hash": "#langx/isstring",
-                "type": "h2",
-                "title": ".isString",
-                "id": "isstring",
-                "children": []
-            },
-            {
-                "hash": "#langx/issameorigin",
-                "type": "h2",
-                "title": ".isSameOrigin",
-                "id": "issameorigin",
-                "children": []
-            },
-            {
-                "hash": "#langx/iswindow",
-                "type": "h2",
-                "title": ".isWindow",
-                "id": "iswindow",
-                "children": []
-            },
-            {
-                "hash": "#langx/klass",
-                "type": "h2",
-                "title": ".klass",
-                "id": "klass",
-                "children": []
-            },
-            {
-                "hash": "#langx/lowerfirst",
-                "type": "h2",
-                "title": ".lowerFirst",
-                "id": "lowerfirst",
-                "children": []
-            },
-            {
-                "hash": "#langx/makearray",
-                "type": "h2",
-                "title": ".makeArray",
-                "id": "makearray",
-                "children": []
-            },
-            {
-                "hash": "#langx/map",
-                "type": "h2",
-                "title": ".map",
-                "id": "map",
-                "children": []
-            },
-            {
-                "hash": "#langx/mixin",
-                "type": "h2",
-                "title": ".mixin",
-                "id": "mixin",
-                "children": []
-            },
-            {
-                "hash": "#langx/substitute",
-                "type": "h2",
-                "title": ".substitute",
-                "id": "substitute",
-                "children": []
-            },
-            {
-                "hash": "#langx/returntrue",
-                "type": "h2",
-                "title": ".returnTrue",
-                "id": "returntrue",
-                "children": []
-            },
-            {
-                "hash": "#langx/returnfalse",
-                "type": "h2",
-                "title": ".returnFalse",
-                "id": "returnfalse",
-                "children": []
-            },
-            {
-                "hash": "#langx/safemixin",
-                "type": "h2",
-                "title": ".safeMixin",
-                "id": "safemixin",
-                "children": []
-            },
-            {
-                "hash": "#langx/topixel",
-                "type": "h2",
-                "title": ".toPixel",
-                "id": "topixel",
-                "children": []
-            },
-            {
-                "hash": "#langx/trim",
-                "type": "h2",
-                "title": ".trim",
-                "id": "trim",
-                "children": []
-            },
-            {
-                "hash": "#langx/type",
-                "type": "h2",
-                "title": ".type",
-                "id": "type",
-                "children": []
-            },
-            {
-                "hash": "#langx/uniq",
-                "type": "h2",
-                "title": ".uniq",
-                "id": "uniq",
-                "children": []
-            },
-            {
-                "hash": "#langx/upperfirst",
-                "type": "h2",
-                "title": ".upperFirst",
-                "id": "upperfirst",
-                "children": []
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
-        "name": "spa",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/spa.sdoc.html",
-        "structure":
-        {
-            "hash": "#spa/spa",
-            "type": "h1",
-            "title": "spa",
-            "id": "spa",
-            "children": [
-            {
-                "hash": "#spa/spa1",
-                "type": "h2",
-                "title": "spa()",
-                "id": "spa1",
-                "children": []
-            },
-            {
-                "hash": "#spa/application",
-                "type": "h2",
-                "title": ".Application",
-                "id": "application",
-                "children": [
-                {
-                    "hash": "#spa/applicationprototypego",
-                    "type": "h3",
-                    "title": "Application.prototype.go()",
-                    "id": "applicationprototypego"
-                },
-                {
-                    "hash": "#spa/applicationprototypepage",
-                    "type": "h3",
-                    "title": "Application.prototype.page()",
-                    "id": "applicationprototypepage"
-                },
-                {
-                    "hash": "#spa/applicationprototypeprepare",
-                    "type": "h3",
-                    "title": "Application.prototype.prepare()",
-                    "id": "applicationprototypeprepare"
-                },
-                {
-                    "hash": "#spa/applicationprototyperun",
-                    "type": "h3",
-                    "title": "Application.prototype.run()",
-                    "id": "applicationprototyperun"
-                }]
-            },
-            {
-                "hash": "#spa/page",
-                "type": "h2",
-                "title": ".Page",
-                "id": "page",
-                "children": [
-                {
-                    "hash": "#spa/pageprototyperefresh",
-                    "type": "h3",
-                    "title": "Page.prototype.refresh()",
-                    "id": "pageprototyperefresh"
-                }]
-            },
-            {
-                "hash": "#spa/plugin",
-                "type": "h2",
-                "title": ".Plugin",
-                "id": "plugin",
-                "children": [
-                {
-                    "hash": "#spa/pluginprototypeprepare",
-                    "type": "h3",
-                    "title": "Plugin.prototype.prepare()",
-                    "id": "pluginprototypeprepare"
-                }]
-            },
-            {
-                "hash": "#spa/plugincontroller",
-                "type": "h2",
-                "title": ".PluginController",
-                "id": "plugincontroller",
-                "children": [
-                {
-                    "hash": "#spa/plugincontrollerprototypeperform",
-                    "type": "h3",
-                    "title": "PluginController.prototype.perform()",
-                    "id": "plugincontrollerprototypeperform"
-                }]
-            },
-            {
-                "hash": "#spa/route",
-                "type": "h2",
-                "title": ".Route",
-                "id": "route",
-                "children": [
-                {
-                    "hash": "#spa/routeprototypeprepare",
-                    "type": "h3",
-                    "title": "Route.prototype.prepare()",
-                    "id": "routeprototypeprepare"
-                }]
-            },
-            {
-                "hash": "#spa/routecontroller",
-                "type": "h2",
-                "title": ".RouteController",
-                "id": "routecontroller",
-                "children": [
-                {
-                    "hash": "#spa/routecontrollerprototypeperform",
-                    "type": "h3",
-                    "title": "RouteController.prototype.perform()",
-                    "id": "routecontrollerprototypeperform"
-                }]
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "noder",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/noder.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/noder.sdoc.html",
+        "structure": {
             "hash": "#noder/noder",
             "type": "h1",
             "title": "noder",
             "id": "noder",
-            "children": [
-            {
+            "children": [{
                 "hash": "#noder/clone",
                 "type": "h2",
                 "title": ".clone",
                 "id": "clone",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/contains",
                 "type": "h2",
                 "title": ".contains",
                 "id": "contains",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/contents",
                 "type": "h2",
                 "title": ".contents",
                 "id": "contents",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/createelement",
                 "type": "h2",
                 "title": ".createElement",
                 "id": "createelement",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/createfragment",
                 "type": "h2",
                 "title": ".createFragment",
                 "id": "createfragment",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/createtextnode",
                 "type": "h2",
                 "title": ".createTextNode",
                 "id": "createtextnode",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/html",
                 "type": "h2",
                 "title": ".html",
                 "id": "html",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/doc",
                 "type": "h2",
                 "title": ".doc",
                 "id": "doc",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/empty",
                 "type": "h2",
                 "title": ".empty",
                 "id": "empty",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/ischildof",
                 "type": "h2",
                 "title": ".isChildOf",
                 "id": "ischildof",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/isdoc",
                 "type": "h2",
                 "title": ".isDoc",
                 "id": "isdoc",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/ownerdoc",
                 "type": "h2",
                 "title": ".ownerDoc",
                 "id": "ownerdoc",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/after",
                 "type": "h2",
                 "title": ".after",
                 "id": "after",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/before",
                 "type": "h2",
                 "title": ".before",
                 "id": "before",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/prepend",
                 "type": "h2",
                 "title": ".prepend",
                 "id": "prepend",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/append",
                 "type": "h2",
                 "title": ".append",
                 "id": "append",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/remove",
                 "type": "h2",
                 "title": ".remove",
                 "id": "remove",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/replace",
                 "type": "h2",
                 "title": ".replace",
                 "id": "replace",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/throb",
                 "type": "h2",
                 "title": ".throb",
                 "id": "throb",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/traverse",
                 "type": "h2",
                 "title": ".traverse",
                 "id": "traverse",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/wrapper",
                 "type": "h2",
                 "title": ".wrapper",
                 "id": "wrapper",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/wrapperinner",
                 "type": "h2",
                 "title": ".wrapperInner",
                 "id": "wrapperinner",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#noder/unwrap",
                 "type": "h2",
                 "title": ".unwrap",
@@ -1310,196 +1009,104 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
-        "name": "velm",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/velm.sdoc.html",
-        "structure":
-        {
-            "hash": "#velm/velm",
-            "type": "h1",
-            "title": "velm",
-            "id": "velm",
-            "children": [
-            {
-                "hash": "#velm/velm1",
-                "type": "h2",
-                "title": "velm()",
-                "id": "velm1",
-                "children": []
-            },
-            {
-                "hash": "#velm/batch",
-                "type": "h2",
-                "title": ".batch()",
-                "id": "batch",
-                "children": []
-            },
-            {
-                "hash": "#velm/delegate",
-                "type": "h2",
-                "title": ".delegate()",
-                "id": "delegate",
-                "children": []
-            },
-            {
-                "hash": "#velm/find",
-                "type": "h2",
-                "title": ".find()",
-                "id": "find",
-                "children": []
-            },
-            {
-                "hash": "#velm/root",
-                "type": "h2",
-                "title": ".root",
-                "id": "root",
-                "children": []
-            },
-            {
-                "hash": "#velm/visuleelement",
-                "type": "h2",
-                "title": ".VisuleElement",
-                "id": "visuleelement",
-                "children": [
-                {
-                    "hash": "#velm/constructor",
-                    "type": "h3",
-                    "title": "constructor",
-                    "id": "constructor"
-                },
-                {
-                    "hash": "#velm/prototype_attribute",
-                    "type": "h3",
-                    "title": "prototype attribute",
-                    "id": "prototype_attribute"
-                },
-                {
-                    "hash": "#velm/prototype_methods",
-                    "type": "h3",
-                    "title": "prototype methods",
-                    "id": "prototype_methods"
-                }]
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "router",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/router.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/router.sdoc.html",
+        "structure": {
             "hash": "#router/router",
             "type": "h1",
             "title": "router",
             "id": "router",
-            "children": [
-            {
+            "children": [{
                 "hash": "#router/baseurl",
                 "type": "h2",
                 "title": ".baseUrl",
                 "id": "baseurl",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/current",
                 "type": "h2",
                 "title": ".current",
                 "id": "current",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/go",
                 "type": "h2",
                 "title": ".go",
                 "id": "go",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/map",
                 "type": "h2",
                 "title": ".map",
                 "id": "map",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/off",
                 "type": "h2",
                 "title": ".off",
                 "id": "off",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/on",
                 "type": "h2",
                 "title": ".on",
                 "id": "on",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/one",
                 "type": "h2",
                 "title": ".one",
                 "id": "one",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/path",
                 "type": "h2",
                 "title": ".path",
                 "id": "path",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/previous",
                 "type": "h2",
                 "title": ".previous",
                 "id": "previous",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/route",
                 "type": "h2",
                 "title": ".Route",
                 "id": "route",
-                "children": [
-                {
+                "children": [{
                     "hash": "#router/routeprototypematch",
                     "type": "h3",
                     "title": ".Route.prototype.match",
                     "id": "routeprototypematch"
-                },
-                {
+                }, {
                     "hash": "#router/routeprototypepath",
                     "type": "h3",
                     "title": ".Route.prototype.path",
                     "id": "routeprototypepath"
                 }]
-            },
-            {
+            }, {
                 "hash": "#router/route1",
                 "type": "h2",
                 "title": ".route",
                 "id": "route1",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/routes",
                 "type": "h2",
                 "title": ".routes",
                 "id": "routes",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/start",
                 "type": "h2",
                 "title": ".start",
                 "id": "start",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#router/trigger",
                 "type": "h2",
                 "title": ".trigger",
@@ -1508,26 +1115,22 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
         "name": "scripter",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/scripter.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/scripter.sdoc.html",
+        "structure": {
             "hash": "#scripter/scripter",
             "type": "h1",
             "title": "scripter",
             "id": "scripter",
-            "children": [
-            {
+            "children": [{
                 "hash": "#scripter/loadJavaScript",
                 "type": "h2",
                 "title": ".loadJavaScript",
                 "id": "loadJavaScript",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#scripter/deleteJavaScript",
                 "type": "h2",
                 "title": ".deleteJavaScript",
@@ -1536,80 +1139,231 @@
             }]
         },
         "iconClass": "fa fa-caret-right"
-    },
-    {
+    }, {
+        "name": "spa",
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/spa.sdoc.html",
+        "structure": {
+            "hash": "#spa/spa",
+            "type": "h1",
+            "title": "spa",
+            "id": "spa",
+            "children": [{
+                "hash": "#spa/spa1",
+                "type": "h2",
+                "title": "spa()",
+                "id": "spa1",
+                "children": []
+            }, {
+                "hash": "#spa/application",
+                "type": "h2",
+                "title": ".Application",
+                "id": "application",
+                "children": [{
+                    "hash": "#spa/applicationprototypego",
+                    "type": "h3",
+                    "title": "Application.prototype.go()",
+                    "id": "applicationprototypego"
+                }, {
+                    "hash": "#spa/applicationprototypepage",
+                    "type": "h3",
+                    "title": "Application.prototype.page()",
+                    "id": "applicationprototypepage"
+                }, {
+                    "hash": "#spa/applicationprototypeprepare",
+                    "type": "h3",
+                    "title": "Application.prototype.prepare()",
+                    "id": "applicationprototypeprepare"
+                }, {
+                    "hash": "#spa/applicationprototyperun",
+                    "type": "h3",
+                    "title": "Application.prototype.run()",
+                    "id": "applicationprototyperun"
+                }]
+            }, {
+                "hash": "#spa/page",
+                "type": "h2",
+                "title": ".Page",
+                "id": "page",
+                "children": [{
+                    "hash": "#spa/pageprototyperefresh",
+                    "type": "h3",
+                    "title": "Page.prototype.refresh()",
+                    "id": "pageprototyperefresh"
+                }]
+            }, {
+                "hash": "#spa/plugin",
+                "type": "h2",
+                "title": ".Plugin",
+                "id": "plugin",
+                "children": [{
+                    "hash": "#spa/pluginprototypeprepare",
+                    "type": "h3",
+                    "title": "Plugin.prototype.prepare()",
+                    "id": "pluginprototypeprepare"
+                }]
+            }, {
+                "hash": "#spa/plugincontroller",
+                "type": "h2",
+                "title": ".PluginController",
+                "id": "plugincontroller",
+                "children": [{
+                    "hash": "#spa/plugincontrollerprototypeperform",
+                    "type": "h3",
+                    "title": "PluginController.prototype.perform()",
+                    "id": "plugincontrollerprototypeperform"
+                }]
+            }, {
+                "hash": "#spa/route",
+                "type": "h2",
+                "title": ".Route",
+                "id": "route",
+                "children": [{
+                    "hash": "#spa/routeprototypeprepare",
+                    "type": "h3",
+                    "title": "Route.prototype.prepare()",
+                    "id": "routeprototypeprepare"
+                }]
+            }, {
+                "hash": "#spa/routecontroller",
+                "type": "h2",
+                "title": ".RouteController",
+                "id": "routecontroller",
+                "children": [{
+                    "hash": "#spa/routecontrollerprototypeperform",
+                    "type": "h3",
+                    "title": "RouteController.prototype.perform()",
+                    "id": "routecontrollerprototypeperform"
+                }]
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }, {
         "name": "styler",
-        "parent": "/api/Skylark API",
-        "path": "/api/Skylark API/styler.sdoc.html",
-        "structure":
-        {
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/styler.sdoc.html",
+        "structure": {
             "hash": "#styler/styler",
             "type": "h1",
             "title": "styler",
             "id": "styler",
-            "children": [
-            {
+            "children": [{
                 "hash": "#styler/addclass",
                 "type": "h2",
                 "title": ".addClass",
                 "id": "addclass",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/classname",
                 "type": "h2",
                 "title": ".className",
                 "id": "classname",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/css",
                 "type": "h2",
                 "title": ".css",
                 "id": "css",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/hasclass",
                 "type": "h2",
                 "title": ".hasClass",
                 "id": "hasclass",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/hide",
                 "type": "h2",
                 "title": ".hide",
                 "id": "hide",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/isinvisible",
                 "type": "h2",
                 "title": ".isInvisible",
                 "id": "isinvisible",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/removeclass",
                 "type": "h2",
                 "title": ".removeClass",
                 "id": "removeclass",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/show",
                 "type": "h2",
                 "title": ".show",
                 "id": "show",
                 "children": []
-            },
-            {
+            }, {
                 "hash": "#styler/toggleclass",
                 "type": "h2",
                 "title": ".toggleClass",
                 "id": "toggleclass",
                 "children": []
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }, {
+        "name": "velm",
+        "parent": "/api/skylark_api",
+        "path": "/api/skylark_api/velm.sdoc.html",
+        "structure": {
+            "hash": "#velm/velm",
+            "type": "h1",
+            "title": "velm",
+            "id": "velm",
+            "children": [{
+                "hash": "#velm/velm1",
+                "type": "h2",
+                "title": "velm()",
+                "id": "velm1",
+                "children": []
+            }, {
+                "hash": "#velm/batch",
+                "type": "h2",
+                "title": ".batch()",
+                "id": "batch",
+                "children": []
+            }, {
+                "hash": "#velm/delegate",
+                "type": "h2",
+                "title": ".delegate()",
+                "id": "delegate",
+                "children": []
+            }, {
+                "hash": "#velm/find",
+                "type": "h2",
+                "title": ".find()",
+                "id": "find",
+                "children": []
+            }, {
+                "hash": "#velm/root",
+                "type": "h2",
+                "title": ".root",
+                "id": "root",
+                "children": []
+            }, {
+                "hash": "#velm/visuleelement",
+                "type": "h2",
+                "title": ".VisuleElement",
+                "id": "visuleelement",
+                "children": [{
+                    "hash": "#velm/constructor",
+                    "type": "h3",
+                    "title": "constructor",
+                    "id": "constructor"
+                }, {
+                    "hash": "#velm/prototype_attribute",
+                    "type": "h3",
+                    "title": "prototype attribute",
+                    "id": "prototype_attribute"
+                }, {
+                    "hash": "#velm/prototype_methods",
+                    "type": "h3",
+                    "title": "prototype methods",
+                    "id": "prototype_methods"
+                }]
             }]
         },
         "iconClass": "fa fa-caret-right"

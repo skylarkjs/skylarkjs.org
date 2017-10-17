@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +22,9 @@
     </div>
     <div></div>
     <script>
-    require(["skylark/query", "skylark/noder"], function($, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                noder=skylarkjs.noder;
         $("div:last").style("border", "1px solid #ccc");
         var contents = noder.contents($("div:first")[0]);
         for (var i = 0, len = contents.length; i < len; i++) {

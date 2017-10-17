@@ -21,10 +21,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -42,7 +41,10 @@
         </ul>
     </article>
     <script>
-    require(["skylark/finder", "skylark/noder", "skylark/dnd"], function(finder, noder, dnd) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                noder=skylarkjs.noder,
+                dnd=skylarkjs.dnd;
         var links = finder.findAll("li > a"),
             el = null;
         function draggable(elm) {

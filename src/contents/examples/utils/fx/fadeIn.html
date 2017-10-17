@@ -11,10 +11,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -24,7 +23,10 @@
     <span id="target">Click here...</span>
     <div id="one"></div>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/fx"], function($, finder, fx) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                finder=skylarkjs.finder,
+                fx=skylarkjs.fx;
         $("body").on("click", function() {
             fx.fadeIn(finder.find("div"), "slow");
         });

@@ -54,9 +54,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylark" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -93,7 +93,9 @@
         <div id="moveable3">You can move this paragraph. It is relatively positioned.</div>
     </div>
     <script>
-    require(["skylark/finder", "skylark/mover"], function(finder, mover) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder = skylarkjs.finder,
+            mover = skylarkjs.mover;
         mover.movable(finder.byId("moveable1"), {
             handle: finder.byId("handle1")
         });

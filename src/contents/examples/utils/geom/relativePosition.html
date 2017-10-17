@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -22,7 +21,9 @@
     relative  postition : top:<b>100</b>    left:<b>100</b>
     <div class="border"></div>
     <script>
-    require(["skylark/query","skylark/finder", "skylark/geom", "skylark/datax"], function($,finder, geom, datax) {
+    require(["skylarkjs"], function(finder, geom) {
+        var finder= skylarkjs.finder,
+                geom=skylarkjs.geom;
         geom.relativePosition(finder.find("div"),{top:100,left:100});
     });
     </script>

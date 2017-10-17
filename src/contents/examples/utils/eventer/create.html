@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -19,7 +18,9 @@
     <button>click me</button>
     <p></p>
     <script>
-    require(["skylark/query", "skylark/eventer"], function($, eventer) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                eventer=skylarkjs.eventer;
         var btn = $("button"),
             e = eventer.create("clicked", {
                 msg: "button has been clicked"

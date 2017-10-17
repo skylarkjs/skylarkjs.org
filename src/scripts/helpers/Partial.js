@@ -1,9 +1,10 @@
 define([
     "jquery",
-    "skylarkjs/langx",
+    "skylarkjs",
     "text!./_partials.hbs",
     "handlebars"
-], function($, langx, partialsTpl, handlebars) {
+], function($, skylarkjs, partialsTpl, handlebars) {
+    var langx = skylarkjs.langx;
     var partials = {};
     var selector = $(langx.trim(partialsTpl));
     var _registryPartial = function(name) {

@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -22,7 +21,11 @@
     <div>Fourth</div>
     Is a array? <input></input>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/langx", "skylark/datax"], function($, finder, langx, datax) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder = skylarkjs.finder,
+            $=skylarkjs.query,
+            langx = skylarkjs.langx,
+            datax = skylarkjs.datax;
         var elems = document.getElementsByTagName("div"); // returns a nodeList
         var arr = langx.makeArray(elems);
         arr.reverse(); // use an Array method on list of dom elements

@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -28,7 +27,9 @@
     </div>
     <p></p>
     <script>
-    require(["skylark/query", "skylark/eventer"], function($, eventer) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                eventer=skylarkjs.eventer;
         $("li:first").on("click", function(evt) {
             eventer.trigger($("li:last")[0], eventer.proxy(evt), {
                 value: $(this).text()

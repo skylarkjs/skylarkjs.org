@@ -1,11 +1,5 @@
-node_modules
+deploy
 dist
-server/node/public
-server/apache/assets
-server/apache/contents
-server/apache/lib
-server/apache/scripts
-server/apache/index.html
 build/.sass-cache
 build/node_modules
 .DS_Store

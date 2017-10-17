@@ -1,20 +1,22 @@
 define([
-    "skylarkjs/spa",
     "jquery",
-    "skylarkjs/eventer",
-    "skylarkjs/langx",
+    "skylarkjs",
     "handlebars",
     "scripts/helpers/AceEditor",
     "scripts/helpers/Partial",
     "scripts/helpers/FolderTreeDomEvent",
     "text!contents/guide/guide.json",
     "text!scripts/routes/guide/guide.hbs"
-], function(spa, $, eventer, langx, handlebars, AceEditor, Partial, FolderTreeDomEvent, guideJson, guideTpl) {
+], function($, skylarkjs, handlebars, AceEditor, Partial, FolderTreeDomEvent, guideJson, guideTpl) {
     var _heightObj = {},
         _currentRange = null,
         _isClickScroll = false,
         _rangeInfo = {},
-        _sectionPrefix = FolderTreeDomEvent.sectionPrefix();
+        _sectionPrefix = FolderTreeDomEvent.sectionPrefix(),
+        spa = skylarkjs.spa,
+        langx = skylarkjs.langx,
+        noder = skylarkjs.noder,
+        eventer = skylarkjs.eventer;
     var calculateHeight = function(node) {
             var hb = {},
                 pageTop = $(".page-content")[0].getBoundingClientRect().top;
@@ -98,7 +100,7 @@ define([
                 folders: docData
             });
         },
-        entered: function(evt) {
+        rendered: function(evt) {
             var baseSelector = $("#pageContainer"),
                 args = this._domEvtArgs = {
                     section: true,
@@ -127,7 +129,7 @@ define([
                                 $(node).html(div);
                             });
                             _rangeInfo = createRangeInfo();
-                            evt.route._anchorData = Object.values(_heightObj);
+                            // evt.route._anchorData = Object.values(_heightObj);
                             callback();
                         });
                     },
@@ -135,8 +137,8 @@ define([
                         var data = target.data(),
                             sectionId = data.sectionId;
                         // eventer.off(window, "scroll");
-                        if($("#" + sectionId).length) {
-                            $(document.body).animate({
+                        if ($("#" + sectionId).length) {
+                            $([document.body, document.documentElement]).animate({
                                 "scrollTop": $("#" + sectionId).position().top
                             }, 200, function() {
                                 // setTimeout(function() {

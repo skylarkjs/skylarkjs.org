@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -19,7 +18,9 @@
     <div class="count">0</div>
     <button class="target">Counter</button>
     <script>
-    require(["skylark/query", "skylark/eventer"], function($, eventer) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                eventer=skylarkjs.eventer;
         var count = $(".count"),
             value = count.text();
         eventer.one($(".target")[0], "click mouseenter", function() {

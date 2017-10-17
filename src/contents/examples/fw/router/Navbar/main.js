@@ -1,7 +1,7 @@
 require.config({
   baseUrl: "./"
   ,packages : [
-     { name: "skylark", location: "/lib/skylark" },
+     { name: "skylark", location: "/lib/skylarkjs/skylarkjs" },
      { name: "example", location: "" }
   ]
 });

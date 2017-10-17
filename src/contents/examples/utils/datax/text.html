@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -24,8 +23,10 @@
     <p><b>Test2</b> Paragraph.</p>
     <p></p>
     <script>
-    require(["skylark/query", "skylark/datax"], function($, datax) {
-        var str = datax.text($("p:first")[0]);
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                datax=skylarkjs.datax,
+                str = datax.text($("p:first")[0]);
         $("p:last").html("first p's text value is: " + str);
     });
     </script>

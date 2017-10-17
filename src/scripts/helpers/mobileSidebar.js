@@ -1,7 +1,8 @@
 define([
+    "jquery",
     "./isMobile",
-    "jquery"
-], function(isMobile, $) {
+    "skylarkjs"
+], function($, isMobile, skylarkjs) {
     return {
         start: function() {
             var self = this,

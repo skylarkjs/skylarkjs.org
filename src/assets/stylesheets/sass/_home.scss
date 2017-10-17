@@ -98,7 +98,7 @@
                 }
             }
 
-            .github {
+            .github .twitter {
                 margin-left: 30px;
             }
         }
@@ -121,12 +121,17 @@
                 .container {
                     max-width: 900px;
                 }
-                span {
-                    font-family: cursive;
-                }
             }
         }
         @include respond-to($phone) {
+            .btns {
+                .github, .twitter {
+                    margin-left: 5px;
+                }
+                .btn {
+                    padding: 3px;
+                }
+            }
             .features {
                 max-width: 100%;
             }
@@ -153,15 +158,11 @@
                 font-weight: bold;
             }
             span {
-                font-style: oblique;
                 display: inline-block;
-                color: #4e4d4d;
+                color: #333;
+                font-weight: bolder;
+                font-style: normal;
                 padding: 4px 0;
-                &:hover {
-                    color: #333;
-                    font-weight: bolder;
-                    font-style: normal;
-                }
             }
             .title {
                 color: #286090;

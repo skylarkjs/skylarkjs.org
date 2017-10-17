@@ -1,278 +1,461 @@
 [
 {
     "parent": "/guide",
-    "path": "/guide/starting Skylark.js",
+    "path": "/guide/essentials",
     "className": "root",
-    "name": "Starting Skylark.js",
+    "name": "essentials",
     "files": [
     {
-        "name": "starting Skylark",
-        "parent": "/guide/Starting Skylark.js",
-        "path": "/guide/Starting Skylark.js/starting Skylark.sdoc.html",
+        "name": "quick_start",
+        "parent": "/guide/essentials",
+        "path": "/guide/essentials/quick_start.html",
         "structure":
         {
-            "hash": "#starting Skylark/starting_skylarkjs",
+            "hash": "#quick_start/quick_start",
             "type": "h1",
-            "title": "starting skylark.js",
-            "id": "starting_skylarkjs",
+            "title": "Quick Start",
+            "id": "quick_start",
             "children": [
             {
-                "hash": "#starting Skylark/folder_structure",
+                "hash": "#quick_start/requirements",
                 "type": "h2",
-                "title": "folder structure",
-                "id": "folder_structure",
+                "title": "Requirements",
+                "id": "requirements",
                 "children": []
             },
             {
-                "hash": "#starting Skylark/use_requirejs",
+                "hash": "#quick_start/installation",
                 "type": "h2",
-                "title": "use requirejs",
-                "id": "use_requirejs",
+                "title": "Installation",
+                "id": "installation",
                 "children": []
             },
             {
-                "hash": "#starting Skylark/base_config",
+                "hash": "#quick_start/create_project",
                 "type": "h2",
-                "title": "base config",
-                "id": "base_config",
+                "title": "Create Project",
+                "id": "create_project",
                 "children": []
             },
             {
-                "hash": "#starting Skylark/integrate_other_libraries",
+                "hash": "#quick_start/build_and_deploy",
                 "type": "h2",
-                "title": "Integrate other libraries",
-                "id": "integrate_other_libraries",
+                "title": "Build and Deploy",
+                "id": "build_and_deploy",
+                "children": []
+            },
+            {
+                "hash": "#quick_start/run_application",
+                "type": "h2",
+                "title": "Run Application",
+                "id": "run_application",
                 "children": [
                 {
-                    "hash": "#starting Skylark/amd_libray",
+                    "hash": "#quick_start/as_a_desktop_application",
                     "type": "h3",
-                    "title": "amd libray",
-                    "id": "amd_libray"
+                    "title": "as a desktop application",
+                    "id": "as_a_desktop_application"
                 },
                 {
-                    "hash": "#starting Skylark/non_amd_libray",
+                    "hash": "#quick_start/as_a_web_application",
                     "type": "h3",
-                    "title": "non amd libray",
-                    "id": "non_amd_libray"
+                    "title": "as a web application",
+                    "id": "as_a_web_application"
+                }]
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "name": "introduction",
+        "parent": "/guide/essentials",
+        "path": "/guide/essentials/introduction.html",
+        "structure":
+        {
+            "hash": "#introduction/introduction",
+            "type": "h1",
+            "title": "Introduction",
+            "id": "introduction",
+            "children": [
+            {
+                "hash": "#introduction/runtime",
+                "type": "h2",
+                "title": "Runtime",
+                "id": "runtime",
+                "children": [
+                {
+                    "hash": "#introduction/different_builds",
+                    "type": "h3",
+                    "title": "different builds",
+                    "id": "different_builds"
+                },
+                {
+                    "hash": "#introduction/installation",
+                    "type": "h3",
+                    "title": "installation",
+                    "id": "installation"
+                },
+                {
+                    "hash": "#introduction/usage",
+                    "type": "h3",
+                    "title": "usage",
+                    "id": "usage"
                 }]
             },
             {
-                "hash": "#starting Skylark/replace_jquery",
+                "hash": "#introduction/sdk",
                 "type": "h2",
-                "title": "replace jquery",
-                "id": "replace_jquery",
+                "title": "sdk",
+                "id": "sdk",
                 "children": []
             }]
         },
         "iconClass": "fa fa-caret-right"
     },
     {
-        "name": "use utility functions",
-        "parent": "/guide/Starting Skylark.js",
-        "path": "/guide/Starting Skylark.js/use utility functions.sdoc.html",
+        "name": "add_route_view",
+        "parent": "/guide/essentials",
+        "path": "/guide/essentials/add_route_view.html",
         "structure":
         {
-            "hash": "#use utility functions/use_utility_functions",
+            "hash": "#add_route_view/coding_route",
             "type": "h1",
-            "title": "use utility functions",
-            "id": "use_utility_functions",
+            "title": "Coding Route",
+            "id": "coding_route",
             "children": [
             {
-                "hash": "#use utility functions/composition",
-                "type": "h2",
-                "title": "Composition",
-                "id": "composition",
-                "children": []
-            },
-            {
-                "hash": "#use utility functions/usage",
-                "type": "h2",
-                "title": "Usage",
-                "id": "usage",
-                "children": []
-            },
-            {
-                "hash": "#use utility functions/examples",
-                "type": "h2",
-                "title": "Examples",
-                "id": "examples",
-                "children": []
-            }]
-        },
-        "iconClass": "fa fa-caret-right"
-    },
-    {
-        "name": "use vme",
-        "parent": "/guide/Starting Skylark.js",
-        "path": "/guide/Starting Skylark.js/use vme.sdoc.html",
-        "structure":
-        {
-            "hash": "#use vme/use_vme",
-            "type": "h1",
-            "title": "use vme",
-            "id": "use_vme",
-            "children": [
-            {
-                "hash": "#use vme/usage",
-                "type": "h2",
-                "title": "Usage",
-                "id": "usage",
-                "children": []
-            },
-            {
-                "hash": "#use vme/extends",
-                "type": "h2",
-                "title": "Extends",
-                "id": "extends",
-                "children": []
-            }
-            ]
-        },
-        "iconClass": "fa fa-caret-right"
-    }
-    ],
-    "folders": [],
-    "iconClass": "fa fa-caret-right"
-},
-{
-    "parent": "/guide",
-    "path": "/guide/Single Page Application",
-    "className": "root",
-    "name": "Single Page Application",
-    "files": [
-    {
-        "name": "spa startup",
-        "parent": "/guide/Single Page Application",
-        "path": "/guide/Single Page Application/spa startup.sdoc.html",
-        "structure":
-        {
-            "hash": "#spa startup/develop_single_page_application",
-            "type": "h1",
-            "title": "develop single page application",
-            "id": "develop_single_page_application",
-            "children": [
-            {
-                "hash": "#spa startup/overview",
+                "hash": "#add_route_view/overview",
                 "type": "h2",
                 "title": "Overview",
                 "id": "overview",
                 "children": []
             },
             {
-                "hash": "#spa startup/architecure",
+                "hash": "#add_route_view/route_controller",
                 "type": "h2",
-                "title": "Architecure",
-                "id": "architecure",
+                "title": "Route Controller",
+                "id": "route_controller",
+                "children": []
+            },
+            {
+                "hash": "#add_route_view/route_config",
+                "type": "h2",
+                "title": "Route Config",
+                "id": "route_config",
+                "children": []
+            },
+            {
+                "hash": "#add_route_view/route_events",
+                "type": "h2",
+                "title": "Route Events",
+                "id": "route_events",
                 "children": [
                 {
-                    "hash": "#spa startup/application_elements",
+                    "hash": "#add_route_view/entering",
                     "type": "h3",
-                    "title": "Application elements",
-                    "id": "application_elements"
+                    "title": "entering",
+                    "id": "entering"
                 },
                 {
-                    "hash": "#spa startup/front_controller_pattern",
+                    "hash": "#add_route_view/rendering",
                     "type": "h3",
-                    "title": "Front controller pattern",
-                    "id": "front_controller_pattern"
+                    "title": "rendering",
+                    "id": "rendering"
+                },
+                {
+                    "hash": "#add_route_view/entered",
+                    "type": "h3",
+                    "title": "entered",
+                    "id": "entered"
+                },
+                {
+                    "hash": "#add_route_view/exiting",
+                    "type": "h3",
+                    "title": "exiting",
+                    "id": "exiting"
+                },
+                {
+                    "hash": "#add_route_view/exited",
+                    "type": "h3",
+                    "title": "exited",
+                    "id": "exited"
                 }]
             },
             {
-                "hash": "#spa startup/develop_a_skylark_application",
+                "hash": "#add_route_view/cli_command",
                 "type": "h2",
-                "title": "Develop a skylark application",
-                "id": "develop_a_skylark_application",
+                "title": "Cli Command",
+                "id": "cli_command",
                 "children": [
                 {
-                    "hash": "#spa startup/decide_folder_structure",
+                    "hash": "#add_route_view/sjs_commands",
                     "type": "h3",
-                    "title": "decide Folder structure",
-                    "id": "decide_folder_structure"
+                    "title": "sjs commands",
+                    "id": "sjs_commands"
                 },
                 {
-                    "hash": "#spa startup/configure_the_applicattion",
+                    "hash": "#add_route_view/npm_run_commands",
                     "type": "h3",
-                    "title": "configure the applicattion",
-                    "id": "configure_the_applicattion"
-                },
-                {
-                    "hash": "#spa startup/create_layout_html",
-                    "type": "h3",
-                    "title": "create layout html",
-                    "id": "create_layout_html"
-                },
-                {
-                    "hash": "#spa startup/coding_startup_script",
-                    "type": "h3",
-                    "title": "coding startup script",
-                    "id": "coding_startup_script"
-                },
-                {
-                    "hash": "#spa startup/coding_route_controller",
-                    "type": "h3",
-                    "title": "coding route controller",
-                    "id": "coding_route_controller"
-                },
-                {
-                    "hash": "#spa startup/coding_plugin_controller",
-                    "type": "h3",
-                    "title": "coding plugin controller",
-                    "id": "coding_plugin_controller"
+                    "title": "npm run commands",
+                    "id": "npm_run_commands"
                 }]
             }]
         },
         "iconClass": "fa fa-caret-right"
     },
     {
-        "name": "use router framework alone",
-        "parent": "/guide/Single Page Application",
-        "path": "/guide/Single Page Application/use router framework alone.sdoc.html",
+        "name": "add_plugin",
+        "parent": "/guide/essentials",
+        "path": "/guide/essentials/add_plugin.html",
         "structure":
         {
-            "hash": "#use router framework alone/use_router_framework_alone",
+            "hash": "#add_plugin/coding_plugin",
             "type": "h1",
-            "title": "use router framework alone",
-            "id": "use_router_framework_alone",
+            "title": "Coding Plugin",
+            "id": "coding_plugin",
             "children": [
             {
-                "hash": "#use router framework alone/usage",
+                "hash": "#add_plugin/overview",
+                "type": "h2",
+                "title": "Overview",
+                "id": "overview",
+                "children": []
+            },
+            {
+                "hash": "#add_plugin/plugin_controller",
+                "type": "h2",
+                "title": "Plugin controller",
+                "id": "plugin_controller",
+                "children": []
+            },
+            {
+                "hash": "#add_plugin/plugin_config",
+                "type": "h2",
+                "title": "Plugin Config",
+                "id": "plugin_config",
+                "children": []
+            },
+            {
+                "hash": "#add_plugin/global_events",
+                "type": "h2",
+                "title": "Global Events",
+                "id": "global_events",
+                "children": [
+                {
+                    "hash": "#add_plugin/starting",
+                    "type": "h3",
+                    "title": "starting",
+                    "id": "starting"
+                },
+                {
+                    "hash": "#add_plugin/started",
+                    "type": "h3",
+                    "title": "started",
+                    "id": "started"
+                },
+                {
+                    "hash": "#add_plugin/routing",
+                    "type": "h3",
+                    "title": "routing",
+                    "id": "routing"
+                },
+                {
+                    "hash": "#add_plugin/routed",
+                    "type": "h3",
+                    "title": "routed",
+                    "id": "routed"
+                }]
+            },
+            {
+                "hash": "#add_plugin/cli_command",
+                "type": "h2",
+                "title": "Cli Command",
+                "id": "cli_command",
+                "children": [
+                {
+                    "hash": "#add_plugin/sjs_commands",
+                    "type": "h3",
+                    "title": "sjs commands",
+                    "id": "sjs_commands"
+                },
+                {
+                    "hash": "#add_plugin/npm_run_commands",
+                    "type": "h3",
+                    "title": "npm run commands",
+                    "id": "npm_run_commands"
+                }]
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "name": "use_utils_fun",
+        "parent": "/guide/essentials",
+        "path": "/guide/essentials/use_utils_fun.html",
+        "structure":
+        {
+            "hash": "#use_utils_fun/dom_utilities",
+            "type": "h1",
+            "title": "DOM Utilities",
+            "id": "dom_utilities",
+            "children": [
+            {
+                "hash": "#use_utils_fun/overview",
+                "type": "h2",
+                "title": "Overview",
+                "id": "overview",
+                "children": []
+            },
+            {
+                "hash": "#use_utils_fun/composition",
+                "type": "h2",
+                "title": "Composition",
+                "id": "composition",
+                "children": [
+                {
+                    "hash": "#use_utils_fun/base_api",
+                    "type": "h3",
+                    "title": "base api",
+                    "id": "base_api"
+                },
+                {
+                    "hash": "#use_utils_fun/node_level_api",
+                    "type": "h3",
+                    "title": "node level api",
+                    "id": "node_level_api"
+                },
+                {
+                    "hash": "#use_utils_fun/vme_api",
+                    "type": "h3",
+                    "title": "vme api",
+                    "id": "vme_api"
+                },
+                {
+                    "hash": "#use_utils_fun/query_api",
+                    "type": "h3",
+                    "title": "query api",
+                    "id": "query_api"
+                }]
+            },
+            {
+                "hash": "#use_utils_fun/usage",
+                "type": "h2",
+                "title": "Usage",
+                "id": "usage",
+                "children": [
+                {
+                    "hash": "#use_utils_fun/use_node_level_api",
+                    "type": "h3",
+                    "title": "use node level api",
+                    "id": "use_node_level_api"
+                },
+                {
+                    "hash": "#use_utils_fun/use_vme_api",
+                    "type": "h3",
+                    "title": "use vme api",
+                    "id": "use_vme_api"
+                },
+                {
+                    "hash": "#use_utils_fun/use_query_api",
+                    "type": "h3",
+                    "title": "use query api",
+                    "id": "use_query_api"
+                }]
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }],
+    "folders": [],
+    "iconClass": "fa fa-caret-right"
+},
+{
+    "parent": "/guide",
+    "path": "/guide/integation",
+    "className": "root",
+    "name": "integation",
+    "files": [
+    {
+        "name": "jquery",
+        "parent": "/guide/integation",
+        "path": "/guide/integation/jquery.html",
+        "structure":
+        {
+            "hash": "#jquery/jquery",
+            "type": "h1",
+            "title": "jquery",
+            "id": "jquery",
+            "children": [
+            {
+                "hash": "#jquery/overview",
+                "type": "h2",
+                "title": "Overview",
+                "id": "overview",
+                "children": []
+            },
+            {
+                "hash": "#jquery/installation",
+                "type": "h2",
+                "title": "Installation",
+                "id": "installation",
+                "children": []
+            },
+            {
+                "hash": "#jquery/usage",
+                "type": "h2",
+                "title": "Usage",
+                "id": "usage",
+                "children": [
+                {
+                    "hash": "#jquery/use_skylark-jquery",
+                    "type": "h3",
+                    "title": "use skylark-jquery",
+                    "id": "use_skylark-jquery"
+                },
+                {
+                    "hash": "#jquery/integrate_existed_jquery_plugin",
+                    "type": "h3",
+                    "title": "integrate existed jquery plugin",
+                    "id": "integrate_existed_jquery_plugin"
+                }]
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    },
+    {
+        "name": "backbone",
+        "parent": "/guide/integation",
+        "path": "/guide/integation/backbone.html",
+        "structure":
+        {
+            "hash": "#backbone/backbone",
+            "type": "h1",
+            "title": "backbone",
+            "id": "backbone",
+            "children": [
+            {
+                "hash": "#backbone/overview",
+                "type": "h2",
+                "title": "Overview",
+                "id": "overview",
+                "children": []
+            },
+            {
+                "hash": "#backbone/installation",
+                "type": "h2",
+                "title": "Installation",
+                "id": "installation",
+                "children": []
+            },
+            {
+                "hash": "#backbone/usage",
                 "type": "h2",
                 "title": "Usage",
                 "id": "usage",
                 "children": []
-            },
-            {
-                "hash": "#use router framework alone/hooker",
-                "type": "h2",
-                "title": "Hooker",
-                "id": "hooker",
-                "children": []
-            },
-            {
-                "hash": "#use router framework alone/select_engine",
-                "type": "h2",
-                "title": "Select engine",
-                "id": "select_engine",
-                "children": []
-            },
-            {
-                "hash": "#use router framework alone/example",
-                "type": "h2",
-                "title": "Example",
-                "id": "example",
-                "children": []
-            },
-            {
-                "hash": "#use router framework alone/extends",
-                "type": "h2",
-                "title": "Extends",
-                "id": "extends",
-                "children": []
             }]
         },
         "iconClass": "fa fa-caret-right"
-    }
-    ],
+    }],
     "folders": [],
     "iconClass": "fa fa-caret-right"
 }]

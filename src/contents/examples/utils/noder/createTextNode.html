@@ -10,10 +10,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +22,9 @@
     <button>Click</button>
     <div>Hello</div>
     <script>
-    require(["skylark/query", "skylark/noder"], function($, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                noder=skylarkjs.noder;
         $("button").on("click", function() {
             $("div")[0].appendChild(noder.createTextNode("World!"));
         });

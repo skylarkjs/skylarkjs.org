@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }, ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -21,7 +20,10 @@
         <span></span>
     </div>
     <script>
-    require(["skylark/datax", "skylark/finder", "skylark/noder"], function(datax, finder, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                noder=skylarkjs.noder,
+                datax=skylarkjs.datax;
         var childOf = noder.isChildOf(finder.find("h4"), finder.find("div"));
         datax.text(finder.find("span"), childOf);
     });

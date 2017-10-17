@@ -11,9 +11,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [
-            { name: "skylark", location: "/lib/skylark" },
-        ]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +23,9 @@
     <p id="target">This is a selected item </p>
     <p> This is not a selected item </p>
     <script>
-    require(["skylark/finder", "skylark/styler"], function(finder, styler) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var finder=skylarkjs.finder,
+                styler=skylarkjs.styler;
         styler.addClass(finder.byId("target"), "selected");
     });
     </script>

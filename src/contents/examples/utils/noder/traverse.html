@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -22,7 +21,9 @@
         <input type="text" value=2 />
     </div>
     <script>
-    require(["skylark/query", "skylark/noder"], function($, noder) {
+    require(["skylarkjsr"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                noder=skylarkjs.noder;
         $("button").on("click", function() {
             noder.traverse($("div")[0], function(node) {
                 var selector = $(node),

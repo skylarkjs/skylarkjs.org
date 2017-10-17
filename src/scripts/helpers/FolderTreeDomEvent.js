@@ -1,9 +1,10 @@
 define([
     "./isMobile",
     "./mobileSidebar",
-    "skylarkjs/langx",
-    "jquery"
-], function(isMobile, mobileSidebar, langx, $) {
+    "jquery",
+    "skylarkjs"
+], function(isMobile, mobileSidebar, $, skylarkjs) {
+    var langx = skylarkjs.langx;
     var _sectionPrefix = "_section-";
     var FolderTreeDomEvent = langx.klass({
         klassName: "FolderTreeDomEvent",

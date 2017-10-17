@@ -9,10 +9,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -23,7 +22,10 @@
     <a href="#">Click to hide me too</a>
     <p>Here is another paragraph</p>
     <script>
-    require(["skylark/query", "skylark/finder", "skylark/fx"], function($, finder, fx) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                finder=skylarkjs.finder,
+                fx=skylarkjs.fx;
         fx.hide(finder.find("p"));
         $("a").on("click", function(event) {
             event.preventDefault();

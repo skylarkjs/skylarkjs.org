@@ -6,10 +6,9 @@
     <script>
     require.config({
         baseUrl: "./",
-        packages: [{
-            name: "skylark",
-            location: "/lib/skylark"
-        }]
+        paths: {
+            skylarkjs: "/lib/skylarkjs/skylarkjs"
+        }
     });
     </script>
 </head>
@@ -18,7 +17,9 @@
     <h4>Example : <span>Look for the p element and then ownerDoc body to change the background color of the body.</span></h4>
     <p>Hello</p>
     <script>
-    require(["skylark/query", "skylark/noder"], function($, noder) {
+    require(["skylarkjs"], function(skylarkjs) {
+        var $=skylarkjs.query,
+                noder=skylarkjs.noder;
         $(noder.ownerDoc($("p")[0]).body).style("background","green");
     });
     </script>
