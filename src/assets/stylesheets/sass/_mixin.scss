@@ -11,6 +11,43 @@
     right: 0;
 }
 
+@mixin box-with-contents($content:'\201D', $bRadius: 50%) {
+    .blockquote {
+        text-align: justify;
+        padding: 20px;
+        position: relative;
+        font-size: 2rem;
+        line-height: 1.88;
+        border: 1px double rgba(0, 0, 0, .1);
+        display: block;
+        transition: opacity .5s ease-out;
+        &:hover {
+            border-color: #2eb897;
+            box-shadow: 0 0 0 1px #2eb897, 0 0 0 2px #2eb897;
+        }
+        &:before {
+            background: #35a8ff;
+            content: $content;
+            top: -0.3rem;
+            position: absolute;
+            width: auto;
+            height: 40px;
+            display: block;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            border-radius: $bRadius;
+            -webkit-box-shadow: 0 0 0 10px #FFF;
+            box-shadow: 0 0 0 10px #FFF;
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 0 12px;
+        }
+    }
+}
+
+
 @mixin hexagon($percentage:1, $bgColor:#077fc3, $color:#fff, $hoveBgColor:#8395ee) {
     .polygon {
         background: $bgColor;

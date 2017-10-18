@@ -63,7 +63,7 @@ define([
                     onSection: function(target) {
                         var data = target.data(),
                             sectionId = data.sectionId;
-                        $(document.body).animate({
+                        $([document.body, document.documentElement]).animate({
                             "scrollTop": $("#" + sectionId).position().top
                         }, 200, function() {});
                     }

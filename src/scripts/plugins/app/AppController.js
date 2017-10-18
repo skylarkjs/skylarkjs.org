@@ -34,6 +34,7 @@ define([
                 }).hide();
             };
             window.addThrob = function(node, callback) {
+
                 $(node).css("opacity", 0.5);
                 var throb = noder.throb(node, {});
                 callback();
@@ -63,12 +64,14 @@ define([
                 });
             };
             var main = $("#main-wrap")[0];
-            throb = window.addThrob(main, function() {
-                require(["bootstrap"], function() {
-                    main.style.opacity = 1;
-                    throb.remove();
+            if(main) {
+                throb = window.addThrob(main, function() {
+                    require(["bootstrap"], function() {
+                        main.style.opacity = 1;
+                        throb.remove();
+                    });
                 });
-            });
+            }
             goTop($(".go-top-btn"));
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 $("#sk-navbar").delegate(".nav-item", "click", function(e) {
