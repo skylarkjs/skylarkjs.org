@@ -1,0 +1,117 @@
+{
+    "name": "Skylark Home Page",
+    "title": "Skylark.js - Official Site",
+    "baseUrl": "",
+    "runtime":
+    {
+        "skylarkjs":
+        {
+            "version": "0.9.5"
+        },
+        "packages": [
+        {
+            "name": "ace",
+            "main": "ace",
+            "location": "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8"
+        }],
+        "shim":
+        {
+            "bootstrap":
+            {
+                "deps": ["jquery"],
+                "exports": "bootstrap"
+            }
+        },
+        "paths":
+        {
+            "jquery": "lib/skylarkjs/skylark-jquery",
+            "caret": "https://cdn.bootcss.com/Caret.js/0.3.1/jquery.caret",
+            "atwho": "https://cdn.bootcss.com/at.js/1.5.4/js/jquery.atwho",
+            "bootstrap": "https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min",
+            "handlebars": "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.amd.min",
+            "jotted": "https://cdn.jsdelivr.net/jotted/1.5.1/jotted.min",
+            "particles": "lib/particles",
+            "tether": "https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min",
+            "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text"
+        }
+    },
+    "page":
+    {
+        "routeViewer": "#pageContainer"
+    },
+    "plugins":
+    {
+        "app":
+        {
+            "hookers": "starting started",
+            "controller":
+            {
+                "type": "scripts/plugins/app/AppController"
+            }
+        },
+        "navbar":
+        {
+            "hookers": "starting",
+            "controller":
+            {
+                "type": "scripts/plugins/navbar/NavbarController"
+            }
+        }
+    },
+    "routes":
+    {
+        "home":
+        {
+            "pathto": "/",
+            "data":
+            {
+                "name": "home",
+                "navName": "Home"
+            },
+            "controller":
+            {
+                "type": "scripts/routes/home/HomeController"
+            }
+        },
+        "guide":
+        {
+            "pathto": "/guide",
+            "data":
+            {
+                "name": "guide",
+                "navName": "Guide"
+            },
+            "controller":
+            {
+                "type": "scripts/routes/guide/GuideController"
+            }
+        },
+        "api":
+        {
+            "pathto": "/api",
+            "data":
+            {
+                "name": "api",
+                "navName": "API"
+            },
+            "controller":
+            {
+                "type": "scripts/routes/api/ApiController"
+            }
+        },
+        "examples":
+        {
+            "pathto": "/examples",
+            "data":
+            {
+                "name": "examples",
+                "navName": "Examples"
+            },
+            "lazy": true,
+            "controller":
+            {
+                "type": "scripts/routes/examples/ExamplesController"
+            }
+        }
+    }
+}

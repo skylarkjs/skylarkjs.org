@@ -1,0 +1,73 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#movable">.movable</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="mover">mover</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit4" id="movable">movable()</h2>
+    <div class="level2">
+        <blockquote>
+            mover.movable(elm, params)
+        </blockquote>
+        <p>
+            make the specified element be in a moveable state.
+        </p>
+        <p><strong class="u">Return value</strong></p>
+        <p>
+            An object that contains the remove() method is used to cancel the movable state.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> params
+                    <br> An Object contains params to control elmement movement. </div>
+                <ul>
+                    <li class="level2">
+                        <div class="li"> handle
+                            <br> TYPE : HTMLElement
+                            <br> The handle element that allow the move operation, default is elm. </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> constraints
+                            <br> TYPE : { minX: value1,minY:value2,maxX: vaule3 ,maxY: value4}
+                            <br> This parameter is used to limit the range of element movement </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> started
+                            <br> TYPE : Function
+                            <br> The callback function when the movement is started </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> moving
+                            <br> TYPE : Function
+                            <br> The callback function when moving </div>
+                    </li>
+                    <li class="level2">
+                        <div class="li"> stopped
+                            <br> TYPE : Function
+                            <br> The callback function when the movement is stopped </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

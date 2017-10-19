@@ -61,7 +61,9 @@
                     "type": "h3",
                     "title": "as a web application",
                     "id": "as_a_web_application"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
+
             }]
         },
         "iconClass": "fa fa-caret-right"
@@ -100,7 +102,8 @@
                     "type": "h3",
                     "title": "usage",
                     "id": "usage"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             },
             {
                 "hash": "#introduction/sdk",
@@ -179,7 +182,8 @@
                     "type": "h3",
                     "title": "exited",
                     "id": "exited"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             },
             {
                 "hash": "#add_route_view/cli_command",
@@ -198,7 +202,8 @@
                     "type": "h3",
                     "title": "npm run commands",
                     "id": "npm_run_commands"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             }]
         },
         "iconClass": "fa fa-caret-right"
@@ -264,7 +269,8 @@
                     "type": "h3",
                     "title": "routed",
                     "id": "routed"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             },
             {
                 "hash": "#add_plugin/cli_command",
@@ -283,7 +289,8 @@
                     "type": "h3",
                     "title": "npm run commands",
                     "id": "npm_run_commands"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             }]
         },
         "iconClass": "fa fa-caret-right"
@@ -335,7 +342,8 @@
                     "type": "h3",
                     "title": "query api",
                     "id": "query_api"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             },
             {
                 "hash": "#use_utils_fun/usage",
@@ -360,7 +368,8 @@
                     "type": "h3",
                     "title": "use query api",
                     "id": "use_query_api"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             }]
         },
         "iconClass": "fa fa-caret-right"
@@ -416,7 +425,8 @@
                     "type": "h3",
                     "title": "integrate existed jquery plugin",
                     "id": "integrate_existed_jquery_plugin"
-                }]
+                }],
+                "iconClass": "fa fa-caret-right"
             }]
         },
         "iconClass": "fa fa-caret-right"
@@ -452,6 +462,116 @@
                 "title": "Usage",
                 "id": "usage",
                 "children": []
+            }]
+        },
+        "iconClass": "fa fa-caret-right"
+    }],
+    "folders": [],
+    "iconClass": "fa fa-caret-right"
+},
+{
+    "parent": "/guide",
+    "path": "/guide/advanced",
+    "className": "root",
+    "name": "advanced",
+    "files": [
+    {
+        "name": "ecosystem",
+        "parent": "/guide/advanced",
+        "path": "/guide/advanced/ecosystem.html",
+        "structure":
+        {
+            "hash": "#ecosystem/ecosystem",
+            "type": "h1",
+            "title": "Ecosystem",
+            "id": "ecosystem",
+            "children": [
+            {
+                "hash": "#ecosystem/constitution",
+                "type": "h2",
+                "title": "Constitution",
+                "id": "constitution",
+                "children": []
+            },
+            {
+                "hash": "#ecosystem/skylark-langx",
+                "type": "h2",
+                "title": "skylark-langx",
+                "id": "skylark-langx",
+                "children": [
+                {
+                    "hash": "#ecosystem/introduction",
+                    "type": "h3",
+                    "title": "Introduction",
+                    "id": "introduction"
+                },
+                {
+                    "hash": "#ecosystem/integration",
+                    "type": "h3",
+                    "title": "Integration",
+                    "id": "integration"
+                }],
+                "iconClass": "fa fa-caret-right"
+            },
+            {
+                "hash": "#ecosystem/skylark-utils",
+                "type": "h2",
+                "title": "skylark-utils",
+                "id": "skylark-utils",
+                "children": [
+                {
+                    "hash": "#ecosystem/introduction1",
+                    "type": "h3",
+                    "title": "Introduction",
+                    "id": "introduction1"
+                },
+                {
+                    "hash": "#ecosystem/integration1",
+                    "type": "h3",
+                    "title": "Integration",
+                    "id": "integration1"
+                }],
+                "iconClass": "fa fa-caret-right"
+            },
+            {
+                "hash": "#ecosystem/skylark-router",
+                "type": "h2",
+                "title": "skylark-router",
+                "id": "skylark-router",
+                "children": [
+                {
+                    "hash": "#ecosystem/introduction2",
+                    "type": "h3",
+                    "title": "Introduction",
+                    "id": "introduction2"
+                },
+                {
+                    "hash": "#ecosystem/integration2",
+                    "type": "h3",
+                    "title": "Integration",
+                    "id": "integration2"
+                }],
+                "iconClass": "fa fa-caret-right"
+            },
+            {
+                "hash": "#ecosystem/skylark-spa",
+                "type": "h2",
+                "title": "skylark-spa",
+                "id": "skylark-spa",
+                "children": [
+                {
+                    "hash": "#ecosystem/introduction3",
+                    "type": "h3",
+                    "title": "Introduction",
+                    "id": "introduction3"
+                },
+                {
+                    "hash": "#ecosystem/integration3",
+                    "type": "h3",
+                    "title": "Integration",
+                    "id": "integration3"
+                }],
+                "iconClass": "fa fa-caret-right"
             }]
         },
         "iconClass": "fa fa-caret-right"

@@ -1,0 +1,333 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#overview">Overview</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#route_controller">Route Controller</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#route_config">Route Config</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#route_events">Route Events</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#entering">entering</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#rendering">rendering</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#entered">entered</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#exiting">exiting</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#exited">exited</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#cli_command">Cli Command</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#sjs_commands">sjs commands</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#npm_run_commands">npm run commands</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="coding_route">Coding Route</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit2" id="overview">Overview</h2>
+    <div class="level2">
+        <p>
+            Route represents a viewport of the application page, and that is identified and navigated through a path.
+            <br>The path starts with “/” and supports parameters, such as
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> /home </div>
+            </li>
+            <li class="level1">
+                <div class="li"> /chapters/:id </div>
+            </li>
+        </ul>
+        <p>
+            Each route consists of the route config and exactly one route controller. route events are sent to the corresponding routing controller for processing.
+        </p>
+    </div>
+    <h2 class="sectionedit3" id="route_controller">Route Controller</h2>
+    <div class="level2">
+        <p>
+            You need to create a controller class for each route(view), and in controller class, You should create a method with the same name for each route event to be processed.
+        </p>
+        <p>
+            The following route controller generates a different view rendering based on the path parameters.
+        </p>
+        <p>
+            <em class="u"><strong>ChapterController.js</strong></em>
+        </p>
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
+define([
+    "skylarkjs",
+    "text!./templates/chapter1.html",
+    "text!./templates/chapter2.html",
+    "text!./templates/chapter3.html"
+],function(spa,tpl1,tpl2,tpl3){
+    var spa = skylarkjs.spa,
+        $ = skylark.query;
+
+    return spa.RouteController.inherit({
+        klassName: "ChapterController",
+
+        rendering(e) {
+            var html;
+            switch(e.context.params.id) {
+                case "1" : html = tpl1;
+                         break;
+                case "2" : html = tpl2;
+                         break;
+                case "3" : html = tpl3;
+                         break;
+                default : html = "";
+                         break;
+            }
+            e.content = html;
+        },
+
+        exiting(e) {
+            var field = $('[name="field"]').val();
+            if (field) {
+                var ret = confirm('Are you sure you want to quit this chapter ?');
+                if (!ret) {
+                    e.result = false;
+                }
+            }
+        }
+  });
+
+}); </pre>
+    </div>
+    <h2 class="sectionedit4" id="route_config">Route Config</h2>
+    <div class="level2">
+        <p>
+            All route need to be configured in slax-config.json, the route in the example above is configured as follows:
+        </p>
+        <p>
+            slax-config.json
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+...
+   "routes" : {
+      "chapter": {
+          "pathto" : "/chapter/:id",
+          "controller" : {
+            "type" : "scripts/routes/chapter/ChapterController"
+          }
+      }
+    }
+...
+
+
+} </pre>
+    </div>
+    <h2 class="sectionedit5" id="route_events">Route Events</h2>
+    <div class="level2">
+        <p>
+            route events are follows :
+            <br>
+        </p>
+    </div>
+    <h3 class="sectionedit6" id="entering">entering</h3>
+    <div class="level3">
+        <p>
+            triggered when route will be entered
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> route
+                    <br> the Route object </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> the current path and params info (if has) ,such as <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+ "path" : "/chapters/2",
+ "params" : {
+   "id" : "2"
+ }
+} </pre>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit7" id="rendering">rendering</h3>
+    <div class="level3">
+        <p>
+            triggered when route needs to render the view
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> route
+                    <br> same as with all other route events </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> same as with all other route events </div>
+            </li>
+            <li class="level1">
+                <div class="li"> content
+                    <br> The return value of the event handler, view content is set, can be an
+                    <abbr title="HyperText Markup Language">HTML</abbr> string or a DOM node </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit8" id="entered">entered</h3>
+    <div class="level3">
+        <p>
+            triggered when route has been entered
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> route
+                    <br> same as with all other route events </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> same as with all other route events </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit9" id="exiting">exiting</h3>
+    <div class="level3">
+        <p>
+            triggered route will be exited
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> route
+                    <br> same as with all other route events </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> same as with all other route events </div>
+            </li>
+            <li class="level1">
+                <div class="li"> result
+                    <br> The return value of the event handler,If false is set, path changing is not allowed </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit10" id="exited">exited</h3>
+    <div class="level3">
+        <p>
+            triggered when route has been exited
+        </p>
+        <p>
+            The event object have the following properties:
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> route
+                    <br> same as with all other route events </div>
+            </li>
+            <li class="level1">
+                <div class="li"> context
+                    <br> same as with all other route events </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit11" id="cli_command">Cli Command</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit12" id="sjs_commands">sjs commands</h3>
+    <div class="level3">
+        <p>
+            skylark.js sdk provided the following commands
+        </p>
+    </div>
+    <h4 id="add_routes">add routes</h4>
+    <div class="level4">
+        <p>
+            use the following command to add one or more routes.
+        </p>
+        <p>
+            &lt;routes&gt; is the definition for name and path of the route to add, a single route format is &lt;name&gt;: &lt;path&gt;, multiple routes separated with 「,」
+            <br>
+        </p>
+        <pre class="code">
+sjs routes add &lt;slaxPrjRoot&gt; &lt;routes&gt;  </pre>
+        <p>
+            example:
+            <br>
+        </p>
+        <pre class="code">
+sjs routes add . home:/,chapter:/chapters/:id </pre>
+    </div>
+    <h4 id="delete_routes">delete routes</h4>
+    <div class="level4">
+        <p>
+            use the following command to delete one or more routes.
+        </p>
+        <pre class="code">
+sjs routes delete &lt;slaxPrjRoot&gt; &lt;routes&gt;  </pre>
+        <p>
+            &lt;routes&gt; is the name list of the routes to delete, multiple routes separated with 「,」
+        </p>
+    </div>
+    <h4 id="list_routes">list routes</h4>
+    <div class="level4">
+        <p>
+            use the following command to list existed routes.
+            <br>
+        </p>
+        <pre class="code">
+sjs routes list &lt;slaxPrjRoot&gt;  </pre>
+    </div>
+    <h3 class="sectionedit13" id="npm_run_commands">npm run commands</h3>
+    <div class="level3">
+        <p>
+            When creating slax project with sjs create command, the above sjs command is wrapped into the package script, you can use npm run to execute these scripts, so no need to specify the project path.
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> npm run route-add – &lt;routes&gt; </div>
+            </li>
+            <li class="level1">
+                <div class="li"> npm run route-delete – &lt;routes&gt; </div>
+            </li>
+            <li class="level1">
+                <div class="li"> npm run route-list </div>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

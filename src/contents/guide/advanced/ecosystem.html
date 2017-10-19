@@ -1,0 +1,267 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#constitution">Constitution</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#skylark-langx">skylark-langx</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#introduction">Introduction</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#integration">Integration</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#skylark-utils">skylark-utils</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#introduction1">Introduction</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#integration1">Integration</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#skylark-router">skylark-router</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#introduction2">Introduction</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#integration2">Integration</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#skylark-spa">skylark-spa</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#introduction3">Introduction</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#integration3">Integration</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="ecosystem">Ecosystem</h1>
+    <div class="level1">
+        <p>
+            skylark.js is a highly modularized ecosystem that constitutes a variety of modules that are inherently independent and can be used independently.
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="constitution">Constitution</h2>
+    <div class="level2">
+        <p>
+            The following table lists the main components of the skylark.js ecosystem:
+        </p>
+        <div class="table sectionedit3">
+            <table class="inline">
+                <thead>
+                    <tr class="row0">
+                        <th class="col0"> Project </th>
+                        <th class="col1"> Description</th>
+                        <th class="col2"> Integration </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row1">
+                        <td class="col0">skylark-langx (<a href="https://github.com/skylarkjs/skylark-langx" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-langx">github</a>)</td>
+                        <td class="col1"> javaScript language extension library</td>
+                        <td class="col2"> built-in on skylark.js runtime</td>
+                    </tr>
+                    <tr class="row2">
+                        <td class="col0">skylark-router (<a href="https://github.com/skylarkjs/skylark-router" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-router">github</a>)</td>
+                        <td class="col1">frontend routing framework</td>
+                        <td class="col2"> built-in on skylark.js runtime</td>
+                    </tr>
+                    <tr class="row3">
+                        <td class="col0">skylark-spa (<a href="https://github.com/skylarkjs/skylark-spa" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-spa">github</a>)</td>
+                        <td class="col1">html5 single page application framework</td>
+                        <td class="col2"> built-in on skylark.js runtime</td>
+                    </tr>
+                    <tr class="row4">
+                        <td class="col0">skylark-utils (<a href="https://github.com/skylarkjs/skylark-utils" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-utils">github</a>) &nbsp; </td>
+                        <td class="col1">javascript dom utility library</td>
+                        <td class="col2"> built-in on skylark.js runtime(full build version)</td>
+                    </tr>
+                    <tr class="row5">
+                        <td class="col0">skylark-slax-browser (<a href="https://github.com/skylarkjs/skylark-slax-browser" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-slax-browser">github</a>)</td>
+                        <td class="col1">official desktop browser for running skylark.js application</td>
+                        <td class="col2">built-in on skylark.js development tools</td>
+                    </tr>
+                    <tr class="row6">
+                        <td class="col0">skylark-slax-nodeserver (<a href="https://github.com/skylarkjs/skylark-slax-nodeserver" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-slax-nodeserver">github</a>)</td>
+                        <td class="col1">official node server for running the skylark.js application</td>
+                        <td class="col2">built-in on skylark.js development tools</td>
+                    </tr>
+                    <tr class="row7">
+                        <td class="col0"> [skylark-jquery] (<a href="https://github.com/skylarkjs/skylark-jquery" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-jquery">github</a>)</td>
+                        <td class="col1">an extension library fully compatible with jquery api</td>
+                        <td class="col2">optional, installed by the developer as needed</td>
+                    </tr>
+                    <tr class="row8">
+                        <td class="col0"> [skylark-backbone] (<a href="https://github.com/skylarkjs/skylark-backbone" class="urlextern" target="_blank" title="https://github.com/skylarkjs/skylark-backbone">github</a>)</td>
+                        <td class="col1">an extension library fully compatible with backbone api</td>
+                        <td class="col2">optional, installed by the developer as needed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h2 class="sectionedit4" id="skylark-langx">skylark-langx</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit5" id="introduction">Introduction</h3>
+    <div class="level3">
+        <p>
+            A simple JavaScript language extension library, including class support, Evented class, Deferred class and some commonly used tool functions.
+        </p>
+    </div>
+    <h3 class="sectionedit6" id="integration">Integration</h3>
+    <div class="level3">
+        <p>
+            This library is built-in on skylark.js core library as skylarkjs.langx.
+        </p>
+    </div>
+    <h2 class="sectionedit7" id="skylark-utils">skylark-utils</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit8" id="introduction1">Introduction</h3>
+    <div class="level3">
+        <p>
+            skylark-utils is a powerful and concise dom utility library.
+        </p>
+    </div>
+    <h3 class="sectionedit9" id="integration1">Integration</h3>
+    <div class="level3">
+        <p>
+            This library is built-in on skylark.js library,the correspondence between each sub-module is as follows
+        </p>
+        <div class="table sectionedit10">
+            <table class="inline">
+                <thead>
+                    <tr class="row0">
+                        <th class="col0">skylark.js</th>
+                        <th class="col1">skylark-utils</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row1">
+                        <td class="col0">skylarkjs.browser</td>
+                        <td class="col1">skylark-utils/browser</td>
+                    </tr>
+                    <tr class="row2">
+                        <td class="col0">skylarkjs.css</td>
+                        <td class="col1">skylark-utils/css</td>
+                    </tr>
+                    <tr class="row3">
+                        <td class="col0">skylarkjs.datax</td>
+                        <td class="col1">skylark-utils/datax</td>
+                    </tr>
+                    <tr class="row4">
+                        <td class="col0">skylarkjs.dnd</td>
+                        <td class="col1">skylark-utils/dnd</td>
+                    </tr>
+                    <tr class="row5">
+                        <td class="col0">skylarkjs.eventer</td>
+                        <td class="col1">skylark-utils/eventer</td>
+                    </tr>
+                    <tr class="row6">
+                        <td class="col0">skylarkjs.filer</td>
+                        <td class="col1">skylark-utils/filer</td>
+                    </tr>
+                    <tr class="row7">
+                        <td class="col0">skylarkjs.finder</td>
+                        <td class="col1">skylark-utils/finder</td>
+                    </tr>
+                    <tr class="row8">
+                        <td class="col0">skylarkjs.fx</td>
+                        <td class="col1">skylark-utils/fx</td>
+                    </tr>
+                    <tr class="row9">
+                        <td class="col0">skylarkjs.geom</td>
+                        <td class="col1">skylark-utils/geom</td>
+                    </tr>
+                    <tr class="row10">
+                        <td class="col0">skylarkjs.http</td>
+                        <td class="col1">skylark-utils/http</td>
+                    </tr>
+                    <tr class="row11">
+                        <td class="col0">skylarkjs.mover</td>
+                        <td class="col1">skylark-utils/mover</td>
+                    </tr>
+                    <tr class="row12">
+                        <td class="col0">skylarkjs.noder</td>
+                        <td class="col1">skylark-utils/noder</td>
+                    </tr>
+                    <tr class="row13">
+                        <td class="col0">skylarkjs.query</td>
+                        <td class="col1">skylark-utils/query</td>
+                    </tr>
+                    <tr class="row14">
+                        <td class="col0">skylarkjs.scripter</td>
+                        <td class="col1">skylark-utils/scripter</td>
+                    </tr>
+                    <tr class="row15">
+                        <td class="col0">skylarkjs.styler</td>
+                        <td class="col1">skylark-utils/styler</td>
+                    </tr>
+                    <tr class="row16">
+                        <td class="col0">skylarkjs.velm</td>
+                        <td class="col1">skylark-utils/velm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h2 class="sectionedit11" id="skylark-router">skylark-router</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit12" id="introduction2">Introduction</h3>
+    <div class="level3">
+        <p>
+            skylark-router is an elaborate front-end routing framework.
+        </p>
+    </div>
+    <h3 class="sectionedit13" id="integration2">Integration</h3>
+    <div class="level3">
+        <p>
+            This library is completely built-in on skylark.js, and when you use skylark.js to develop an application, you do not have to use this library's
+            <abbr title="Application Programming Interface">API</abbr> directly.
+        </p>
+    </div>
+    <h2 class="sectionedit14" id="skylark-spa">skylark-spa</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit15" id="introduction3">Introduction</h3>
+    <div class="level3">
+        <p>
+            skylark-spa is an Elegant HTML5 Single Page Application Framework.
+        </p>
+    </div>
+    <h3 class="sectionedit16" id="integration3">Integration</h3>
+    <div class="level3">
+        <p>
+            This library is completely built-in on skylark.js, and when you use skylark.js to develop an application, you do not have to use this library's
+            <abbr title="Application Programming Interface">API</abbr> directly.
+        </p>
+        <p>
+            skylark.js will automatically create an instance of spa.Application after startup and start the application.
+            <br>
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

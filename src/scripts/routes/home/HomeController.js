@@ -26,7 +26,7 @@ define([
             var div = $("<div>").appendTo($(".footer"));
             $("<p>").appendTo(div).html("<i>Copyright © 2016-" +
                 (new Date()).getFullYear() +
-                "</i><a href='http://www.hudaokeji.com'><img src='./assets/images/hudao-logo.png' />Hudaokeji Co.,Ltd.</a> "
+                "</i><a href='http://www.hudaokeji.com' target='_blank'><img src='./assets/images/hudao-logo.png' />Hudaokeji Co.,Ltd.</a> "
             );
             $("<p>").appendTo(div).html("powered by the skylark.js singe page application framework!");
             // var qq = $("<p>").appendTo(div);

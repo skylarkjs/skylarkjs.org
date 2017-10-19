@@ -1,0 +1,119 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#overview">Overview</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#installation">Installation</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#usage">Usage</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#use_skylark-jquery">use skylark-jquery</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#integrate_existed_jquery_plugin">integrate existed jquery plugin</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="jquery">jquery</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit2" id="overview">Overview</h2>
+    <div class="level2">
+        <p>
+            Jquery is a most popular javascript library, with a large number of plug-ins and application using jquery.
+            <br>The optional skylark.jquery library is based on the skylark/query module, providing APIs that are fully compatible with jquery,and the codes is simpler and more productive, JQuery plugins and applications can run directly on skylark without jquery.
+        </p>
+    </div>
+    <h2 class="sectionedit3" id="installation">Installation</h2>
+    <div class="level2">
+        <p>
+            In order to use skylark-jquery library, there are two options of using CDN directly or copying the library to the lib folder of the project using bower or npm.
+            <br>Then setup the skylark-jquery library in slax-config.json file.
+        </p>
+        <p>
+            using cdn :
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+    "runtime" : {
+      "skylarkjs" : {
+        "version" : "0.9.3"
+      },
+      "paths": {
+        "jquery" : "http://registry.skylarkjs.org/packages/skylark-jquery/v0.9.3/uncompressed/skylark-jquery"
+      }
+    }
+}
+</pre>
+        <p>
+            using lib copy:
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+    "runtime" : {
+      "skylarkjs" : {
+        "version" : "0.9.3"
+      },
+      "paths": {
+        "jquery" : "./lib/skylark-jquery/uncompressed/skylark-jquery"
+      }
+    }
+ }
+ </pre>
+    </div>
+    <h2 class="sectionedit4" id="usage">Usage</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit5" id="use_skylark-jquery">use skylark-jquery</h3>
+    <div class="level3">
+        <p>
+            the method is exactly the same as using original jquery.
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
+define(["jquery"],function($) {
+  $(".btn").button();
+}); </pre>
+    </div>
+    <h3 class="sectionedit6" id="integrate_existed_jquery_plugin">integrate existed jquery plugin</h3>
+    <div class="level3">
+        <p>
+            To use bootstrap as an example, configed as follows:
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+    "runtime" : {
+      "skylarkjs" : {
+        "version" : "0.9.3"
+      },
+      "shim": {
+          "bootstrap": {
+              "deps": ["jquery"],
+              "exports": "bootstrap"
+          }
+      },
+      "paths": {
+        "jquery" : "./lib/skylark-jquery/uncompressed/skylark-jquery",
+        "bootstrap" : "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min",
+      }
+    }
+ }
+ </pre>
+    </div>
+    <!-- wikipage stop -->
+</div>

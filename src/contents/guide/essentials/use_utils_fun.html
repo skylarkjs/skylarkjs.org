@@ -1,0 +1,233 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#overview">Overview</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#composition">Composition</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#base_api">base api</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#node_level_api">node level api</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#vme_api">vme api</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#query_api">query api</a></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#usage">Usage</a></div>
+                    <ul class="toc">
+                        <li class="level2">
+                            <div class="li"><a href="#use_node_level_api">use node level api</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#use_vme_api">use vme api</a></div>
+                        </li>
+                        <li class="level2">
+                            <div class="li"><a href="#use_query_api">use query api</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="dom_utilities">DOM Utilities</h1>
+    <div class="level1">
+        <p>
+            Skylarkjs provides a large number of simple but powerful dom utility functions, and you can use these function to develop modern ui program even without third-party UI libraries .
+        </p>
+    </div>
+    <h2 class="sectionedit2" id="overview">Overview</h2>
+    <div class="level2">
+        <p>
+            Dom utilities supports the following three types of APIs, and you can choose the most appropriate
+            <abbr title="Application Programming Interface">API</abbr> type for your scenario：
+        </p>
+        <ol>
+            <li class="level1">
+                <div class="li"> node level api
+                    <br> Directly specify the target dom node for dom operation, simple and intuitive </div>
+            </li>
+            <li class="level1">
+                <div class="li"> vme api
+                    <br> use a vme object wrapping single dom node. support chain-call,so suitable for multiple operations on the same dom node </div>
+            </li>
+            <li class="level1">
+                <div class="li"> query api
+                    <br> use a query object wrapping node list. suitable for multiple operations on the same dom node </div>
+            </li>
+        </ol>
+    </div>
+    <h2 class="sectionedit3" id="composition">Composition</h2>
+    <div class="level2">
+        <p>
+            The dom utility sub modules contained in skylarkjs are listed by category as follows:
+        </p>
+    </div>
+    <h3 class="sectionedit4" id="base_api">base api</h3>
+    <div class="level3">
+        <ul>
+            <li class="level1">
+                <div class="li"> browser
+                    <br> This module defines some APIs about brower compatibility. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> css
+                    <br> This module defines some APIs about stylesheet and rule. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> scripter
+                    <br> This module defines some APIs wrapping script load and unload. </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit5" id="node_level_api">node level api</h3>
+    <div class="level3">
+        <ul>
+            <li class="level1">
+                <div class="li"> datax
+                    <br> This module defines some APIs wrapping DOM attribute and property. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> dnd
+                    <br> This module defines some APIs wrapping DOM drag and drop. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> eventer
+                    <br> This module defines some APIs wrapping DOM event. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> filer
+                    <br> This module defines some APIs wrapping local file reand and write. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> finder
+                    <br> This module defines some APIs wrapping dom query. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> fx
+                    <br> This module defines some APIs wrapping DOM transition and animation. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> geom
+                    <br> This module defines some APIs wrapping DOM geometry. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> mover
+                    <br> This module defines some APIs wrapping DOM move. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> noder
+                    <br> This module defines some APIs wrapping DOM construction. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> styler
+                    <br> This module defines some APIs wrapping dom style and class. </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit6" id="vme_api">vme api</h3>
+    <div class="level3">
+        <ul>
+            <li class="level1">
+                <div class="li"> velm
+                    <br> This module implemented VisuleElement type for wrapping a visual dom node.
+                    <br> VisualElment provides a number of methods encapsulated from the basic utility module function and supports chain calls. </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="sectionedit7" id="query_api">query api</h3>
+    <div class="level3">
+        <ul>
+            <li class="level1">
+                <div class="li"> query
+                    <br> This module provides a similar jquery api </div>
+            </li>
+        </ul>
+        <p>
+            skykark-jquery based on this module provides an
+            <abbr title="Application Programming Interface">API</abbr> that is fully compatible with jquery.
+        </p>
+    </div>
+    <h2 class="sectionedit8" id="usage">Usage</h2>
+    <div class="level2">
+    </div>
+    <h3 class="sectionedit9" id="use_node_level_api">use node level api</h3>
+    <div class="level3">
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
+define(["skylarkjs"],function(skylarkjs){
+  var finder = skylarkjs.finder,
+      geom = skylarkjs.geom;
+
+  var el = finder.find(".target:first");
+  if (el) {
+    var p = geom.pagePosition(el);
+    p.left = p.left + 10;
+    p.top = p.top + 30;
+    styler.css(el,{
+      position : "absoute"
+    });
+    geom.pagePosition(el,p);
+  }
+}); </pre>
+    </div>
+    <h3 class="sectionedit10" id="use_vme_api">use vme api</h3>
+    <div class="level3">
+        <p>
+            The skylark/vme module implemented VisuleElement type for wrapping a visual dom node.
+        </p>
+        <p>
+            VisualElment provides a number of methods encapsulated from the basic utility module function and supports chain calls.
+        </p>
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
+define(["skylarkjs"],function(skylarkjs){
+var vme = skylarkjs.vme;
+//Get a VisualElement object from id
+var ve1 = vme("id11");
+
+// Get a VisualElement object from dom node
+var ve2 = vme(document.getElementById("id11"));
+
+// Get a VisualElement object from selector
+var ve3 = vme.find(".cls1 .cls2");
+
+//Chains call
+ve3.removeClass("cls1").addClass("cls2 cls3")
+
+});      </pre>
+        <p>
+            The VisualElement type is exposed on vme.VisualElement, you can extend it with adding new prototype method or static method.
+        </p>
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
+define(["skylarkjs"],function(skylarkjs){
+var vme = skylarkjs.vme;
+  vme.VisualElement.partial({
+    newProp1 : "value1",
+    newMethod1 : function() {}
+  });
+});
+</pre>
+    </div>
+    <h3 class="sectionedit11" id="use_query_api">use query api</h3>
+    <div class="level3">
+        <p>
+            skylarkjs.query provides a compatible
+            <abbr title="Application Programming Interface">API</abbr> with jquery, and the code is simpler and more productive.
+            <br>You can use skylarkjs.query like using jquery.
+            <br>
+        </p>
+    </div>
+    <!-- wikipage stop -->
+</div>

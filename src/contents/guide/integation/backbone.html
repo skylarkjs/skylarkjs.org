@@ -1,0 +1,182 @@
+<div class="page group" style="min-height: 144px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div style="">
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#overview">Overview</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#installation">Installation</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#usage">Usage</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="backbone">backbone</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit2" id="overview">Overview</h2>
+    <div class="level2">
+        <p>
+            Backbone.js provides a base (framework) for implementing MVC on the client side, simple and powerful.
+        </p>
+        <p>
+            The optional skylark.backbone library is based on the skylark library, providing APIs that are fully compatible with backbone ,and the codes is simpler and more productive, Backbone program can run directly on skylark without original backbone library.
+        </p>
+    </div>
+    <h2 class="sectionedit3" id="installation">Installation</h2>
+    <div class="level2">
+        <p>
+            In order to use skylark-backbone library, there are two options of using CDN directly or copying the library to the lib folder of the project using bower or npm.
+        </p>
+        <p>
+            Then setup the skylark-backbone library in slax-config.json file.
+        </p>
+        <p>
+            using cdn :
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+    "runtime" : {
+      "skylarkjs" : {
+        "version" : "0.9.3"
+      },
+      "shim": {
+          "backbone": {
+              "deps": ["underscore", "jquery"],
+              "exports": "Backbone"
+          },
+          "underscore": {
+              "exports: '_'
+          }
+      },
+      "paths": {
+        "jquery" : "http://registry.skylarkjs.org/packages/skylark-jquery/v0.9.3/uncompressed/skylark-jquery",
+        "underscore" : "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore",
+        'backbone' :  "http://registry.skylarkjs.org/packages/skylark-backbone/0.9.0/backbone"
+       }
+    }
+}
+</pre>
+        <p>
+            using lib copy:
+            <br>
+        </p>
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
+    "runtime" : {
+      "skylarkjs" : {
+        "version" : "0.9.3"
+      },
+      "shim": {
+          "backbone": {
+              "deps": ["underscore", "jquery"],
+              "exports": "Backbone"
+          },
+          "underscore": {
+              "exports: '_'
+          }
+      },
+      "paths": {
+        "jquery" : "./lib/skylark-jquery/uncompressed/skylark-jquery",
+        "underscore" : "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore",
+        'backbone' :  "./lib/skylark-backbone/backbone"
+       }
+    }
+} </pre>
+    </div>
+    <h2 class="sectionedit4" id="usage">Usage</h2>
+    <div class="level2">
+        <p>
+            Skylarkjs route controller is a pure javascript object, inherited from spa.RouteController is not necessary.
+            <br>Therefore, we can use the backbone view as a route controller:
+        </p>
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
+define(["Backbone"],function(Backbone) {
+  var TodoView = Backbone.View.extend({
+    klassName : "TodoView",
+    //... is a list tag.
+    tagName:  "li",
+
+    // Cache the template function for a single item.
+    template: _.template($('#item-template').html()),
+
+    // The DOM events specific to an item.
+    events: {
+      "click .toggle"   : "toggleDone",
+      "dblclick .view"  : "edit",
+      "click a.destroy" : "clear",
+      "keypress .edit"  : "updateOnEnter",
+      "blur .edit"      : "close"
+    },
+
+    // The TodoView listens for changes to its model, re-rendering. Since there's
+    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
+    // app, we set a direct reference on the model for convenience.
+    initialize: function() {
+      this.listenTo(this.model, 'change', this.render);
+      this.listenTo(this.model, 'destroy', this.remove);
+    },
+
+    // Re-render the titles of the todo item.
+    render: function() {
+      this.$el.html(this.template(this.model.toJSON()));
+      this.$el.toggleClass('done', this.model.get('done'));
+      this.input = this.$('.edit');
+      return this;
+    },
+
+    // Toggle the `"done"` state of the model.
+    toggleDone: function() {
+      this.model.toggle();
+    },
+
+    // Switch this view into `"editing"` mode, displaying the input field.
+    edit: function() {
+      this.$el.addClass("editing");
+      this.input.focus();
+    },
+
+    // Close the `"editing"` mode, saving changes to the todo.
+    close: function() {
+      var value = this.input.val();
+      if (!value) {
+        this.clear();
+      } else {
+        this.model.save({title: value});
+        this.$el.removeClass("editing");
+      }
+    },
+
+    // If you hit `enter`, we're through editing the item.
+    updateOnEnter: function(e) {
+      if (e.keyCode == 13) this.close();
+    },
+
+    // Remove the item, destroy the model.
+    clear: function() {
+      this.model.destroy();
+    },
+
+    // skylarkjs route event handler
+    rendering : function(e) {
+       this.render();
+       e.content = this.$el[0];
+    }
+
+  });
+
+  return TodoView
+});
+
+</pre>
+    </div>
+    <!-- wikipage stop -->
+</div>

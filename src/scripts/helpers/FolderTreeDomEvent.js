@@ -126,7 +126,9 @@ define([
         setSectionActived: function(target) {
             if (this.currentSection) $(this.currentSection).removeClass("active");
             this.currentSection = $(target.parent().parent());
-            this.currentSection.addClass("active");
+            this.currentSection.addClass("active").find(">.sections").toggleClass("hide");
+            this.currentSection.find(".icon").toggleClass("active");
+            this.currentSection.find(".icon").toggleClass("unactive");
             this._updateClickTreeSection(target);
         },
 
@@ -175,7 +177,10 @@ define([
             if (sub.file) this._setFileUnActive(sub.file.selector, needSection);
             var parent = file.parent().parent();
             parent.addClass("active");
-            if (needSection) parent.find(">.sections").removeClass("hide");
+            if (needSection) {
+                parent.find(">.sections").removeClass("hide");
+                parent.find(".icon").addClass("active");
+            }
             sub.prevFile = sub.file;
             sub.file = {
                 selector: file,
@@ -186,7 +191,10 @@ define([
         _setFileUnActive: function(file, needSection) {
             var parent = file.parent().parent();
             parent.removeClass("active");
-            if (needSection) parent.find(">.sections").addClass("hide");
+            if (needSection) {
+                parent.find(">.sections").addClass("hide");
+                parent.find(".icon").removeClass("active");
+            }
         },
 
         _updateClickTreeSection: function(section) {

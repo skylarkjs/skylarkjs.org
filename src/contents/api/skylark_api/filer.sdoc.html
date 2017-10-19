@@ -1,0 +1,88 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#dropzone">.dropzone</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#picker">.picker</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1 class="sectionedit1" id="filer">filer</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit2" id="dropzone">dropzone()</h2>
+    <div class="level2">
+        <blockquote>
+            filer.dropzone(elm, params)
+        </blockquote>
+        <p>
+            Make the specified element to could accept HTML5 file drag and drop.
+        </p>
+        <p><strong class="u">Return value</strong></p>
+        <p>the filer module object for chains call.</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> params
+                    <br> TYPE : PlainObject
+                    <br> An Object contains params to control file picker. </div>
+                <ul>
+                    <li class="level2">
+                        <div class="li"> droped
+                            <br> TYPE : Function
+                            <br> The callback function when the files is droped.
+                            <br> synax : function droped(files) files is a list of File objects </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit3" id="picker">picker()</h2>
+    <div class="level2">
+        <blockquote>
+            filer.picker(elm, params)
+        </blockquote>
+        <p>
+            Make the specified element to pop-up the file selection dialog box when clicked , and read the contents the files selected from client file system by user.
+        </p>
+        <p><strong class="u">Return value</strong></p>
+        <p>the filer module object for chains call.</p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> params
+                    <br> TYPE : PlainObject
+                    <br> An Object contains params to control file picker. </div>
+                <ul>
+                    <li class="level2">
+                        <div class="li"> picked
+                            <br> TYPE : Function
+                            <br> The callback function when the files is selected.
+                            <br> synax : function picked(files) files is a list of File objects </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

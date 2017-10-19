@@ -1,0 +1,375 @@
+<div class="page group" style="min-height: 198px;">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+    <div id="dw__toc">
+        <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>目录</h3>
+        <div>
+            <ul class="toc" aria-expanded="true" style="">
+                <li class="level1">
+                    <div class="li"><a href="#animate">.animate</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#show">.show</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#hide">.hide</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#toggle">.toggle</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#fadeto">.fadeTo</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#fadein">.fadeIn</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#fadeout">.fadeOut</a></div>
+                </li>
+                <li class="level1">
+                    <div class="li"><a href="#fadetoggle">.fadeToggle</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- TOC END -->
+    <h1 class="sectionedit1" id="fx">fx</h1>
+    <div class="level1">
+    </div>
+    <h2 class="sectionedit2" id="animate">animate()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.animate(elm, properties, duration, ease, callback, delay)
+        </blockquote>
+        <p>
+            Perform a custom animation of a set of
+            <abbr title="Cascading Style Sheets">CSS</abbr> properties.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> properties
+                    <br> TYPE: PlainObject
+                    <br> An object of
+                    <abbr title="Cascading Style Sheets">CSS</abbr> properties and values that the animation will move toward. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> TYPE: Number or String
+                    <br> A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> ease
+                    <br> TYPE: String
+                    <br> A string indicating which easing function to use for the transition. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> delay </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit3" id="show">show()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.show(elm, duration, callback)
+        </blockquote>
+        <p>
+            Display the matched elements.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> TYPE: Number or String
+                    <br> A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit4" id="hide">hide()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.hide(elm, duration, callback)
+        </blockquote>
+        <p>
+            Hide the matched elements.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> TYPE: Number or String
+                    <br> A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit5" id="toggle">toggle()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.toggle(elm, duration, callback)
+        </blockquote>
+        <p>
+            Display or hide the matched elements.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> TYPE: Number or String \\A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit6" id="fadeto">fadeTo()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.fadeTo(elm, duration,opacity, callback)
+        </blockquote>
+        <p>
+            Adjust the opacity of the matched elements.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> Type: Number or String \\A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> opacity
+                    <br> TYPE: Number
+                    <br> A number between 0 and 1 denoting the target opacity. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit7" id="fadein">fadeIn()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.fadeIn(elm, duration, callback)
+        </blockquote>
+        <p>Display the matched elements by fading them to opaque.</p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> Type: Number or String \\A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit8" id="fadeout">fadeOut()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.fadeOut(elm, duration, callback)
+        </blockquote>
+        <p>
+            Hide the matched elements by fading them to transparent.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chanis call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> Type: Number or String
+                    <br>A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br> A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit9" id="fadetoggle">fadeToggle()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.fadeToggle(elm, duration, callback)
+        </blockquote>
+        <p>
+            Display or hide the matched elements by animating their opacity.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> Type: Number or String
+                    <br>A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function()
+                    <br>A function to call once the animation is complete, called once per matched element. </div>
+            </li>
+        </ul>
+    </div>
+    <h2 class="sectionedit10" id="scrolltotop">.scrolltoTop()</h2>
+    <div class="level2">
+        <blockquote>
+            fx.scrolltoTop(elm, duration, callback)
+        </blockquote>
+        <p>
+            Scroll content of the specified element by animating it's scrollTop.
+        </p>
+        <p>
+            <strong class="u">Return value</strong>
+        </p>
+        <p>
+            the fx module object for chains call.
+        </p>
+        <p>
+            <strong class="u">Parameter</strong>
+        </p>
+        <ul>
+            <li class="level1">
+                <div class="li"> elm
+                    <br> TYPE : HTMLElement
+                    <br> the target dom element. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> pos
+                    <br> TYPE : HTMLElement
+                    <br> the target scrollTop position </div>
+            </li>
+            <li class="level1">
+                <div class="li"> duration
+                    <br> Type: Number or String
+                    <br> A string or number determining how long the animation will run. </div>
+            </li>
+            <li class="level1">
+                <div class="li"> callback
+                    <br> TYPE: Function
+                    <br> A function to call once the animation is complete. </div>
+            </li>
+        </ul>
+    </div>
+    <!-- wikipage stop -->
+</div>

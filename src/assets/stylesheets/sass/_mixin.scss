@@ -11,6 +11,84 @@
     right: 0;
 }
 
+@mixin doc-style {
+    h2 {
+        border-bottom: 1px solid #ddd;
+        padding: 0.7em 0;
+    }
+    h3 {
+        padding: 0.5em 0;
+        &:before {
+            content: "#";
+            color: #6f6f6f;
+            transition: all .3s ease;
+            padding-right: 10px;
+        }
+    }
+    img {
+        width: 540px;
+        height: auto;
+        margin: 0 auto;
+    }
+    pre.code {
+        &._doc-code_ {
+            &:before {
+                content: attr(data-type);
+                text-align: right;
+                display: inline-block;
+                width: 100%;
+                color: #888;
+                padding-right: 20px;
+                font-weight: 700;
+                letter-spacing: .8px;
+                text-transform: uppercase;
+            }
+            padding: 0;
+        }
+        background-color: #f5f5f5;
+        border-radius: 3px;
+        padding: 20px;
+        overflow-x: auto;
+    }
+}
+
+@mixin box-with-contents($bRadius: 50%) {
+    .blockquote {
+        text-align: left;
+        padding: 20px;
+        position: relative;
+        font-size: 2rem;
+        line-height: 1.88;
+        border: 1px double rgba(0, 0, 0, .1);
+        display: block;
+        transition: opacity .5s ease-out;
+        &:hover {
+            border-color: #2eb897;
+            box-shadow: 0 0 0 1px #2eb897, 0 0 0 2px #2eb897;
+        }
+        &:before {
+            background: #35a8ff;
+            content: attr(data-head);
+            top: -0.3rem;
+            position: absolute;
+            width: auto;
+            height: 40px;
+            display: block;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            border-radius: $bRadius;
+            -webkit-box-shadow: 0 0 0 10px #FFF;
+            box-shadow: 0 0 0 10px #FFF;
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 0 12px;
+        }
+    }
+}
+
+
 @mixin hexagon($percentage:1, $bgColor:#077fc3, $color:#fff, $hoveBgColor:#8395ee) {
     .polygon {
         background: $bgColor;
@@ -155,6 +233,11 @@
                 color: #34495e;
             }
             i {
+                &.active {
+                    padding-left: 2px;
+                    transform: rotateZ(90deg);
+                    transition: transform .3s;
+                }
                 font-size: 1rem;
                 width: 10px;
                 padding-top: 4px;
@@ -164,6 +247,9 @@
             &>.side-link {
                 background-color: #d9edf7;
                 i {
+                    &.unactive {
+                        transform: rotateZ(0deg);
+                    }
                     padding-left: 2px;
                     transform: rotateZ(90deg);
                     transition: transform .3s;
