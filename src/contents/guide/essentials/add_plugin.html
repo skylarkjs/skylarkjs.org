@@ -69,7 +69,7 @@
         <p>
             <em class="u"><strong>HighlightController</strong></em>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
 define([
     "skylarkjs",
 ],function(skylarkjs){
@@ -102,9 +102,8 @@ define([
             slax-config.json
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-json" data-type="json">
 {
-...
    "plugins" : {
        "highlight": {
         "hookers": "routing routed",
@@ -113,9 +112,6 @@ define([
        }
        }
     }
-...
-
-
 } </pre>
     </div>
     <h2 class="sectionedit5" id="global_events">Global Events</h2>
@@ -177,11 +173,11 @@ define([
             context data example:
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-json" data-type="json">
 {
- path : "/chapters/2",
- params : {
-   id : "2"
+ "path" : "/chapters/2",
+ "params" : {
+   "id" : "2"
  }
 } </pre>
     </div>
@@ -235,7 +231,7 @@ sjs plugins add . highlight:routing+routed </pre>
             use the following command to delete one or more plugins.
         </p>
         <pre class="code">
-* sjs plugins delete &lt;slaxPrjRoot&gt; &lt;plugins&gt;  </pre>
+sjs plugins delete &lt;slaxPrjRoot&gt; &lt;plugins&gt;  </pre>
         <p>
             &lt;plugins&gt; is the name list of the plugins to delete, multiple routes separated with 「,」
         </p>
@@ -247,7 +243,7 @@ sjs plugins add . highlight:routing+routed </pre>
             <br>
         </p>
         <pre class="code">
-  * sjs plugins list &lt;slaxPrjRoot&gt;  </pre>
+sjs plugins list &lt;slaxPrjRoot&gt;  </pre>
     </div>
     <h3 class="sectionedit12" id="npm_run_commands">npm run commands</h3>
     <div class="level3">

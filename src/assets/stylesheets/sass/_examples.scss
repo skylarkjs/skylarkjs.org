@@ -11,6 +11,7 @@
     }
 
     .page-content {
+        @include doc-style;
         overflow: hidden;
         position: relative;
         .doc-img img {

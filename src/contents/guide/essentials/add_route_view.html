@@ -81,7 +81,7 @@
         <p>
             <em class="u"><strong>ChapterController.js</strong></em>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
 define([
     "skylarkjs",
     "text!./templates/chapter1.html",
@@ -131,7 +131,7 @@ define([
             slax-config.json
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-json" data-type="json">
 {
 ...
    "routes" : {
@@ -169,11 +169,11 @@ define([
             </li>
             <li class="level1">
                 <div class="li"> context
-                    <br> the current path and params info (if has) ,such as <pre class="code _doc-code_ code-type-js">
+                    <br> the current path and params info (if has) ,such as <pre class="code _doc-code_ code-type-json" data-type="json">
 {
- path : "/chapters/2",
- params : {
-   id : "2"
+ "path" : "/chapters/2",
+ "params" : {
+   "id" : "2"
  }
 } </pre>
                 </div>
@@ -298,7 +298,7 @@ sjs routes add . home:/,chapter:/chapters/:id </pre>
             use the following command to delete one or more routes.
         </p>
         <pre class="code">
-* sjs routes delete &lt;slaxPrjRoot&gt; &lt;routes&gt;  </pre>
+sjs routes delete &lt;slaxPrjRoot&gt; &lt;routes&gt;  </pre>
         <p>
             &lt;routes&gt; is the name list of the routes to delete, multiple routes separated with 「,」
         </p>
@@ -310,7 +310,7 @@ sjs routes add . home:/,chapter:/chapters/:id </pre>
             <br>
         </p>
         <pre class="code">
-  * sjs routes list &lt;slaxPrjRoot&gt;  </pre>
+sjs routes list &lt;slaxPrjRoot&gt;  </pre>
     </div>
     <h3 class="sectionedit13" id="npm_run_commands">npm run commands</h3>
     <div class="level3">

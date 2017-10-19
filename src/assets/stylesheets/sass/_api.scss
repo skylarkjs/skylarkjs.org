@@ -6,6 +6,7 @@
     }
 
     .page-content {
+        @include doc-style;
         overflow: hidden;
         position: relative;
         max-width: 600px;

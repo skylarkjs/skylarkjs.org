@@ -42,8 +42,8 @@
             using cdn :
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
-
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
     "runtime" : {
       "skylarkjs" : {
         "version" : "0.9.3"
@@ -62,12 +62,15 @@
         "underscore" : "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore",
         'backbone' :  "http://registry.skylarkjs.org/packages/skylark-backbone/0.9.0/backbone"
        }
-    } </pre>
+    }
+}
+</pre>
         <p>
             using lib copy:
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
     "runtime" : {
       "skylarkjs" : {
         "version" : "0.9.3"
@@ -86,8 +89,8 @@
         "underscore" : "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore",
         'backbone' :  "./lib/skylark-backbone/backbone"
        }
-    },
-.... </pre>
+    }
+} </pre>
     </div>
     <h2 class="sectionedit4" id="usage">Usage</h2>
     <div class="level2">
@@ -95,7 +98,7 @@
             Skylarkjs route controller is a pure javascript object, inherited from spa.RouteController is not necessary.
             <br>Therefore, we can use the backbone view as a route controller:
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
 define(["Backbone"],function(Backbone) {
   var TodoView = Backbone.View.extend({
     klassName : "TodoView",

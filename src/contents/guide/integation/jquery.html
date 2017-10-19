@@ -46,7 +46,8 @@
             using cdn :
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
     "runtime" : {
       "skylarkjs" : {
         "version" : "0.9.3"
@@ -54,13 +55,15 @@
       "paths": {
         "jquery" : "http://registry.skylarkjs.org/packages/skylark-jquery/v0.9.3/uncompressed/skylark-jquery"
       }
-    },
+    }
+}
 </pre>
         <p>
             using lib copy:
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
     "runtime" : {
       "skylarkjs" : {
         "version" : "0.9.3"
@@ -68,7 +71,8 @@
       "paths": {
         "jquery" : "./lib/skylark-jquery/uncompressed/skylark-jquery"
       }
-    },
+    }
+ }
  </pre>
     </div>
     <h2 class="sectionedit4" id="usage">Usage</h2>
@@ -80,7 +84,7 @@
             the method is exactly the same as using original jquery.
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
+        <pre class="code _doc-code_ code-type-js" data-type="javascript">
 define(["jquery"],function($) {
   $(".btn").button();
 }); </pre>
@@ -91,8 +95,8 @@ define(["jquery"],function($) {
             To use bootstrap as an example, configed as follows:
             <br>
         </p>
-        <pre class="code _doc-code_ code-type-js">
-
+        <pre class="code _doc-code_ code-type-json" data-type="json">
+{
     "runtime" : {
       "skylarkjs" : {
         "version" : "0.9.3"
@@ -107,7 +111,8 @@ define(["jquery"],function($) {
         "jquery" : "./lib/skylark-jquery/uncompressed/skylark-jquery",
         "bootstrap" : "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min",
       }
-    },
+    }
+ }
  </pre>
     </div>
     <!-- wikipage stop -->

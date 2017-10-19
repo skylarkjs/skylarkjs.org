@@ -117,24 +117,7 @@
                 margin: 0 auto;
                 display: block;
             }
-            .concise {
-                @include box-with-contents('Concise', 0);
-            }
-            .anywhere {
-                @include box-with-contents('Anywhere', 0);
-            }
-            .integratable {
-                @include box-with-contents('Integratable', 0);
-            }
-            .unified {
-                @include box-with-contents('Unified', 0);
-            }
-            .configable {
-                @include box-with-contents('Configable', 0);
-            }
-            .modular {
-                @include box-with-contents('Modular', 0);
-            }
+            @include box-with-contents(0);
         }
         @include respond-to($except-phone) {
             .features {
